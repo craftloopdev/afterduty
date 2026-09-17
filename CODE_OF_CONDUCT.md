@@ -11,8 +11,10 @@ assume good faith, and help keep the community welcoming for everyone.
 
 ## Reporting
 
-To report unacceptable behavior, contact the maintainers privately at
-**conduct@afterduty.app** (or, if that is unavailable, **security@afterduty.app**).
+To report unacceptable behavior, open a private report through the repository's
+[GitHub Security Advisory form](https://github.com/craftloopdev/afterduty/security/advisories/new)
+(private to the maintainers even though it lives under "Security"), or a regular
+GitHub issue if the matter is not sensitive.
 All reports will be reviewed and investigated promptly and fairly, and reporter
 confidentiality will be respected.
 

@@ -54,7 +54,7 @@
 | VCP-OPS-02 | Do NOT push 5 local backup tags; confirm origin has 0 tags | maintainer | open | pin pre-scrub commits |
 | VCP-OPS-03 | Verify GCP controls (API-key referrer, Firebase rules, App Check, Cloud Run max-instances, billing alerts, SA IAM, bucket private) | maintainer | open | per SECURITY-OPS.md pre-publish list |
 | VCP-OPS-04 | Move `tools/session-start.sh` to `.internal/`; trim `regression/MANIFEST.md` internal paths; reword templates | maintainer | **fixed** | scrubbed incident dates + `~/VAClaimPath` from `session-start.sh` (kept it working); trimmed both `.internal/plans/...` refs in MANIFEST.md; templates reworded/relocated |
-| VCP-OPS-05 | Confirm `security@afterduty.app` is monitored | maintainer | open | SECURITY.md must not be hollow |
+| VCP-OPS-05 | Security reports route through GitHub Security Advisories; no contact mailbox is published in the repo | maintainer | **fixed 2026-09-17** | SECURITY.md + CODE_OF_CONDUCT.md point at the advisory form |
 | VCP-OPS-06 | Maintainer identity decision (gmail in 190/224 commits + LICENSE); MFA on infra Google account; rename mock persona | maintainer | open | optional: rotate DB pw / scrub `craftloop-admin.json` comment |
 
 ## Ruled out (considered, not blocking — see report §"Verified clean / ruled out")

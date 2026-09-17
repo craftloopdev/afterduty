@@ -9,8 +9,6 @@ history, disability ratings. We take security reports seriously.
 
 Preferred: [open a private GitHub Security Advisory](https://github.com/craftloopdev/afterduty/security/advisories/new).
 
-Fallback email: `security@afterduty.app`.
-
 Please include:
 - A clear description of the issue and the impact you believe it has.
 - Steps to reproduce, ideally with a minimal proof-of-concept.
