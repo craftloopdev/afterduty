@@ -26,7 +26,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
     // Gemini via Google Vertex AI Java SDK (direct, not Spring AI)
-    implementation("com.google.cloud:google-cloud-vertexai:1.15.0")
+    implementation("com.google.cloud:google-cloud-vertexai:1.52.0")
 
     // Claude via Anthropic SDK on Vertex AI. 2.35+ is required for the `us`
     // multi-region endpoint (VertexBackend maps region "us" to
