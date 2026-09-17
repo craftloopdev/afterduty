@@ -1,0 +1,36 @@
+{
+  "case_id": "gc-008",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)hearing loss",
+          "vasrd_code": "6100",
+          "rating_band": {
+            "min": 0,
+            "max": 30
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)knee",
+          "vasrd_code": "5260",
+          "rating_band": {
+            "min": 10,
+            "max": 30
+          },
+          "must_be_found": true,
+          "laterality": "right"
+        }
+      ],
+      "combined_rating_band": {
+        "min": 10,
+        "max": 50
+      },
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

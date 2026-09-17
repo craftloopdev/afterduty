@@ -1,0 +1,15 @@
+{
+  "merge_groups": [
+    {
+      "keep_index": 0,
+      "absorb_indices": [
+        1
+      ],
+      "canonical_name": "Obstructive sleep apnea",
+      "reason": "same condition restated"
+    }
+  ],
+  "standalone_indices": [
+    2
+  ]
+}

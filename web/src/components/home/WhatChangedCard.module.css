@@ -1,0 +1,162 @@
+/*
+ * WhatChangedCard — the digest card above Home's hero, plus the discreet
+ * timeline link that takes its place when nothing is unread. All colors are
+ * tokens (tokens.test.ts no-hex discipline).
+ */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+  padding: 18px 20px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: var(--s10);
+}
+
+.ic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  color: var(--ai-fg);
+  background: var(--ai-bg);
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+}
+
+.body {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.lines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  border-top: 1px solid var(--line);
+  font-size: 0.84375rem;
+  color: var(--ink);
+}
+
+.line > span {
+  display: flex;
+  padding: 9px 2px;
+  color: var(--muted);
+}
+
+.lineLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s8);
+  padding: 9px 2px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.lineLink:hover {
+  color: var(--navy);
+}
+
+.acts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s12);
+  margin-top: var(--s4);
+}
+
+.gotIt {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s6);
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.gotIt:disabled {
+  opacity: 0.6;
+}
+
+.seeAll {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s4);
+  min-height: 44px;
+  padding: 10px 6px;
+  font-size: 0.84375rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* ── Discreet timeline link (no unread digest) ── */
+.timelineLink {
+  margin: 0;
+  align-self: flex-start;
+}
+
+.timelineLink a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s6);
+  min-height: 44px;
+  padding: 8px 4px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--faint);
+}
+
+.timelineLink a:hover {
+  color: var(--navy);
+}
+
+/* Grouped digest sections (readability fix — grouped, capped lines instead of
+   one run-on paragraph + a 30-line flat list). */
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: var(--s8);
+  min-width: 0;
+}
+.groupHead {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+}
+.moreLine {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}

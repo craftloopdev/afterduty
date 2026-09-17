@@ -1,0 +1,19 @@
+{
+  "case_id": "gc-013",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete_zero_conditions",
+      "conditions": [],
+      "abstention": {
+        "expected": false
+      },
+      "expected_evidence": [
+        {
+          "filename_pattern": "(?i)bad.?scan",
+          "processing_status": "error",
+          "message_non_blank": true
+        }
+      ]
+    }
+  }
+}

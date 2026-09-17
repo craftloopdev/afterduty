@@ -1,0 +1,230 @@
+.grid {
+  display: grid;
+  /* minmax(0, …) so a track can NEVER exceed its share regardless of a child's
+     min-content (a long filename must not balloon the column past the viewport). */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--s16);
+}
+@media (max-width: 440px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+  padding: var(--s16);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  /* Content (filenames, fact values) can never push the card wider than its track. */
+  min-width: 0;
+}
+.ic {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+}
+.name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+  /* Filenames WRAP (readable) rather than ellipsize — an inline <b> can't apply
+     ellipsis anyway, and nowrap here set the card's min-content from the filename,
+     ballooning the grid track past the viewport and clipping the fact lines
+     inside. anywhere breaks the underscore/hyphen runs in report names. */
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.kind {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.foot {
+  margin-top: var(--s4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  font-size: 0.78rem;
+}
+.ok {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--strong);
+  font-weight: 600;
+}
+.paused {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--partial);
+  font-weight: 600;
+}
+.err {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--missing);
+  font-weight: 600;
+}
+.pending {
+  color: var(--muted);
+}
+.detail {
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+/* Card head row: doc icon + overflow menu (P1-29). */
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s8);
+}
+.menuWrap {
+  position: relative;
+}
+.menuBtn {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.menuBtn:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+.menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 6;
+  min-width: 150px;
+  padding: var(--s4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.menuItem {
+  display: block;
+  width: 100%;
+  padding: var(--s8) var(--s10);
+  border: none;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.menuItem:hover {
+  background: var(--sunken);
+}
+.menuDanger {
+  color: var(--missing);
+}
+.menuDanger:hover {
+  background: var(--missing-bg);
+}
+
+/* Citation deep-link highlight (P1-30 ?focus=). */
+.focused {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--focus) 18%, transparent);
+}
+
+/* "What we found" expandable (P1-30). */
+.factsToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s6);
+  margin-top: var(--s4);
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--navy500);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.chev,
+.chevOpen {
+  transition: transform 0.15s ease;
+}
+.chevOpen {
+  transform: rotate(90deg);
+}
+.factsNote {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.factList {
+  list-style: none;
+  margin: 0;
+  padding: var(--s8) var(--s10);
+  border-radius: var(--r-md);
+  background: var(--sunken);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+.factRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.factLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.factValue {
+  font-size: 0.82rem;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+/* Delete confirm modal (P1-29). */
+.modalBody {
+  margin: 0 0 var(--s12);
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+.modalError {
+  margin-bottom: var(--s12);
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.84rem;
+}
+.modalActions {
+  display: flex;
+  gap: var(--s10);
+}
+.confirmDanger {
+  background: var(--missing);
+}

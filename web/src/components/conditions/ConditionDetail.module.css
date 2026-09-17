@@ -1,0 +1,506 @@
+.page {
+  display: block;
+}
+
+/* ──────────────────────────────────────────────
+   HERO
+   Desktop: tags + side-by-side metrics, then a tinted rationale panel.
+   Mobile: a single card with the why-toggle inside.
+   ────────────────────────────────────────────── */
+.hero {
+  display: block;
+}
+
+.tags {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-bottom: var(--s12);
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: var(--s16);
+}
+
+.ratingRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s16);
+  padding-bottom: var(--s20);
+  border-bottom: 1px solid var(--line);
+}
+
+.ratingMain {
+  min-width: 0;
+}
+.ratingLabel {
+  font-size: 0.71rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--faint);
+}
+.ratingValue {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 2.25rem;
+  font-weight: 850;
+  letter-spacing: -1px;
+  color: var(--ink);
+  margin-top: 2px;
+  line-height: 1.05;
+}
+.ratingValueSoft {
+  font-size: 1.5rem;
+  letter-spacing: -0.4px;
+  color: var(--muted);
+}
+
+/* One-line explainer for a true 0% rating — a real, valuable VA outcome (P1-5). */
+.zeroNote {
+  margin: var(--s6) 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 46ch;
+}
+
+/* Rating honesty: "Estimate — needs a PFT to confirm" chip. Full-width row so the
+   wrapping amber pill sits under the rating rather than crowding the badge; the Pill's
+   own `wrap` keeps sentence-length text inside the card (overflow discipline). */
+.evidenceNote {
+  display: flex;
+  margin-top: var(--s12);
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* ── Why this number? ── */
+.why {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  margin-top: var(--s16);
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--sunken);
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.84rem;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.why:hover {
+  background: var(--card);
+  color: var(--ink);
+}
+.why:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.whyChev {
+  margin-left: auto;
+}
+
+.rationale {
+  display: flex;
+  gap: 11px;
+  margin-top: 10px;
+  padding: 16px 18px;
+  background: var(--sunken);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+/* ──────────────────────────────────────────────
+   SECTION HEADING
+   ────────────────────────────────────────────── */
+.secHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s12);
+  margin: var(--s24) 0 var(--s12);
+}
+.secHead h2 {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin: 0;
+  color: var(--ink);
+}
+.secNote {
+  font-size: 0.8125rem;
+  color: var(--faint);
+  font-weight: 600;
+}
+
+/* ──────────────────────────────────────────────
+   TRIAD LEGS
+   Desktop: 3 equal columns. Mobile: stacked.
+   ────────────────────────────────────────────── */
+.legs {
+  display: grid;
+  /* minmax(0, …): a bare 1fr floors at min-content, so one long evidence token
+     could blow all three columns past the card. */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s16);
+}
+
+.leg {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+.legHead {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: var(--s12);
+}
+.legIc {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.legHt {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+.legHt b {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+}
+.legHt small {
+  font-size: 0.71rem;
+  color: var(--faint);
+}
+.legItems {
+  list-style: none;
+  margin: var(--s12) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.legItems li {
+  display: flex;
+  gap: 9px;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.legBullet {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ──────────────────────────────────────────────
+   STRENGTHEN (weakest leg)
+   ────────────────────────────────────────────── */
+.fix {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: var(--s16);
+  padding: 14px;
+  background: var(--partial-bg);
+  border-radius: var(--r-lg);
+}
+.fixIc {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: color-mix(in srgb, var(--partial) 16%, transparent);
+  color: var(--partial);
+}
+.fixTxt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.fixTxt b {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: var(--partial);
+}
+.fixTxt small {
+  font-size: 0.8125rem;
+  color: var(--partial);
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* ──────────────────────────────────────────────
+   RELATED STEP BAR
+   ────────────────────────────────────────────── */
+.fixbar {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  text-align: left;
+  margin-top: var(--s16);
+  padding: 16px 18px;
+  border-radius: var(--r-md);
+  background: var(--card);
+  border: 1.5px solid var(--navy);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.fixbar:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+.fixbar:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.fixbarIc {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--navy);
+  color: var(--on-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.fixbarTx {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.fixbarTx b {
+  font-size: 0.90625rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+.fixbarTx small {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.fixbarImpact {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--muted);
+  background: var(--sunken);
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+  flex-shrink: 1;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fixbarImpactStrong {
+  color: var(--strong);
+  background: var(--strong-bg);
+}
+.fixbarChev {
+  color: var(--faint);
+  flex-shrink: 0;
+}
+
+/* ──────────────────────────────────────────────
+   ACTIONS
+   ────────────────────────────────────────────── */
+.actions {
+  display: flex;
+  gap: var(--s12);
+  margin-top: var(--s16);
+}
+
+/* ──────────────────────────────────────────────
+   NEXT-STEP MODAL
+   ────────────────────────────────────────────── */
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+}
+.modalGap {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.modalGapTx {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.modalGapTx b {
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+.modalGapTx .fixbarImpact {
+  align-self: flex-start;
+  /* The modal IS the full view: the raw impact can be a whole sentence, so it
+     wraps here instead of keeping the row-chip ellipsis (mirrors StepsPanel's
+     sheetImpact). */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  border-radius: var(--r-md);
+}
+.modalFacts {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+.modalFacts dt {
+  font-size: 0.71rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--faint);
+  margin-top: var(--s8);
+}
+.modalFacts dd {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+/* ──────────────────────────────────────────────
+   RESPONSIVE → mobile (screens1 .cp-* layout)
+   ────────────────────────────────────────────── */
+@media (max-width: 759.98px) {
+  /* Hero becomes one card; the rationale toggle lives inside it. */
+  .hero {
+    background: var(--card);
+    border-radius: var(--r-lg);
+    padding: 18px;
+    box-shadow: var(--shadow);
+    margin-top: var(--s8);
+  }
+  .tags {
+    margin-bottom: var(--s16);
+  }
+  .ratingRow {
+    align-items: center;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .ratingValue {
+    font-size: 2.25rem;
+  }
+  .ratingValueSoft {
+    font-size: 1.5rem;
+  }
+  .rationale {
+    background: var(--bg);
+    border: none;
+    padding: 14px;
+    border-radius: var(--r-md);
+  }
+
+  /* Section label → small uppercase muted caption. */
+  .secHead {
+    margin: var(--s20) 0 10px;
+  }
+  .secHead h2 {
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .secNote {
+    display: none;
+  }
+
+  /* Legs stack. */
+  .legs {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Actions stack full-width. */
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Exclude toggle: stack the copy above a full-width button. */
+  .exclude {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+}
+
+/* ── "Don't include in my claim" toggle (owner-set, reversible) ── */
+.exclude {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s16);
+  margin-top: var(--s16);
+  padding: var(--s16);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--sunken);
+}
+.excludeTxt {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.excludeTxt b {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.excludeTxt small {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.excludeError {
+  margin: var(--s8) 0 0;
+  padding: var(--s8) var(--s12);
+  border-radius: var(--r-sm);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — After Duty</title>
+  <style>
+    :root {
+      --navy: #0F1E3D;
+      --navy-2: #13284F;
+      --ink: #0A1833;
+      --ink-2: #475069;
+      --ink-3: #6C7690;
+      --line: #E6E9F0;
+      --page: #F4F5F9;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Inter Tight", "Segoe UI", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--page);
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+    header { margin-bottom: 32px; border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+    h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.5px; }
+    h2 { font-size: 18px; margin: 28px 0 10px; color: var(--navy-2); }
+    p, li { color: var(--ink-2); }
+    .updated { color: var(--ink-3); font-size: 13px; }
+    a { color: var(--navy-2); }
+    .mark {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .mark svg { width: 26px; height: 26px; }
+    ul { padding-left: 20px; }
+    code { background: #EDEFF5; padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+    footer { margin-top: 48px; color: var(--ink-3); font-size: 13px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 2L3 6v7c0 5.2 3.9 8.5 9 10 5.1-1.5 9-4.8 9-10V6l-9-4z"
+              fill="none" stroke="#13284F" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M8 12l3 3 5-6" stroke="#7C5CE6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      After Duty
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: April&nbsp;18,&nbsp;2026</div>
+  </header>
+
+  <p>
+    After Duty (formerly VA Claim Path) (<em>we</em>, <em>us</em>) is a product of Craftloop,
+    built to help U.S. Veterans organize evidence for VA disability claims.
+    This policy explains what we collect, how we use it, who we share
+    it with, and the choices you have. If you have questions, email
+    <a href="mailto:privacy@afterduty.app">privacy@afterduty.app</a>.
+  </p>
+
+  <h2>What we collect</h2>
+  <ul>
+    <li>
+      <strong>Account information.</strong> Your phone number and/or email
+      address, used only for passwordless sign-in (a one-time code sent to your
+      phone or email via Firebase Authentication), plus an optional display name.
+    </li>
+    <li>
+      <strong>Documents you upload.</strong> Service records, medical
+      records, personal statements, buddy letters, and any other evidence
+      you choose to submit. We parse these to extract facts that help
+      identify claimable conditions.
+    </li>
+    <li>
+      <strong>Evidence chat + quick-add input.</strong> Text you type to
+      describe conditions or symptoms.
+    </li>
+    <li>
+      <strong>Derived analytical data.</strong> AI-extracted facts, VASRD
+      code matches, triad assessments, rating estimates, and evidence
+      gaps — computed from your uploads.
+    </li>
+    <li>
+      <strong>Operational logs.</strong> Timestamps, IP addresses, and
+      error traces used to run and debug the service. We do not sell
+      or share these.
+    </li>
+  </ul>
+
+  <h2>How we use your data</h2>
+  <ul>
+    <li>To process your claim evidence and produce the analyses, ratings,
+      and suggestions you see in the app.</li>
+    <li>To authenticate you, keep your session secure, and prevent abuse.</li>
+    <li>To troubleshoot errors and improve product quality.</li>
+  </ul>
+  <p>
+    We do <strong>not</strong> use your evidence to train third-party AI
+    models. We do <strong>not</strong> sell your personal information.
+  </p>
+
+  <h2>Third-party processors</h2>
+  <p>We use a small set of vendors to operate the service:</p>
+  <ul>
+    <li><strong>Google Cloud Platform</strong> — hosting (Cloud Run),
+      database (Cloud SQL), Firebase Authentication.</li>
+    <li><strong>Anthropic</strong> — large-language-model inference used
+      by the AI pipeline (condition synthesis, gap analysis, rating
+      estimation). Content sent for inference is covered by Anthropic's
+      zero-retention terms where applicable.</li>
+    <li><strong>Google Cloud AI / Gemini</strong> — fact extraction from
+      uploaded documents.</li>
+  </ul>
+  <p>
+    Each vendor processes data only to deliver its service to us and is
+    contractually bound to confidentiality.
+  </p>
+
+  <h2>Retention</h2>
+  <p>
+    We keep your evidence and derived analyses as long as your account
+    exists. You can delete individual documents from the Evidence page,
+    or request full account deletion by emailing
+    <a href="mailto:privacy@afterduty.app">privacy@afterduty.app</a> — we'll
+    purge your data within 30 days.
+  </p>
+
+  <h2>Your rights</h2>
+  <ul>
+    <li><strong>Access.</strong> Request a copy of your data.</li>
+    <li><strong>Correction.</strong> Ask us to correct inaccurate data.</li>
+    <li><strong>Deletion.</strong> Ask us to erase your account and data.</li>
+    <li><strong>Export.</strong> Ask for a machine-readable copy of what
+      you've uploaded and what we've derived.</li>
+  </ul>
+  <p>
+    California (CCPA/CPRA), EEA/UK (GDPR), and other jurisdictions give
+    you these rights by law; we honor them regardless of where you live.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    After Duty is intended for adults (18+). We do not knowingly
+    collect data from children under 13. If you believe a child has
+    provided us data, email us and we will delete it.
+  </p>
+
+  <h2>Security</h2>
+  <p>
+    We use TLS for every network connection, industry-standard hashing
+    for secrets, role-separated service accounts, and principle-of-least-
+    privilege access controls. No system is perfectly secure; if you
+    believe your account has been compromised, please contact us.
+  </p>
+
+  <h2>Not medical or legal advice</h2>
+  <p>
+    After Duty is an educational tool. It does not file claims for
+    you, does not render medical diagnoses, and is not a substitute for
+    advice from a Veterans Service Officer (VSO) or an accredited
+    attorney. Always consult a qualified professional before making
+    claim decisions.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    We may update this policy to reflect product changes or legal
+    requirements. The "Last updated" date at the top of this page
+    indicates when it was last revised. Material changes will be
+    announced in-app before they take effect.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Craftloop · <a href="mailto:privacy@afterduty.app">privacy@afterduty.app</a>
+  </p>
+
+  <footer>
+    © 2026 Craftloop. After Duty and the shield mark are trademarks of Craftloop.
+  </footer>
+</div>
+</body>
+</html>

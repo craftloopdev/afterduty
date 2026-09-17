@@ -1,0 +1,74 @@
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* P1-23: the safe-area inset must ADD to the bar, never eat into it. A fixed
+     height + border-box padding used to squeeze the tabs to ~26px on notched
+     phones; min-height grows with the inset so the tabs always keep 60px. */
+  min-height: var(--mobile-nav-h);
+  padding: var(--s6) var(--s8) calc(var(--s6) + env(safe-area-inset-bottom, 0px));
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-top: 1px solid var(--line);
+}
+
+/* Shown only on mobile; the sidebar takes over at >=760px. */
+@media (min-width: 760px) {
+  .nav {
+    display: none;
+  }
+}
+
+.tab {
+  flex: 1;
+  min-width: 0; /* 5 even tabs: let them shrink instead of overflowing at 375px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--faint);
+  font-size: 0.66rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.label {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The icon sits inside a pill. On the ACTIVE tab the pill fills navy and lifts
+   slightly, so the CURRENT page is the one distinct, larger-feeling button —
+   the emphasis now moves with you instead of a fixed center button. */
+.pill {
+  display: grid;
+  place-items: center;
+  height: 34px;
+  width: 58px;
+  border-radius: var(--r-pill);
+  color: inherit;
+  transition: background 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.tab[data-active="1"] {
+  color: var(--navy);
+}
+
+.tab[data-active="1"] .pill {
+  background: var(--navy);
+  color: var(--on-navy);
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--navy) 32%, transparent);
+}
+
+.tab:active .pill {
+  transform: scale(0.94);
+}

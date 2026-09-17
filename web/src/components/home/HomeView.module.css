@@ -1,0 +1,145 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s20);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--s20);
+  align-items: start;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+  min-width: 0;
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+  position: sticky;
+  top: 92px;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .rail {
+    position: static;
+  }
+}
+
+.footNote {
+  display: flex;
+  align-items: center;
+  gap: var(--s6);
+  font-size: 0.78rem;
+  color: var(--faint);
+  padding: var(--s4);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
+  padding: 13px 18px;
+  border-radius: var(--r-md);
+  background: var(--navy);
+  color: var(--on-navy);
+  font-weight: 700;
+  font-size: 0.94rem;
+  box-shadow: var(--shadow-sm);
+}
+.cta:active {
+  transform: scale(0.985);
+}
+
+.ctaGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
+  padding: 13px 18px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.94rem;
+}
+.ctaGhost:active {
+  transform: scale(0.985);
+}
+
+/* ── Honest free-tier state (analysis Pro-gated, evidence stored) ── */
+.lockedCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s12);
+  padding: var(--s20);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+.lockedIc {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: var(--navy100);
+  color: var(--navy);
+}
+.lockedTx b {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+.lockedTx p {
+  margin: var(--s6) 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 56ch;
+}
+.lockedActs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s8);
+}
+.lockedRail {
+  max-width: 420px;
+}
+
+/* ── /learn entry for FREE users (P1-18) ── */
+.learnCard {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  align-self: flex-start;
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.875rem;
+  box-shadow: var(--shadow-sm);
+}
+.learnCard b {
+  color: var(--navy);
+  font-weight: 700;
+}
+.learnCard:active {
+  transform: scale(0.985);
+}
+/* Under the centered new-user empty state the card centers too. */
+.learnCardCenter {
+  align-self: center;
+}

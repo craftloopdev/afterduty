@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Post-traumatic stress disorder",
+    "vasrd_code": "9411",
+    "body_system": "mental",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Gastroesophageal reflux disease",
+    "vasrd_code": "7346",
+    "body_system": "digestive",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Lumbar strain",
+    "vasrd_code": "5237",
+    "body_system": "musculoskeletal",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Migraine headaches",
+    "vasrd_code": "8100",
+    "body_system": "neurological",
+    "is_presumptive": false,
+    "confidence": 0.9
+  }
+]

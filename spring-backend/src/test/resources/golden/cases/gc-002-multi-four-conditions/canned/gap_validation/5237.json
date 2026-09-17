@@ -1,0 +1,13 @@
+{
+  "validated_gaps": [
+    {
+      "original_index": 0,
+      "keep": true,
+      "is_real": true,
+      "is_critical": true,
+      "is_needed": true,
+      "rater_priority": "medium",
+      "rater_note": "Materially strengthens the claim."
+    }
+  ]
+}

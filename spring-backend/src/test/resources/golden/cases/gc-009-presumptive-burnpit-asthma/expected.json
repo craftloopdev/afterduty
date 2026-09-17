@@ -1,0 +1,35 @@
+{
+  "case_id": "gc-009",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)asthma",
+          "vasrd_code": "6602",
+          "rating_band": {
+            "min": 30,
+            "max": 30
+          },
+          "must_be_found": true,
+          "presumptive": true,
+          "deterministic_rating_expected": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 30,
+        "max": 30
+      },
+      "gaps": [
+        {
+          "condition_vasrd": "6602",
+          "pattern": "(?i)spirometry|FEV",
+          "must_be_flagged": true
+        }
+      ],
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

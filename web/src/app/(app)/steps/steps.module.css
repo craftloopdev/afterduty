@@ -1,0 +1,12 @@
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
+  padding: 13px 18px;
+  border-radius: var(--r-md);
+  background: var(--navy);
+  color: var(--on-navy);
+  font-weight: 700;
+  font-size: 0.94rem;
+  box-shadow: var(--shadow-sm);
+}

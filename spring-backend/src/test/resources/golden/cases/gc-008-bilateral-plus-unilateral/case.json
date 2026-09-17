@@ -1,0 +1,46 @@
+{
+  "id": "gc-008",
+  "slug": "bilateral-plus-unilateral",
+  "title": "Bilateral hearing loss + unilateral knee",
+  "tags": [
+    "bilateral"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-mix.txt",
+          "filename": "Mix.txt",
+          "canned_extraction": "canned/extraction/01-mix.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "6100": "canned/synthesis_rate/6100.json",
+      "5260": "canned/synthesis_rate/5260.json"
+    },
+    "gap_evidence_by_vasrd": {
+      "6100": "canned/gap_evidence/6100.json"
+    },
+    "gap_validation_by_vasrd": {
+      "6100": "canned/gap_validation/6100.json"
+    },
+    "gap_whatif_by_vasrd": {
+      "6100": "canned/gap_whatif/6100.json"
+    }
+  }
+}

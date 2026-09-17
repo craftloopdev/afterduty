@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-07-06T06:43:54.673899Z",
+  "eval_run_id": "20260706-pyramiding-groups-WAIVED",
+  "prompt_versions": {
+    "extraction_prompt_version": "1",
+    "extraction_schema_version": "2",
+    "rating_prompt_version": "v1",
+    "identify_prompt_version": "3",
+    "judge_prompt_version": "1"
+  },
+  "cases": {
+    "gc-001": "sha256:bb2e1d2fb5e4e2c0fc6172eccc3cb6f5f4496a9ba888f9f9864fcd86f97e6929",
+    "gc-002": "sha256:3d9afa1f2265cfe07fdb11ad65958b6f89fb6c4ae4e7a0650254bf4b667bc70d",
+    "gc-003": "sha256:97f38697307d1ed3f58492fa0a7f8b7090174a2dc2f64135b9519b1fafbf03fa",
+    "gc-004": "sha256:4e32b2e466a078bbaa6ab2bfa9860c389e8e921200a839c3183b5108ec0effe1",
+    "gc-005": "sha256:773d6a23a99beb7cd33bb075bf3325ae7d04ca060e0f536aa2ead9da508a66ed",
+    "gc-006": "sha256:7260bf77743ad876b34086733934e07f828f20599d42006109df50863ccc537b",
+    "gc-007": "sha256:f5327e887456caa5fb6c26740c70af4e516211d0de05ae7d65376b6484279ec2",
+    "gc-008": "sha256:1c6574b949fc142adcd4c1fecd2a8ef0c58056715beda9313c93ef735e927ee2",
+    "gc-009": "sha256:61b18c313944632147e046a193e74cd5f95327bd38c84356d7d316b9bbc1b570",
+    "gc-010": "sha256:691f5815bff37ebb43d7a1330b97f6d3370ffc75bd6aa84553b194bc34e73317",
+    "gc-011": "sha256:f9c78fb4147bd85ca0bdae5c3b129a80e5dc3fea581bb373554bdeb4701cf606",
+    "gc-012": "sha256:d164efe211ccaf1805d7860369dc9d89a5ec82cfb79c846cc986ce9478d290b1",
+    "gc-013": "sha256:a4fc333b4b3edaa96b8df0c0b86e2efe09087dc225d4cfebd94cb769658cc4ee",
+    "gc-014": "sha256:7fcbbfee2c144b7d571354770a9f8bc4aaddffbedb9e3f039afa58d0c8cf041d",
+    "gc-015": "sha256:a4fc333b4b3edaa96b8df0c0b86e2efe09087dc225d4cfebd94cb769658cc4ee",
+    "gc-016": "sha256:a4fc333b4b3edaa96b8df0c0b86e2efe09087dc225d4cfebd94cb769658cc4ee",
+    "gc-017": "sha256:8020de198ea86965c111697f0c9359f0d39aa35b49d6ac5706149a59cca7961d",
+    "gc-018": "sha256:8020de198ea86965c111697f0c9359f0d39aa35b49d6ac5706149a59cca7961d",
+    "gc-019": "sha256:a4fc333b4b3edaa96b8df0c0b86e2efe09087dc225d4cfebd94cb769658cc4ee",
+    "gc-020": "sha256:15f4eac95227361d6b77814730aab15203e3037e5feaa4d8988b205b6d9accdf",
+    "gc-021": "sha256:ab85f694ff1371d2735c13e6c12b33c54a3e30aa06aff9d29dc70ab163d2cfcc",
+    "gc-022": "sha256:61dc66dcd69e543a806f0da76bcc8c4c45549c9f9f2d0a3195337e2867b30e9e",
+    "gc-023": "sha256:cf5e5b4ea3e38ff8e64ce90ca148c298d87775ea70da96c64952280743d28dad",
+    "gc-024": "sha256:4c535ac558a7586642196431c7a9c2acc5e173581b910eab0064276bafeb128d"
+  }
+}

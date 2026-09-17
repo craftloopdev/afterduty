@@ -1,0 +1,87 @@
+.btn {
+  position: relative; /* anchors the .sm ::after tap-target extension */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s8);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.1;
+  border: 1.5px solid transparent;
+  border-radius: var(--r-md);
+  transition: transform 0.08s ease, background 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+  min-height: 44px; /* tap target */
+}
+
+.btn:active {
+  transform: scale(0.975);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ── Sizes ── */
+.sm {
+  padding: 9px 14px;
+  font-size: 0.84rem;
+  border-radius: 11px;
+  min-height: 38px;
+}
+
+/* 44px minimum tap target (P1-25) — vertical only, so tight inline layouts
+   never get overlapping hit areas. */
+.sm::after {
+  content: "";
+  position: absolute;
+  inset: -3px 0;
+}
+.md {
+  padding: 13px 18px;
+  font-size: 0.94rem;
+}
+.lg {
+  padding: 16px 20px;
+  font-size: 1rem;
+}
+
+/* ── Variants ── */
+.primary {
+  background: var(--navy);
+  color: var(--on-navy);
+  box-shadow: var(--shadow-sm);
+}
+.primary:hover:not(:disabled) {
+  box-shadow: var(--shadow);
+}
+
+.ghost {
+  background: var(--card);
+  color: var(--navy);
+  border-color: var(--line);
+}
+.ghost:hover:not(:disabled) {
+  background: var(--sunken);
+}
+
+.full {
+  width: 100%;
+}
+
+/* ── Loading spinner ── */
+.spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

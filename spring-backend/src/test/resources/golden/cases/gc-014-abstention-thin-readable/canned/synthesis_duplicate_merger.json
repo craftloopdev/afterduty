@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Tinnitus (reported, low confidence)",
+    "vasrd_code": "6260",
+    "body_system": "ear",
+    "is_presumptive": false,
+    "confidence": 0.4
+  }
+]

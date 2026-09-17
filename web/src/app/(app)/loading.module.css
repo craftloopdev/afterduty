@@ -1,0 +1,20 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s20);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--s20);
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+}
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

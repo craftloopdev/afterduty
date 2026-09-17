@@ -1,0 +1,46 @@
+{
+  "case_id": "gc-022",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)PTSD|post.?traumatic",
+          "vasrd_code": "9411",
+          "rating_band": {
+            "min": 50,
+            "max": 70
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)tinnitus",
+          "vasrd_code": "6260",
+          "rating_band": {
+            "min": 10,
+            "max": 10
+          },
+          "must_be_found": true,
+          "deterministic_rating_expected": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 70,
+        "max": 80
+      },
+      "pyramiding": [
+        {
+          "vasrd_code": "9400",
+          "absorbed": true
+        },
+        {
+          "vasrd_code": "6260",
+          "max_rating": 10
+        }
+      ],
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

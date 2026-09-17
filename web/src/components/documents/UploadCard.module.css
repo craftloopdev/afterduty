@@ -1,0 +1,125 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--s14);
+  padding: var(--s16);
+  border-radius: var(--r-lg);
+  border: 1.5px dashed var(--line);
+  background: var(--card);
+  flex-wrap: wrap;
+}
+.ic {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: var(--navy100);
+  color: var(--navy);
+}
+.tx {
+  /* Basis floor: when the action buttons don't fit beside this text, they wrap
+     to the next line (.card is flex-wrap) instead of crushing the text column
+     to one word per line (2026-07-02 screenshot). */
+  flex: 1 1 200px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tx b {
+  font-weight: 700;
+  font-size: 0.94rem;
+  color: var(--ink);
+}
+.tx small {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.err {
+  flex-basis: 100%;
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.84rem;
+}
+
+/* Drag-and-drop hover state (P1-28). */
+.dragOver {
+  border-color: var(--navy500);
+  background: var(--navy50);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+}
+
+/* Camera capture is a mobile affordance — hidden on fine-pointer devices. */
+.cameraBtn {
+  display: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .cameraBtn {
+    display: inline-flex;
+  }
+}
+
+/* Per-file status list (P1-28): each file carries its own state + error. */
+.fileList {
+  flex-basis: 100%;
+  /* 0, same reason as .fileName below: without it the list's AUTOMATIC minimum
+     (the nowrap filename's full min-content) overrides the 100% basis and the
+     rows lay out wider than the card on a phone. */
+  min-width: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+.fileRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: var(--s10);
+  row-gap: 2px;
+  padding: var(--s8) var(--s10);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  background: var(--sunken);
+  font-size: 0.82rem;
+}
+.fileName {
+  flex: 1;
+  /* 0, not 120px: a floor stops the flex item shrinking, so the ellipsis never
+     engages and a long report filename pushes the row past the card on a phone. */
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink);
+  font-weight: 600;
+}
+.fileState {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.fileOk {
+  color: var(--strong);
+}
+.fileFail {
+  color: var(--missing);
+}
+.fileError {
+  flex-basis: 100%;
+  color: var(--missing);
+  font-size: 0.78rem;
+}

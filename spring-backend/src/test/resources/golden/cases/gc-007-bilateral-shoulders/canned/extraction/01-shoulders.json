@@ -1,0 +1,64 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-08-15",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Left shoulder strain",
+      "icd10_code": "M25.512",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    },
+    {
+      "diagnosis_name": "Right shoulder strain",
+      "icd10_code": "M25.511",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": false,
+  "service_records": {
+    "rank": "Sergeant",
+    "branch": "Army",
+    "enlistment_date": "2005-01-01",
+    "separation_date": "2011-01-01",
+    "deployments": [
+      {
+        "location": "Iraq",
+        "start_date": "2007-01-01",
+        "end_date": "2008-01-01",
+        "combat_zone": true
+      }
+    ],
+    "awards_decorations": [
+      "Army Commendation Medal"
+    ]
+  },
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "test_result",
+      "value": "Left arm abduction limited to shoulder level",
+      "source": "Ortho",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "test_result",
+      "value": "Right arm abduction limited to shoulder level",
+      "source": "Ortho",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

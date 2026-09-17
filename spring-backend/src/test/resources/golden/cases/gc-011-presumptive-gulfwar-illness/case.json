@@ -1,0 +1,45 @@
+{
+  "id": "gc-011",
+  "slug": "presumptive-gulfwar-illness",
+  "title": "Presumptive: Gulf War unexplained chronic multisymptom illness",
+  "tags": [
+    "presumptive"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-gw.txt",
+          "filename": "GulfWar.txt",
+          "canned_extraction": "canned/extraction/01-gw.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "8850": "canned/synthesis_rate/8850.json"
+    },
+    "gap_evidence_by_vasrd": {
+      "8850": "canned/gap_evidence/8850.json"
+    },
+    "gap_validation_by_vasrd": {
+      "8850": "canned/gap_validation/8850.json"
+    },
+    "gap_whatif_by_vasrd": {
+      "8850": "canned/gap_whatif/8850.json"
+    }
+  }
+}

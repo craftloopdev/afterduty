@@ -1,0 +1,29 @@
+.pill {
+  position: relative; /* anchors the ::after tap-target extension */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: var(--r-pill);
+  background: var(--partial-bg);
+  color: var(--partial);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.1;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.pill:hover {
+  filter: brightness(0.97);
+}
+
+/* 44px minimum tap target (P1-25) — vertical only, so the extension never
+   overlaps the neighboring TopBar actions (10px gaps). */
+.pill::after {
+  content: "";
+  position: absolute;
+  inset: -10px 0;
+}

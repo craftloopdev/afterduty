@@ -1,0 +1,34 @@
+{
+  "case_id": "gc-010",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)ischemic heart|heart disease",
+          "vasrd_code": "7005",
+          "rating_band": {
+            "min": 30,
+            "max": 100
+          },
+          "must_be_found": true,
+          "presumptive": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 30,
+        "max": 100
+      },
+      "gaps": [
+        {
+          "condition_vasrd": "7005",
+          "pattern": "(?i)ejection fraction|LVEF",
+          "must_be_flagged": true
+        }
+      ],
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

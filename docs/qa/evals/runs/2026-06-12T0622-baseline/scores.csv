@@ -1,0 +1,6 @@
+case_id,metric,value
+gc-001,condition_recall,0.000
+gc-001,condition_precision,1.000
+gc-001,rating_band_accuracy,1.000
+gc-001,gap_structural,0.000
+gc-001,cost_usd,0.035

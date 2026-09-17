@@ -1,0 +1,27 @@
+{
+  "case_id": "gc-020",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)tinnitus",
+          "vasrd_code": "6260",
+          "rating_band": {
+            "min": 10,
+            "max": 10
+          },
+          "must_be_found": true,
+          "deterministic_rating_expected": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 10,
+        "max": 10
+      },
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

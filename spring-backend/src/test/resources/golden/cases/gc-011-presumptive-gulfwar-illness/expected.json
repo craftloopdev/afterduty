@@ -1,0 +1,27 @@
+{
+  "case_id": "gc-011",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)multisymptom|undiagnosed|chronic",
+          "vasrd_code": "8850",
+          "rating_band": {
+            "min": 0,
+            "max": 60
+          },
+          "must_be_found": true,
+          "presumptive": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 0,
+        "max": 60
+      },
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

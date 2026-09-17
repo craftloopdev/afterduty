@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Asthma (presumptive, burn-pit)",
+    "vasrd_code": "6602",
+    "body_system": "respiratory",
+    "is_presumptive": true,
+    "confidence": 0.9,
+    "presumptive_basis": "PACT Act burn-pit exposure"
+  }
+]

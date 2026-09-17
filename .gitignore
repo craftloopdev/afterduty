@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.pyc
+
+# Env files — copy `.env.example` → `.env` and fill in
+.env
+.env.*
+!.env.example
+
+# Java / Gradle build output
+.gradle/
+build/
+**/build/
+*.class
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.iws
+
+# Logs
+*.log
+
+# Ad-hoc screenshots / Playwright MCP debris captured during dev sessions.
+# Root-level PNGs are never legitimate source (branding lives in branding/).
+/*.png
+vcp-*.png
+.playwright-mcp/
+.firecrawl/
+
+# Android release signing — keep secrets out of git
+# (web/android/.gitignore already covers keystore.properties)
+*.jks
+*.keystore
+
+# Local agent / session state — never commit
+.claude/
+.shell/
+**/.claude/
+.tdd/
+.remember/
+
+# Internal-only docs and tooling — operator-facing, not for publication
+.internal/
+CLAUDE.md
+OPEN_SOURCE_TODO.md
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# macOS iCloud duplicate-suffix files (literal space + number)
+* [0-9]
+* [0-9].*
+
+# SQLite databases (dev artifacts)
+*.db
+*.sqlite
+*.sqlite3
+
+# Deprecated FastAPI backend — Spring is canonical
+backend/
+
+# Local secret drop (SendGrid key — now in Secret Manager); never commit
+sendgrid-key

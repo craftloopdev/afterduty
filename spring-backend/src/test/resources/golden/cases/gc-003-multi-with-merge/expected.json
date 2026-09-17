@@ -1,0 +1,36 @@
+{
+  "case_id": "gc-003",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)sleep apnea",
+          "vasrd_code": "6847",
+          "rating_band": {
+            "min": 50,
+            "max": 50
+          },
+          "must_be_found": true,
+          "deterministic_rating_expected": true
+        },
+        {
+          "name_pattern": "(?i)hypertension",
+          "vasrd_code": "7101",
+          "rating_band": {
+            "min": 10,
+            "max": 40
+          },
+          "must_be_found": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 50,
+        "max": 70
+      },
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

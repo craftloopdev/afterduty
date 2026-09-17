@@ -1,0 +1,51 @@
+{
+  "id": "gc-003",
+  "slug": "multi-with-merge",
+  "title": "Multi-condition with duplicate merge: sleep apnea identified twice",
+  "tags": [
+    "multi-condition"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-sleep-study.txt",
+          "filename": "Sleep_study.txt",
+          "canned_extraction": "canned/extraction/01-sleep-study.json"
+        },
+        {
+          "file": "docs/02-primary-care.txt",
+          "filename": "Primary_care.txt",
+          "canned_extraction": "canned/extraction/02-primary-care.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "6847": null,
+      "7101": "canned/synthesis_rate/7101.json"
+    },
+    "gap_evidence_by_vasrd": {
+      "7101": "canned/gap_evidence/7101.json"
+    },
+    "gap_validation_by_vasrd": {
+      "7101": "canned/gap_validation/7101.json"
+    },
+    "gap_whatif_by_vasrd": {
+      "7101": "canned/gap_whatif/7101.json"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+[
+  {"scenario": "Veteran obtains a current DBQ showing flexion limited to 15 degrees",
+   "action": "Complete a VA orthopedic DBQ",
+   "current_rating": 20, "potential_rating": 30,
+   "monthly_delta": 186, "action_required": "Attend a C&P exam or submit a private DBQ",
+   "confidence": 0.6, "timeline": "2-4 weeks"}
+]

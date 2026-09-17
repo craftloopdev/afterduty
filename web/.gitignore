@@ -1,0 +1,59 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+/test-results
+/playwright-report
+/.auth
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# capacitor (native iOS) — generated/build artifacts; the Xcode project + config
+# are tracked, but synced web assets, Pods, and Xcode build output are not.
+/ios/App/App/public/
+/ios/App/Pods/
+/ios/App/build/
+/ios/App/DerivedData/
+/ios/capacitor-cordova-ios-plugins/
+/ios/App/App/capacitor.config.json
+.native-stash/
+
+# screenshot pipeline output + capture .app DerivedData (§F.1/§F.3) — all build
+# artifacts; nothing under screenshots/ is tracked source.
+/screenshots/

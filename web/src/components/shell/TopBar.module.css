@@ -1,0 +1,84 @@
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s16);
+  padding: var(--s20) var(--s24);
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 759.98px) {
+  .top {
+    padding: var(--s16);
+  }
+}
+
+/* Native safe area (§D.3): the sticky TopBar must clear the notch / Dynamic
+   Island under `viewportFit: cover`. Scoped to `:root[data-native]` (set on
+   <html> only in the native layout) so the web layout is pixel-identical. */
+:global(:root[data-native]) .top {
+  padding-top: calc(var(--s20) + env(safe-area-inset-top));
+}
+@media (max-width: 759.98px) {
+  :global(:root[data-native]) .top {
+    padding-top: calc(var(--s16) + env(safe-area-inset-top));
+  }
+}
+
+.titles {
+  min-width: 0;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+@media (max-width: 759.98px) {
+  .title {
+    font-size: 1.25rem;
+  }
+}
+.sub {
+  margin-top: 2px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s10);
+  flex-shrink: 0;
+}
+
+/* Account/settings access — the primary entry on mobile (sidebar is hidden). */
+.avatar {
+  position: relative; /* anchors the ::after tap-target extension */
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy100);
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 0.84rem;
+}
+
+/* 44px minimum tap target (P1-25) without inflating the 36px visual circle. */
+.avatar::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+}
+.avatar:hover {
+  background: var(--navy);
+  color: var(--on-navy);
+}

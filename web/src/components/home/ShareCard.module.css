@@ -1,0 +1,93 @@
+/* "Share with your VSO" CTA card — mirrors web.jsx .w-card / .w-sharecard. */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--s20);
+  box-shadow: var(--shadow-sm);
+}
+
+.iconChip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--navy100);
+  color: var(--navy);
+  margin-bottom: var(--s12);
+}
+
+.title {
+  margin: 0 0 var(--s4);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+}
+
+.body {
+  margin: var(--s4) 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Filled CTA rendered as a link styled like a primary button. */
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--s16);
+  padding: 11px;
+  border-radius: var(--r-md);
+  background: var(--navy);
+  color: var(--on-navy);
+  font-weight: 700;
+  font-size: 0.84375rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.12s ease, box-shadow 0.12s ease;
+}
+
+.cta:hover {
+  box-shadow: var(--shadow);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.cta:active {
+  transform: scale(0.985);
+}
+
+/* ── Mobile (.cp-sharecard): touch-friendly sizing, same card shape ── */
+@media (max-width: 759.98px) {
+  .card {
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow);
+  }
+
+  .iconChip {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .cta {
+    min-height: 44px;
+    padding: 13px;
+    font-size: 0.9375rem;
+  }
+}

@@ -1,0 +1,26 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.line {
+  border: 1px solid var(--line);
+}
+
+/* Sentence-length pills (presumptive basis): wrap instead of widening the card
+   past the viewport — the nowrap default gave phones horizontal page scroll. */
+.wrap {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
+  max-width: 100%;
+  border-radius: var(--r-md);
+}

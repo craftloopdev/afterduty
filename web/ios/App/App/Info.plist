@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+        <string>After Duty</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+	<!-- Purpose strings (capacitor-ios-spec §H.6.1). The evidence-upload flow
+	     presents the photo/camera picker via <input type=file>; missing strings =
+	     crash on tap = instant 2.1(a). Reviewer-facing copy is intentionally
+	     specific (generic boilerplate draws metadata rejections). -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>After Duty lets you choose medical records and supporting documents from your photo library to attach as evidence to your claim.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>After Duty lets you photograph paper medical records and letters to attach as evidence to your claim.</string>
+	<!-- Face ID device-login (auth-program-plan P1.4 / B2). REQUIRED: iOS
+	     fatal-errors (crash) the first time LocalAuthentication is invoked without
+	     this key — biometric enroll/unlock triggers it, so a missing string = an
+	     instant crash on the "Enable biometric unlock" tap or the launch prompt.
+	     Reviewer-facing copy is intentionally specific (generic boilerplate draws
+	     metadata rejections). -->
+	<key>NSFaceIDUsageDescription</key>
+	<string>Sign in to After Duty with Face ID.</string>
+	<!-- Export compliance (§H.7.3): HTTPS/ATS only, standard-encryption exempt.
+	     Pre-answers the questionnaire for every build (v1.0 answered identically). -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<!-- Phone-auth reCAPTCHA fallback opens Safari (https) — declare the scheme so
+	     the open succeeds (§D.3/§B.4), matching the Flutter Runner's hint. -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>https</string>
+	</array>
+	<!-- Custom URL schemes: (1) afterduty:// for screenshot driving (§F.3);
+	     (2) the Google reversed-client-id, which is REQUIRED by Firebase phone
+	     auth's reCAPTCHA fallback (§B.4) — FirebaseAuth 11.x fatalError()s at
+	     phone-verify time if no callback scheme is registered (crash observed on
+	     device 2026-07-02 when this was briefly removed as "Google-sign-in-only";
+	     it is NOT tied to offering Google login). -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.afterduty.app</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>afterduty</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.googleusercontent.apps.reversed</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1048958573080-dnqalocqsjklp1bt1huhrvso43uas03i</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

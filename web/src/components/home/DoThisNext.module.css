@@ -1,0 +1,397 @@
+/*
+ * "Do this next" section.
+ * Default styles = desktop (.w-primary / .w-steprow). The @media block below
+ * (max-width:759.98px) becomes the mobile (.cp-nextcard / .cp-stepcard) layout.
+ * Brand colors are tokens; green/amber/red map to strength tokens.
+ */
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Heading row (.w-sec-head) ── */
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--s12);
+}
+
+.heading {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+}
+
+/* ── Primary card (.w-primary) ── */
+.primary {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 18px 20px;
+  border-radius: var(--r-md);
+  background: var(--card);
+  border: 1.5px solid var(--navy);
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.primary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--navy);
+  color: var(--on-navy);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  padding: 4px 11px;
+  border-radius: var(--r-pill);
+  margin-bottom: 13px;
+}
+
+.primaryBody {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.primaryTx {
+  flex: 1;
+  min-width: 0;
+}
+
+.primaryCond {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: var(--s4);
+}
+
+.primaryGap {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+  margin-bottom: var(--s4);
+}
+
+.primarySuggest {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Full impact sentence — lives in the FLEXIBLE main column so it wraps against
+   the available width (min-width:0 chain) instead of forcing the card wider. */
+.primaryImpactLine {
+  display: block;
+  margin-top: 10px;
+  padding: 7px 11px;
+  border-radius: var(--r-md);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--muted);
+  background: var(--sunken);
+  overflow-wrap: anywhere;
+}
+
+.primaryImpactLine[data-strong="1"] {
+  color: var(--strong);
+  background: var(--strong-bg);
+}
+
+.primarySide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Short impact chip (impactChip → ≤18 chars or "→ N%"). Kept in the fixed side
+   column; bounded + ellipsis so a chip can never widen the column and starve
+   the text column (the vertical-text / off-card-overflow bug). */
+.primaryChip {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--muted);
+  background: var(--sunken);
+  padding: 6px 13px;
+  border-radius: var(--r-md);
+  white-space: nowrap;
+  flex-shrink: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.primaryChip[data-strong="1"] {
+  color: var(--strong);
+  background: var(--strong-bg);
+}
+
+.primaryCta {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  background: var(--navy);
+  color: var(--on-navy);
+  font-weight: 800;
+  font-size: 0.875rem;
+  padding: 10px 18px;
+  border-radius: var(--r-md);
+  white-space: nowrap;
+}
+
+/* ── Compact step rows (.w-steprows-sub / .w-steprow) ── */
+.steprows {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 10px;
+}
+
+.steprow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  text-align: left;
+  padding: 15px 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.steprow:hover {
+  border-color: var(--line);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.steprow:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rowMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.rowGap {
+  font-size: 0.90625rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+}
+
+.rowSub {
+  font-size: 0.78125rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowImpact {
+  font-size: 0.78125rem;
+  font-weight: 800;
+  color: var(--muted);
+  background: var(--sunken);
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+  flex-shrink: 1;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowImpact[data-strong="1"] {
+  background: var(--strong-bg);
+  color: var(--strong);
+}
+
+.steprow > svg:last-child {
+  color: var(--faint);
+  flex-shrink: 0;
+}
+
+/* ── Step modal body (.w-stepsheet) ── */
+.sheet {
+  display: flex;
+  flex-direction: column;
+}
+
+.sheetImpact {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  border-radius: var(--r-md);
+  background: var(--strong-bg);
+  color: var(--strong);
+  font-weight: 800;
+  font-size: 0.78125rem;
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+  margin-bottom: var(--s12);
+}
+
+.sheetGap {
+  font-size: 1.3125rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: var(--ink);
+  margin: 0 0 var(--s4);
+}
+
+.sheetCond {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 0 0 var(--s12);
+}
+
+.sheetCond b {
+  color: var(--ink);
+}
+
+.sheetWhy {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.sheetSug {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: var(--sunken);
+  border-radius: var(--r-md);
+  padding: 14px;
+  font-size: 0.84375rem;
+  color: var(--ink);
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.sheetSug b {
+  font-size: 0.71875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--faint);
+}
+
+.sheetActs {
+  display: flex;
+  gap: 10px;
+}
+
+.sheetActs > * {
+  flex: 1;
+}
+
+/* ── Mobile (.cp-nextcard / .cp-stepcard) ── */
+@media (max-width: 759.98px) {
+  .heading {
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+
+  /* Primary stacks into the full cp-nextcard layout. */
+  .primary {
+    padding: var(--s16);
+    border-radius: var(--r-lg);
+  }
+
+  .primaryBody {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .primaryGap {
+    font-size: 1.0625rem;
+  }
+
+  .primarySide {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .primaryCta {
+    flex: 1;
+    justify-content: center;
+    min-height: 44px;
+    padding-inline: 24px;
+  }
+
+  /* Step rows become taller, full-card mobile rows. */
+  .steprow {
+    padding: var(--s16);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .rowGap {
+    font-size: 0.9375rem;
+  }
+
+  .rowSub {
+    font-size: 0.8125rem;
+    /* Parity with StepsPanel: on mobile the sub line (cond · leg · suggest)
+       wraps — a one-line ellipsis at 375px hides nearly everything. */
+    white-space: normal;
+  }
+
+  .sheetGap {
+    font-size: 1.3125rem;
+  }
+
+  /* Actions stack vertically on mobile (.cp-stepsheet-actions). */
+  .sheetActs {
+    flex-direction: column;
+  }
+}

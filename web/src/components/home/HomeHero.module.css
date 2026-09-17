@@ -1,0 +1,266 @@
+/* ── Container ── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-radius: var(--r-lg);
+  padding: 26px 32px;
+  color: var(--on-navy);
+  background: linear-gradient(
+    160deg,
+    var(--hero-a) 0%,
+    var(--hero-b) 55%,
+    var(--hero-c) 100%
+  );
+  box-shadow: var(--shadow-lg);
+}
+
+/* Decorative top-right radial glow. */
+.glow {
+  position: absolute;
+  top: -80px;
+  right: -30px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 92, 230, 0.5), transparent 68%);
+  pointer-events: none;
+}
+
+/* ── Columns + dividers ── */
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 34px;
+  position: relative;
+}
+.main {
+  padding-left: 0;
+}
+.strength {
+  flex: 1;
+}
+
+.div {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  margin: 6px 0;
+}
+
+/* ── Shared label ── */
+.lab {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+/* ── (1) Rating ── */
+.rating {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 3rem;
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin: 6px 0;
+}
+.rating span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.65);
+  margin-left: 2px;
+}
+
+/* Ready-today dollars riding beside the headline rating. */
+.ratingPay {
+  font-style: normal;
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-left: 10px;
+}
+
+/* Companion calibration line: "If all N are granted: 80% · $1,995/mo". */
+.ifAll {
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 0 8px;
+}
+.ifAll b {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  color: var(--on-navy);
+}
+
+/* THE hedge — one consistent line under every headline number (P1-4). */
+.hedge {
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 10px;
+  max-width: 34ch;
+}
+
+.chips {
+  display: flex;
+  gap: 14px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.66);
+}
+.chips b {
+  color: var(--on-navy);
+  font-weight: 800;
+}
+
+/* ── (2) Pay ── */
+.pay {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.6rem;
+  font-weight: 850;
+  letter-spacing: -1px;
+  margin: 8px 0 0;
+}
+.pay small {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 4px;
+}
+
+/* Secondary pay line: the if-all-granted dollars. */
+.payAll {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 6px 0 0;
+}
+.payAll small {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  margin-left: 4px;
+}
+
+/* ── Estimate-unavailable (calc failed) ── */
+.unavail {
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  margin: 10px 0;
+  color: var(--on-navy);
+  max-width: 14ch;
+}
+.unavailSm {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 10px 0 0;
+  color: var(--on-navy);
+}
+
+/* ── (3) Readiness ── */
+.readhead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.readhead b {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.05rem;
+  font-weight: 850;
+  letter-spacing: -0.4px;
+}
+.note {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.62);
+  margin-top: 10px;
+}
+
+/* One teaching line: filing rights are independent of evidence strength. */
+.teach {
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 8px;
+}
+
+/* ── Mobile: stack into a single card column (.cp-hero) ── */
+@media (max-width: 759.98px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 22px;
+  }
+
+  .div {
+    display: none;
+  }
+
+  .col {
+    padding: 0;
+  }
+
+  .main {
+    order: 1;
+  }
+  /* pay column */
+  .col:not(.main):not(.strength) {
+    order: 2;
+  }
+  .strength {
+    order: 3;
+    flex: none;
+  }
+
+  .rating {
+    font-size: 2.6rem;
+    margin: 6px 0 2px;
+  }
+  .rating span {
+    font-size: 1.6rem;
+  }
+  .ratingPay {
+    font-size: 1rem;
+    margin-left: 8px;
+  }
+
+  .pay {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .payAll {
+    margin: 4px 0 16px;
+  }
+
+  /* Show readiness then legend below the bar on mobile. */
+  .readhead {
+    margin-bottom: 10px;
+  }
+  .note {
+    margin-top: 8px;
+  }
+
+  /* The "ready / need work / presumptive" legend reads larger on mobile. */
+  .chips {
+    font-size: 0.81rem;
+    color: rgba(255, 255, 255, 0.78);
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+}

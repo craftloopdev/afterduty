@@ -1,0 +1,56 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-06-06",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Chronic multisymptom illness (undiagnosed)",
+      "icd10_code": "R53.82",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": false,
+  "service_records": {
+    "rank": "Staff Sergeant",
+    "branch": "Army",
+    "enlistment_date": "1988-01-01",
+    "separation_date": "1994-01-01",
+    "deployments": [
+      {
+        "location": "Saudi Arabia",
+        "start_date": "1990-08-01",
+        "end_date": "1991-05-01",
+        "combat_zone": true
+      }
+    ],
+    "awards_decorations": [
+      "Southwest Asia Service Medal"
+    ]
+  },
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "exposure",
+      "value": "Southwest Asia theater service 1990-1991 \u2014 Gulf War presumption",
+      "source": "Service record",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "symptom",
+      "value": "Chronic fatigue, widespread joint pain, cognitive difficulty",
+      "source": "Note",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

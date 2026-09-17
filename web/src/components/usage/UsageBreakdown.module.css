@@ -1,0 +1,92 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+  padding: var(--s16);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+.sub {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.empty {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.rowTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s10);
+  min-width: 0;
+}
+.label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.amount {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--ink);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+.calls {
+  font-weight: 600;
+  color: var(--muted);
+}
+.track {
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: var(--sunken);
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  border-radius: var(--r-pill);
+  background: var(--navy);
+}
+.note {
+  margin: 0;
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--sunken);
+  font-size: 0.82rem;
+  color: var(--ink);
+}

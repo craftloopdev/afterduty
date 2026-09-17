@@ -1,0 +1,53 @@
+{
+  "case_id": "gc-005",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)depress",
+          "vasrd_code": "9434",
+          "rating_band": {
+            "min": 10,
+            "max": 50
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)tinnitus",
+          "vasrd_code": "6260",
+          "rating_band": {
+            "min": 10,
+            "max": 10
+          },
+          "must_be_found": true,
+          "deterministic_rating_expected": true
+        },
+        {
+          "name_pattern": "(?i)knee",
+          "vasrd_code": "5260",
+          "rating_band": {
+            "min": 0,
+            "max": 30
+          },
+          "must_be_found": true,
+          "laterality": "left"
+        }
+      ],
+      "combined_rating_band": {
+        "min": 40,
+        "max": 70
+      },
+      "gaps": [
+        {
+          "condition_vasrd": "5260",
+          "pattern": "(?i)range of motion|ROM",
+          "must_be_flagged": true
+        }
+      ],
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

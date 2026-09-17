@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    gcp:
+      sql:
+        instance-connection-name: ${CLOUD_SQL_INSTANCE}
+        database-name: ${DB_NAME:vaclaim}
+  datasource:
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+va-claim:
+  auth:
+    dev-mode: ${DEV_MODE:false}
+  gemini:
+    project-id: ${GCP_PROJECT:}
+    location: global

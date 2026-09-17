@@ -1,0 +1,480 @@
+spring:
+  application:
+    name: after-duty
+  main:
+    # AnalysisScheduler and the state machines have a mutual dependency:
+    # SynthesisStateMachine/GapStateMachine → constructor → AnalysisScheduler
+    # AnalysisScheduler → setter → SynthesisStateMachine/GapStateMachine
+    # Spring Boot 2.6+ forbids this by default; enable resolution so the app starts.
+    allow-circular-references: true
+  threads:
+    virtual:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  jackson:
+    default-property-inclusion: non_null
+  servlet:
+    multipart:
+      # P0-2 — without this block Spring Boot's 1MB multipart default applied,
+      # rejecting every phone photo/scan before IntakeController's in-code 50MB
+      # check could run. 50MB matches that check. NOTE: the deployed Cloud Run
+      # service speaks HTTP/1, whose request cap is 32MB — so ~30MB is the
+      # honest user-facing ceiling (RestExceptionHandler's 413 copy says 30MB);
+      # these values just stop Spring's limit from being the binding one.
+      max-file-size: ${MULTIPART_MAX_FILE_SIZE:50MB}
+      max-request-size: ${MULTIPART_MAX_REQUEST_SIZE:55MB}
+
+server:
+  port: ${PORT:8080}
+
+usage:
+  # Pro monthly AI spend ceiling in cents. Raised 400 -> 800 (2026-07-04, owner):
+  # the 10x cost-cut (agentic redesign) makes $8 safe headroom, and no veteran
+  # should hit a wall mid-claim. Env-bindable so it can be tuned without a deploy.
+  limit-cents: ${USAGE_LIMIT_CENTS:800}
+  # Free-tier monthly AI spend ceiling in cents (§6 A1). Only consulted when
+  # va-claim.subscription.free-analysis-tier=a1 — with the flag off free users
+  # never reach an AI spend path. Overage uses the SAME deferral + auto-resume
+  # machinery as limit-cents ("Paused — plan limit reached. Resumes <date>",
+  # re-queued by UsageResetJob on the 1st).
+  free-limit-cents: ${FREE_LIMIT_CENTS:150}
+  enabled: true
+  # Comma-separated emails exempt from the cap. Bound from
+  # USAGE_UNLIMITED_EMAILS on Cloud Run. Used for operator / demo accounts;
+  # active Stripe subscribers are bypassed automatically.
+  unlimited-emails: ${USAGE_UNLIMITED_EMAILS:}
+
+va-claim:
+  version: 4.0.0
+  subscription:
+    # Free-tier analysis boundary (2026-07-01 review §6, Phase D). "off"
+    # (default) = today's behavior: the analysis pipeline is Pro-only. "a1" =
+    # extraction + synthesis run for FREE users (conditions / triad /
+    # combined-rating estimate) under usage.free-limit-cents; gap analysis,
+    # what-if scenarios, Ask AI chat, and re-run priority stay Pro-gated.
+    free-analysis-tier: ${FREE_ANALYSIS_TIER:off}
+    # App-Review reviewer-demo allowlist (capacitor-ios-spec §H.7.2). Comma-separated
+    # emails that compute as Pro without a DB write (SubscriptionAccess). Empty by
+    # default → inert in production; staff it at submission time with the demo
+    # account, and pair the same email into USAGE_UNLIMITED_EMAILS above.
+    demo-emails: ${SUBSCRIPTION_DEMO_EMAILS:}
+  admin:
+    # Comma-separated list of emails granted admin-only features (debug
+    # endpoints, AI cost dashboards, admin/grant). Empty = role-based only.
+    emails: ${ADMIN_EMAILS:}
+  auth:
+    # VCP-DFLT-01: fail CLOSED. dev-mode enables the X-User-Email auth bypass for local work and
+    # MUST be false in any real deployment. The 'local' profile opts in explicitly; the 'cloud'
+    # profile keeps it false and the app refuses to boot if it is ever true under 'cloud'.
+    dev-mode: ${DEV_MODE:false}
+    # Auth program P1.6 / D1 — MFA strictness model, ratified 2026-07-04.
+    #   ENROLLMENT_DEVICE_TRUST (default, Model B): enrollment MFA + device trust;
+    #     step-up required for sensitive actions and on new/untrusted devices.
+    #   STRICT (Model A): step-up required for every sensitive action.
+    # Read in StepUpService (the guard decision point) so tightening later is a
+    # config change, not a code change. Unknown values fail safe to Model B.
+    mfa-model: ${AUTH_MFA_MODEL:ENROLLMENT_DEVICE_TRUST}
+    # Auth program P1.3 — WebAuthn / passkey Relying Party config. Defaults are the
+    # production values; override rp-id / origin for dev/preview (rp-id MUST be a
+    # registrable suffix of the origin's host — a WebAuthn requirement the RP
+    # enforces at ceremony time). rp-name is what the OS passkey prompt shows.
+    webauthn:
+      rp-id: ${WEBAUTHN_RP_ID:afterduty.app}
+      rp-name: ${WEBAUTHN_RP_NAME:After Duty}
+      origin: ${WEBAUTHN_ORIGIN:https://app.afterduty.app}
+  firebase:
+    # Required for verifyIdToken(): on Cloud Run the default credentials do NOT
+    # supply a project id to the Admin SDK, so it must be set explicitly here.
+    project-id: ${GCP_PROJECT:}
+  sendgrid:
+    # Passwordless email-code OTP delivery (passwordless-otp-auth-spec §5.3).
+    # Empty api-key ⇒ unconfigured: the sender returns SKIPPED and the mint path
+    # 502s UNLESS dev-mode is on (the 123456 dev shortcut covers local testing).
+    # In prod SENDGRID_API_KEY is a Cloud Run secret. from-email MUST be a
+    # SendGrid-verified sender.
+    api-key: ${SENDGRID_API_KEY:}
+    from-email: ${SENDGRID_FROM_EMAIL:noreply@afterduty.app}
+  vertex:
+    project-id: ${GCP_PROJECT:}
+    # Claude-on-Vertex region. `us` MULTI-REGION by DECISION (2026-08-01),
+    # superseding us-east5 (2026-06-10): post-May-2026 models (Sonnet 5,
+    # Opus 4.8) are served ONLY from the global/us/eu multi-region endpoints —
+    # never from us-east5 — and `us` keeps ML processing inside US jurisdiction
+    # (HIPAA data-residency intent preserved). Multi-region bills the same +10%
+    # premium over global as regional did (AiCostService prices this).
+    # NEVER set 'global' for PHI traffic — it guarantees nothing about location.
+    # Requires anthropic-java-vertex >= 2.35 (maps `us` to the
+    # aiplatform.us.rep.googleapis.com host). us-east5 remains valid config for
+    # the older per-version models (claude-sonnet-4-6).
+    # Read by VertexAnthropicProviderImpl + ChatAgent.
+    claude-region: ${CLAUDE_REGION:us}
+    anthropic:
+      # Default Claude model for vertex-anthropic when a purpose doesn't pin one.
+      default-model: ${VERTEX_ANTHROPIC_MODEL:claude-sonnet-5}
+  gcs:
+    bucket: ${GCS_BUCKET:vaclaim-documents}
+  rag:
+    # Master switch for evidence/KB chunking + embedding + retrieval grounding.
+    # OFF → no chunks written, chat tools answer from state/VASRD records only.
+    enabled: ${RAG_ENABLED:true}
+    embedding:
+      model: ${RAG_EMBEDDING_MODEL:gemini-embedding-001}
+      dimensions: ${RAG_EMBEDDING_DIM:768}          # MRL truncation; must match vector(768)
+      location: ${RAG_EMBEDDING_LOCATION:us-central1}
+    chunking:
+      target-tokens: ${RAG_CHUNK_TOKENS:600}        # 400–800 sweet spot, ≤2,048 model limit
+      overlap-tokens: ${RAG_CHUNK_OVERLAP:120}
+    retrieval:
+      top-k: ${RAG_TOP_K:12}
+      candidate-k: ${RAG_CANDIDATE_K:40}            # per-arm LIMIT before RRF
+      rrf-k: ${RAG_RRF_K:60}
+    backfill:
+      enabled: ${RAG_BACKFILL_ENABLED:true}
+      batch-size: ${RAG_BACKFILL_BATCH:10}
+      poll-ms: ${RAG_BACKFILL_POLL_MS:60000}
+  kb:
+    enabled: ${KB_ENABLED:true}
+    refresh-cron: ${KB_REFRESH_CRON:0 30 9 * * *}   # daily 09:30 UTC, after eCFR's daily refresh
+    ecfr-base-url: ${KB_ECFR_BASE_URL:https://www.ecfr.gov}
+  chat:
+    streaming: ${CHAT_STREAMING:true}               # rollback to non-streaming POST only
+    require-pro: ${CHAT_REQUIRE_PRO:true}           # rollback lever for the owner-gating change
+  gap:
+    # P1-9 — the gap_whatif stage generates, validates and pays for what-if
+    # scenarios on every run, but NO client renders them (ConditionResponse.
+    # whatIfScenarios has zero web/native readers). Default OFF until a renderer
+    # ships: gap analysis completes after validation and whatIfScenarios simply
+    # stays null / carried forward. Re-enable with GAP_WHATIF_ENABLED=true (no
+    # code deploy).
+    whatif-enabled: ${GAP_WHATIF_ENABLED:false}
+  extraction:
+    # Mission B — single-pass structured extraction. When true, the
+    # ExtractionStateMachine collapses the legacy 5-pass per-doc fan-out
+    # (diagnosis/medication/service-record/atom/segment+event) into ONE schema'd
+    # extraction_doc job per eligible document, parsing a DocFacts object and
+    # persisting atoms/MedicalEvents in the exact shapes the per-pass parsers
+    # produced. Set to false to roll back to the legacy multi-pass path with no
+    # code deploy. The persisted-data contract is identical either way, so
+    # synthesis / cross-event aggregation consume the output unchanged.
+    single-pass: ${EXTRACTION_SINGLE_PASS:true}
+    # Vertex inlineData payload guard. Documents whose base64-inlined bytes would
+    # exceed this many MB fall back to the legacy text path (raw_content / decoded
+    # text) rather than being inlined as multimodal parts — Vertex rejects oversized
+    # request bodies. Default 18MB leaves headroom under the ~20MB inline ceiling.
+    max-inline-mb: ${EXTRACTION_MAX_INLINE_MB:18}
+  analysis:
+    # Missions 5a + 5b — incremental (delta) analysis. One flag gates the whole
+    # delta pipeline: changed-docs-only extraction (5a) AND condition generations
+    # with atomic supersede + carry-forward (5b).
+    #
+    # 5a — EXTRACTION DELTA. When true, the single-pass extraction fan-out submits
+    # an extraction_doc job ONLY for documents whose content-addressed extract_key
+    # has changed (never extracted, file changed, or a prompt/schema/model bump);
+    # unchanged documents are skipped entirely. A re-extracted document's prior
+    # atoms are marked superseded (kept for citation history) BEFORE its new atoms
+    # are persisted, atomically in the same transaction; every atom reader reads
+    # only non-superseded atoms. extract_key is written only after a doc's
+    # parse+persist succeeds, so a failed document stays re-extractable.
+    #
+    # 5b — CONDITION GENERATIONS. When true, each synthesis run writes a fresh
+    # PENDING generation of conditions (stamped with a stable identity fingerprint
+    # — vasrd|system|theory|laterality, so bilateral/left/right/dual-site same-DC
+    # conditions stay distinct — and an evidence fingerprint over the live atom
+    # corpus + prompt/model versions). At the COMPLETE transition the new
+    # generation is activated and the prior one is superseded in the SAME
+    # transaction (no window where a reader sees zero or both generations). A
+    # condition whose identity AND evidence fingerprints match a prior active
+    # condition is CLEAN: its rating/verification/gap/what-if outputs are carried
+    # forward and NO rate/gap LLM jobs are submitted; only DIRTY conditions fan
+    # out. The gap stage likewise fans out only over dirty conditions. The
+    # scheduler additionally SHORT-CIRCUITS a synthesis re-run when extraction
+    # produced zero new live facts since the last synthesis (duplicate-content
+    # re-upload): the evidence fingerprint is unchanged, so it skips and stamps
+    # bookkeeping rather than re-running the pipeline. Every user-facing condition
+    # reader (conditions/gaps APIs, home counts, chat grounding, scenarios)
+    # filters superseded_by IS NULL, so a veteran never sees zero/duplicate/stale
+    # conditions across a generation transition.
+    #
+    # ROLLBACK: set INCREMENTAL_ANALYSIS=false (no code deploy). With the flag
+    # OFF, today's exact semantics are preserved — every document is re-extracted
+    # on every run; the extract_key / identity_fingerprint / evidence_fingerprint
+    # columns are never read or written; atoms AND conditions are appended without
+    # supersede; every synthesis run re-rates every condition and the gap stage
+    # fans out over all of them; the no-new-facts short-circuit is disabled. The
+    # superseded_by IS NULL reader filters are a no-op because nothing is ever
+    # superseded, so they remain safe in either flag state.
+    incremental: ${INCREMENTAL_ANALYSIS:true}
+    # Increment B — PROVISIONAL PACT/presumptive inference from evidence atoms.
+    # "Hybrid: infer then confirm" (owner-approved). ON (default): after conditions
+    # are identified/merged, the synthesis coordinator reconciles each against the
+    # deterministic PACT-Act rules engine using signals DERIVED FROM EVIDENCE ATOMS
+    # (Iraq/Afghanistan deployment, burn-pit exposure, etc.) merged with any stored
+    # ServiceProfile. On a match it flips a PROVISIONAL presumptive — explicitly
+    # labeled "provisional — confirm your qualifying service dates/location to
+    # finalize" — and rewrites the stale nexus triad leg (STRONG, "Nexus presumed
+    # under <basis>… no private nexus opinion (IMO) required") so the downstream gap
+    # analyzer stops recommending a nexus letter for a presumptive condition. This
+    # is legal-weight: it is PROVISIONAL by design and never emits an unqualified
+    # hard presumptive assertion. OFF (PRESUMPTIVE_ATOM_INFERENCE=false, no code
+    # deploy) fully disables the pass — is_presumptive then comes from the identify
+    # LLM's boolean only, exactly as before.
+    presumptive-atom-inference: ${PRESUMPTIVE_ATOM_INFERENCE:true}
+    # Secondary-aware analysis (38 CFR 3.310 — secondary service connection).
+    # ON (default): after conditions are identified/merged, the synthesis
+    # coordinator reconciles each SECONDARY condition (one whose identify-supplied
+    # secondary_to names the primary — e.g. GERD secondary to PTSD). A secondary
+    # claim has NO separate in-service event: the in-service requirement is met
+    # THROUGH the service-connected PRIMARY. So it REWRITES the "in-service" triad
+    # leg to represent the load-bearing question — is the PRIMARY service-connected?
+    # — resolving the primary's SC status deterministically from evidence atoms
+    # (KNOWN → STRONG leg), an in-claim strong primary (LIKELY → MODERATE, "not yet
+    # granted"), or neither (UNKNOWN → MISSING with a "confirm your <primary> is VA
+    # service-connected" bullet, which the gap analyzer turns into an ask-the-veteran
+    # gap). It appends a transitive-dependency note to the secondary's rating
+    # rationale and NEVER asserts the primary IS service-connected unless an atom
+    # says so; it does NOT change the rating number (the secondary is rated on its
+    # own code). Runs before the rate fan-out so the corrected leg flows into the
+    # rate + gap prompts. OFF (SECONDARY_AWARE_ANALYSIS=false, no code deploy)
+    # reverts to today's exact behavior — the direct-service-connection triad the
+    # identify LLM produced.
+    secondary-aware: ${SECONDARY_AWARE_ANALYSIS:true}
+    # Rating honesty (owner-approved). ON (default): after each condition is rated, a
+    # deterministic post-pass (EnhancedSynthesisOrchestrator.assessRatingEvidence) checks
+    # every condition whose VASRD code is in a small CURATED map of high-value
+    # quantitative codes (respiratory 6600-6604/6825/6840s → a PFT/FEV-1; hearing 6100 →
+    # an audiogram + Maryland CNC). If the objective measure that code's rating tiers
+    # hinge on is ABSENT from the evidence, it (a) tags the estimate
+    # rating_evidence_note = "Estimate — needs <measure> to confirm…" and (b) tempers the
+    # SERVED confidence to min(llmConfidence, triadCompleteness), then ×0.6 (floor 0.40)
+    # for the missing measure — so a rating resting on absent objective data can't show
+    # 90%+. It NEVER changes the rating number, and UNMAPPED codes are left untouched (we
+    # never guess a requirement). OFF (RATING_HONESTY=false, no code deploy) reverts to
+    # today's exact behavior — the LLM's self-reported confidence and no note.
+    rating-honesty: ${RATING_HONESTY:true}
+    # Increment E — DETERMINISTIC-FIRST RATING (VasrdDecisionEngine).
+    # DEFAULT OFF, PENDING EVAL VALIDATION. Every condition's rating today is an LLM
+    # free-choice (the model's verbatim number). VasrdDecisionEngine is a real 38 CFR
+    # decision tree (asthma 6602 FEV-1 bands / bronchodilator / corticosteroid-course
+    # criteria; sleep apnea 6847; knee 5260/5261; migraines 8100; fixed rules tinnitus
+    # 6260 / ED 7522) that, until now, had NO production caller.
+    #
+    # ON: in the rate fan-out, BEFORE submitting the LLM rate job for a DIRTY condition,
+    # if the condition's VASRD code is one the engine covers, it calls
+    # tryDeterministicRating with the condition's live evidence atoms. When the atoms
+    # actually satisfy a criteria match (a real FEV-1 %, a documented CPAP, ≥3
+    # corticosteroid courses, a flexion-degrees ROM, …) the engine returns a rating +
+    # 38-CFR-cited rationale + a high, evidence-grounded confidence; that is PERSISTED
+    # and NO LLM rate job is submitted for that condition. If the engine returns empty
+    # (criteria can't be met from the atoms on file) OR the code is uncovered, the
+    # condition FALLS THROUGH to today's exact LLM rate path, unchanged.
+    #
+    # OFF (default, this is a NO-OP): NO deterministic call is made — every condition is
+    # rated by the LLM exactly as today. Zero production ratings change. The engine's
+    # code path is fully dormant. Flip ON only after the offline golden suite
+    # (OfflineGoldenPipelineTest / DeterministicScorer, the deterministic_rating_expected
+    # cross-check) is green AND the owner has spot-checked coverage/agreement on real
+    # claims — because a deterministic number OVERRIDES the LLM and is served as the
+    # veteran's estimate. ROLLBACK: RATING_DETERMINISTIC_ENGINE=false (no code deploy).
+    deterministic-rating: ${RATING_DETERMINISTIC_ENGINE:false}
+  synthesis:
+    # Phase B item B2 — ATTRIBUTED PER-CONDITION EVIDENCE FINGERPRINTS.
+    # OFF (default — the rollback lever): every condition's evidence_fingerprint
+    # is the corpus-wide hash, so ONE new fact dirties EVERY condition (today's
+    # behavior byte-for-byte). ON: identify's supporting_atom_ids attribution
+    # (identify prompt v2) scopes each condition's fingerprint to ITS OWN atoms,
+    # so an incremental upload re-rates only the conditions that rest on the new
+    # facts. Safety valves, all active with the flag ON:
+    #   (a) unattributed/attribution-missing conditions fall back to the
+    #       corpus-wide hash (conservative: they dirty on ANY atom change);
+    #   (b) NEW conditions are always dirty (no prior identity match);
+    #   (c) full-refresh-days below — a condition whose last full LLM pass is
+    #       older goes dirty on the next run;
+    #   (d) this flag (PER_CONDITION_FINGERPRINT=false reverts, no deploy).
+    # Gate (report §5 migration step 3): flip ON only with the offline golden
+    # suite green and after watching PipelineMetrics ~1 week on a real claim.
+    per-condition-fingerprint: ${PER_CONDITION_FINGERPRINT:false}
+    # Safety valve (c): max age of a carried-forward condition's last full
+    # rate/verify/gap pass before the next run forces a full refresh for it.
+    full-refresh-days: ${SYNTHESIS_FULL_REFRESH_DAYS:30}
+  service-history:
+    # Service History reconciliation (design 2026-07-05). ON (default): the raw
+    # per-document service periods are normalized (branch synonym map), clustered
+    # into one conclusion per real enlistment (interval-merge within a
+    # branch+component, NOT string-equality), and each field resolved by VA-style
+    # document-type authority (DD-214 > NGB-22 > service/personnel record > orders >
+    # self-statement/manual). Fixes the production bug where ONE Navy enlistment
+    # surfaced as six rows ("NAVY USN"/"US Navy"/"Navy", MOS lists differing, end
+    # 2008 vs 2009) and the profile summed the overlaps into a bogus "~24 years".
+    # Total years becomes the sum of each conclusion's OWN span, not the raw sum.
+    # ROLLBACK: SERVICE_HISTORY_RECONCILE=false (no code deploy) reverts to today's
+    # exact-dedupe behavior (branch(ci)+startDate+endDate), and the additive
+    # sources/reasoning/totalYears fields stay null/omitted.
+    reconcile: ${SERVICE_HISTORY_RECONCILE:true}
+  gemini:
+    project-id: ${GCP_PROJECT:}
+    location: ${GCP_LOCATION:global}
+    model: ${GEMINI_MODEL:gemini-3.1-pro-preview}
+    # Max inline (base64) document payloads in flight at once. Each extraction_doc
+    # call inlines its whole file; 17 at once (two ~12 MB PDFs) exhausted a 512 MB
+    # heap on 2026-09-12. Waiting jobs report IN_PROGRESS, so nothing wedges.
+    max-concurrent: ${GEMINI_MAX_CONCURRENT:4}
+  claude:
+    # api-key backs the anthropic-batch ROLLBACK lane (direct api.anthropic.com)
+    # — keep even while every route runs on Vertex. The old `model` key here had
+    # no reader and was removed 2026-08-02 (dead-code audit); per-route models
+    # live under va-claim.llm.purposes.* and va-claim.vertex.anthropic.
+    api-key: ${ANTHROPIC_API_KEY:}
+  llm:
+    # ---------------------------------------------------------------------------
+    # Increment 6 / Mission 6a — prompt-cache plumbing. When ON (default), Claude
+    # requests carrying a structured prompt render the Messages-API `system` array
+    # form with a single cache_control{type:ephemeral} breakpoint on the corpus
+    # block (atom corpus / KB rubric); usage parsing books cache_read/write tokens
+    # into the AiCallLog cache columns; AiCostService prices reads at 0.1× and
+    # writes at 1.25× (stacking with batch 0.5× / regional 1.1×); and the
+    # silent-invalidator tripwire WARNs when a breakpoint was sent over a
+    # cacheable-sized corpus but nothing cached. OFF → byte-identical to today's
+    # flat-system requests (the array shape and cache_control are never emitted),
+    # the tripwire is inert, and pricing has nothing to price (cache columns 0).
+    prompt-caching: ${PROMPT_CACHING:true}
+    cache-tripwire:
+      # Per-purpose WARN rate-limit window for the silent-invalidator tripwire.
+      window-ms: ${LLM_CACHE_TRIPWIRE_WINDOW_MS:300000}
+    submitter:
+      poll-ms: ${LLM_SUBMITTER_POLL_MS:3000}
+      batch-size: ${LLM_SUBMITTER_BATCH_SIZE:50}
+    poller:
+      poll-ms: ${LLM_POLLER_POLL_MS:15000}
+    orphan-deadline-min: ${LLM_ORPHAN_DEADLINE_MIN:30}
+    # Phase B item B2 (report §5 item 3) — route by dirty-count. A RE-RUN whose
+    # dirty-condition count is ≤ this threshold has its rate/verify/gap jobs
+    # escalated OFF anthropic-batch onto the realtime vertex-anthropic lane at
+    # submitter time (same model, realtime endpoint) — a nexus-letter upload must
+    # never vanish into a 24h batch SLA. First-run/full-run paths keep their
+    # configured lanes. 0 disables escalation (rollback lever).
+    realtime-dirty-threshold: ${REALTIME_DIRTY_THRESHOLD:3}
+    # ---------------------------------------------------------------------------
+    # Increment 3 — config-driven routing (LlmProviderRouter reads this block).
+    # Each purpose pins {provider, model}. Providers:
+    #   vertex-anthropic  Claude on the Vertex global endpoint, REALTIME, ADC auth
+    #                     (no ANTHROPIC_API_KEY). The default Claude path now.
+    #   vertex-gemini     Gemini on Vertex, realtime streaming.
+    #   anthropic-batch   Direct api.anthropic.com Message Batches, 50% off, ≤24h.
+    #                     ROLLBACK LANE — set a purpose's provider to this to flip it
+    #                     back without a code deploy. REQUIRES ANTHROPIC_API_KEY to be
+    #                     set; with the key unset, anthropic-batch jobs FAIL at submit.
+    # Every value is env-overridable so a purpose can be re-pointed at deploy time.
+    # ---------------------------------------------------------------------------
+    purposes:
+      # --- Extraction: UNCHANGED this increment. Stays on Gemini 3.1 Pro. The
+      # Flash-tier swap (design stage 0/1) belongs to a later increment gated by
+      # the golden set, not here. ---
+      extraction_diagnosis:
+        provider: ${ROUTE_EXTRACTION_DIAGNOSIS_PROVIDER:vertex-gemini}
+        model:    ${ROUTE_EXTRACTION_DIAGNOSIS_MODEL:gemini-3.1-pro-preview}
+      extraction_medication:
+        provider: ${ROUTE_EXTRACTION_MEDICATION_PROVIDER:vertex-gemini}
+        model:    ${ROUTE_EXTRACTION_MEDICATION_MODEL:gemini-3.1-pro-preview}
+      extraction_service_record:
+        provider: ${ROUTE_EXTRACTION_SERVICE_RECORD_PROVIDER:vertex-gemini}
+        model:    ${ROUTE_EXTRACTION_SERVICE_RECORD_MODEL:gemini-3.1-pro-preview}
+      extraction_atom:
+        provider: ${ROUTE_EXTRACTION_ATOM_PROVIDER:vertex-gemini}
+        model:    ${ROUTE_EXTRACTION_ATOM_MODEL:gemini-3.1-pro-preview}
+      extraction_event_segment:
+        provider: ${ROUTE_EXTRACTION_EVENT_SEGMENT_PROVIDER:vertex-gemini}
+        model:    ${ROUTE_EXTRACTION_EVENT_SEGMENT_MODEL:gemini-3.1-pro-preview}
+      extraction_event:
+        provider: ${ROUTE_EXTRACTION_EVENT_PROVIDER:vertex-gemini}
+        model:    ${ROUTE_EXTRACTION_EVENT_MODEL:gemini-3.1-pro-preview}
+      # --- Single-pass structured extraction (Mission B). ONE schema'd
+      # structured-output call per document collapses the five per-doc passes
+      # above into a single DocFacts request. Gated by va-claim.extraction.single-pass
+      # (below). Same model tier as the legacy passes for now (Gemini 3.1 Pro); the
+      # Flash-tier swap belongs to a later golden-set-gated increment. ---
+      extraction_doc:
+        provider: ${ROUTE_EXTRACTION_DOC_PROVIDER:vertex-gemini}
+        model:    ${ROUTE_EXTRACTION_DOC_MODEL:gemini-3.1-pro-preview}
+      # --- Synthesis ---
+      synthesis_identify:
+        provider: ${ROUTE_SYNTHESIS_IDENTIFY_PROVIDER:vertex-anthropic}
+        model:    ${ROUTE_SYNTHESIS_IDENTIFY_MODEL:claude-sonnet-5}
+      synthesis_duplicate_merger:
+        provider: ${ROUTE_SYNTHESIS_DUPLICATE_MERGER_PROVIDER:vertex-anthropic}
+        model:    ${ROUTE_SYNTHESIS_DUPLICATE_MERGER_MODEL:claude-sonnet-5}
+      # DEVIATION CLOSED (Mission 6b). The design table always put rate on Sonnet;
+      # the prior deviation kept it on Gemini only because, WITHOUT the cached
+      # atom-corpus block, rate was O(conditions x atoms) full-resend and Sonnet
+      # realtime would have RAISED cost ~50% on the heaviest stage. Increment 6
+      # landed that block: the LIVE atom corpus is now a single byte-stable
+      # cache_control prefix shared by every rate call in a run (RatingAgent +
+      # AtomCorpusRenderer), so per-condition reads bill at 0.1x and Sonnet rate is
+      # now CHEAPER than a Gemini full-resend. Default flips to the design's
+      # vertex-anthropic / claude-sonnet-5. Gemini remains a one-env-var rollback
+      # (ROUTE_SYNTHESIS_RATE_*); on the deployed service the orchestrator sets
+      # ROUTE_SYNTHESIS_RATE_PROVIDER=anthropic-batch while the interim direct lane
+      # is active (50% off, cache best-effort within a batch).
+      synthesis_rate:
+        provider: ${ROUTE_SYNTHESIS_RATE_PROVIDER:vertex-anthropic}
+        model:    ${ROUTE_SYNTHESIS_RATE_MODEL:claude-sonnet-5}
+      # Verify on the harder tier, realtime (design stage 8: Opus binding veto).
+      # Opus 5 (2026-08-01): same $5/$25 price as 4.8 — a free upgrade. NOTE:
+      # on Opus 5, omitting `thinking` runs ADAPTIVE thinking by default (4.8
+      # ran without); max_tokens caps thinking + answer together, and the 16K
+      # default leaves ample headroom for the JSON verdict.
+      synthesis_verify:
+        provider: ${ROUTE_SYNTHESIS_VERIFY_PROVIDER:vertex-anthropic}
+        model:    ${ROUTE_SYNTHESIS_VERIFY_MODEL:claude-opus-5}
+      # --- Gap analysis ---
+      gap_evidence:
+        provider: ${ROUTE_GAP_EVIDENCE_PROVIDER:vertex-anthropic}
+        model:    ${ROUTE_GAP_EVIDENCE_MODEL:claude-sonnet-5}
+      gap_validation:
+        provider: ${ROUTE_GAP_VALIDATION_PROVIDER:vertex-anthropic}
+        model:    ${ROUTE_GAP_VALIDATION_MODEL:claude-sonnet-5}
+      gap_whatif:
+        provider: ${ROUTE_GAP_WHATIF_PROVIDER:vertex-anthropic}
+        model:    ${ROUTE_GAP_WHATIF_MODEL:claude-sonnet-5}
+      # --- Chat (Ask AI). ChatAgent reads its model from this key directly. ---
+      chat:
+        provider: ${ROUTE_CHAT_PROVIDER:vertex-anthropic}
+        model:    ${ROUTE_CHAT_MODEL:claude-sonnet-5}
+    # ChatAgent transport rollback (chat doesn't go through the LlmJob lanes):
+    # vertex (default; ADC + US multi-region residency) | anthropic (direct API,
+    # REQUIRES ANTHROPIC_API_KEY). Rollback-only lever now that Vertex quota is
+    # granted — flip with CHAT_TRANSPORT=anthropic, no code deploy.
+    chat-transport: ${CHAT_TRANSPORT:vertex}
+  stripe:
+    # Test mode only until we validate the paywall end-to-end.
+    secret-key: ${STRIPE_SECRET_KEY:}
+    publishable-key: ${STRIPE_PUBLISHABLE_KEY:}
+    webhook-secret: ${STRIPE_WEBHOOK_SECRET:}
+    price-id-monthly: ${STRIPE_PRICE_ID_MONTHLY:}
+    price-id-annual:  ${STRIPE_PRICE_ID_ANNUAL:}
+    # Legacy single price (the original one-time $100 model). Still read so
+    # existing /admin/grant code paths keep working, but new /checkout always
+    # uses the per-tier price IDs above (subscription mode, not payment).
+    price-id: ${STRIPE_PRICE_ID:}
+    checkout-success-url: ${CHECKOUT_SUCCESS_URL:https://app.afterduty.app/upgrade?checkout=success}
+    checkout-cancel-url:  ${CHECKOUT_CANCEL_URL:https://app.afterduty.app/upgrade?checkout=cancelled}
+    portal-return-url: ${STRIPE_PORTAL_RETURN_URL:https://app.afterduty.app/upgrade}
+    # Days granted by /admin/grant escape hatch when Stripe didn't fire.
+    admin-grant-days: 365
+  revenuecat:
+    # Shared bearer token (set in the RevenueCat dashboard webhook config) that
+    # we verify on every POST /api/subscription/revenuecat/webhook. Empty in
+    # local/test profiles -> webhook handler 503s, which is fine.
+    webhook-auth: ${REVENUECAT_WEBHOOK_AUTH:}
+    # RevenueCat REST v1 secret key, used by /api/subscription/revenuecat/sync
+    # to fetch a fresh subscriber view right after a native purchase.
+    api-key: ${REVENUECAT_API_KEY:}
+    # The entitlement identifier configured in the RC dashboard ("pro" by
+    # default) — the key we look up on subscriber.entitlements.
+    entitlement-id: ${REVENUECAT_ENTITLEMENT_ID:pro}
+
+# Share-invite links (rebrand: domain moves are env flips, not code changes)
+share:
+  accept-url-prefix: ${SHARE_ACCEPT_URL_PREFIX:https://app.afterduty.app/accept-share/}

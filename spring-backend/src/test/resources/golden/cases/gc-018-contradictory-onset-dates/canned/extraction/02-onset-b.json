@@ -1,0 +1,33 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-02-01",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Post-traumatic stress disorder",
+      "icd10_code": "F43.10",
+      "date_diagnosed": "2011-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": true,
+  "service_records": null,
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "symptom",
+      "value": "PTSD symptoms, onset stated 2011",
+      "source": "Note B",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

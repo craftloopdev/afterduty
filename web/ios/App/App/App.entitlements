@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Entitlements (capacitor-ios-spec §D.3). These must also be added as
+	     capabilities in the Xcode target (Signing & Capabilities) so provisioning
+	     is generated — see ios/SETUP.md. -->
+
+	<!-- Sign in with Apple is deliberately ABSENT: login is pure OTP (owner
+	     decision 2026-07-01), and the After Duty App ID (com.afterduty.app) does
+	     not carry the Sign in with Apple capability — declaring the entitlement
+	     would make Xcode Cloud's automatic provisioning reject the archive. -->
+
+	<!-- Push entitlement for phone-auth silent-APNs app verification ONLY (§B.4);
+	     the app ships no messaging. Mirrors the Flutter Runner's production value. -->
+	<key>aps-environment</key>
+	<string>production</string>
+
+	<!-- Universal links for share-accept (§B.5/§D.3), served by the web origin's
+	     /.well-known/apple-app-site-association. Add the Cloud Run preview host
+	     alongside during testing. -->
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:app.afterduty.app</string>
+	</array>
+
+	<!-- NOTE: StoreKit In-App Purchase (the RevenueCat paywall — §C.1) needs NO
+	     entitlements-file key; it is enabled by adding the "In-App Purchase"
+	     capability to the App target in Xcode, which provisions the App ID. Apple
+	     Pay (`com.apple.developer.in-app-payments`) is a different feature and is
+	     intentionally NOT declared here. -->
+</dict>
+</plist>

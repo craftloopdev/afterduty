@@ -1,0 +1,633 @@
+/*
+ * StepsPanel — Prioritized "next steps" for the /steps route.
+ * Default styles = desktop (.w-ceiling / .w-steprow). The @media block below
+ * (max-width:759.98px) becomes the mobile (.cp-ceiling / .cp-stepcard) layout.
+ * Every color is a token; the navy ceiling reuses the --hero-* gradient so it
+ * recolors with the theme. Neutral white overlays use rgba().
+ */
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Ceiling reframe (.w-ceiling) ── */
+.ceiling {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s24);
+  border-radius: var(--r-lg);
+  padding: 22px 26px;
+  margin-bottom: var(--s24);
+  color: var(--on-navy);
+  background: linear-gradient(135deg, var(--hero-a), var(--hero-c));
+  box-shadow: var(--shadow-lg);
+}
+
+.ceilingTx {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.ceilingIc {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--on-navy-muted);
+}
+
+.ceilingTitle {
+  display: block;
+  font-size: 1.1875rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.ceilingNote {
+  margin: 5px 0 0;
+  max-width: 560px;
+  font-size: 0.84375rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.ceilingStats {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.stat {
+  min-width: 96px;
+  padding: 12px 18px;
+  text-align: center;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.statAmt {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}
+
+.statLabel {
+  display: block;
+  margin-top: 1px;
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+/* ── Heading row (.w-sec-head) ── */
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--s12);
+}
+
+.heading {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+}
+
+.note {
+  font-size: 0.78125rem;
+  color: var(--faint);
+}
+
+/* ── Step rows (.w-steprows / .w-steprow) ── */
+.steprows {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+/* A step row is now a CARD (div) so the open-modal button and the Mark done /
+   Doesn't apply buttons never nest: the main row is `.rowOpen`, the
+   affordances sit in `.rowActs` beneath it. */
+.steprow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 15px 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.steprow:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+/* The main clickable row (opens the detail modal). */
+.rowOpen {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.rowOpen:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Hero row (first step) gets emphasis + room for the ribbon. */
+.steprow[data-hero="1"] {
+  padding: 17px 18px;
+  border: 1.5px solid var(--navy);
+  box-shadow: var(--shadow-lg);
+}
+
+.ribbon {
+  position: absolute;
+  top: -9px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--navy);
+  color: var(--on-navy);
+  font-size: 0.65625rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rowMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.rowGap {
+  font-size: 0.90625rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+}
+
+.rowSub {
+  font-size: 0.78125rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowImpact {
+  font-size: 0.78125rem;
+  font-weight: 800;
+  color: var(--muted);
+  background: var(--sunken);
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+  /* Backstop: even a long chip may never crush the title column (impactChip
+     keeps these short, but data is data). */
+  white-space: nowrap;
+  flex-shrink: 1;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-variant-numeric: tabular-nums;
+}
+
+.rowImpact[data-strong="1"] {
+  background: var(--strong-bg);
+  color: var(--strong);
+}
+
+.rowOpen > svg:last-child {
+  color: var(--faint);
+  flex-shrink: 0;
+}
+
+/* ── Checkable-step affordances (Mark done / Doesn't apply / Undo) ── */
+.rowActs {
+  display: flex;
+  gap: var(--s8);
+  padding-top: 10px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.rowAct {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s6);
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.78125rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rowAct:hover {
+  color: var(--ink);
+  border-color: var(--navy);
+}
+
+.rowAct:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.rowAct:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.actErr {
+  margin: 0 0 var(--s12);
+  padding: 10px 14px;
+  border: 1px solid var(--missing-dot);
+  border-radius: var(--r-md);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.84375rem;
+}
+
+/* ── Done / dismissed (collapsed journal of completed steps) ── */
+.doneWrap {
+  margin-top: var(--s16);
+}
+
+.doneToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s8);
+  min-height: 44px;
+  padding: 8px 4px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 0.84375rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.doneToggle:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.doneChev {
+  display: inline-flex;
+  transition: transform 0.12s ease;
+}
+
+.doneChev[data-open="1"] {
+  transform: rotate(180deg);
+}
+
+.doneList {
+  margin: var(--s8) 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+
+.doneRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s12);
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--sunken);
+}
+
+.doneTx {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.doneGap {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.doneSub {
+  font-size: 0.78125rem;
+  color: var(--faint);
+}
+
+/* ── Empty state ── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s4);
+  text-align: center;
+  padding: 40px var(--s20);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.emptyIc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--strong-bg);
+  color: var(--strong);
+  margin-bottom: var(--s8);
+}
+
+.emptyTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+}
+
+.emptyNote {
+  font-size: 0.84375rem;
+  color: var(--muted);
+}
+
+/* ── Step modal body (.w-stepsheet) ── */
+.sheet {
+  display: flex;
+  flex-direction: column;
+}
+
+.sheetImpact {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  border-radius: var(--r-md);
+  background: var(--strong-bg);
+  color: var(--strong);
+  font-weight: 800;
+  font-size: 0.78125rem;
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+  margin-bottom: var(--s12);
+}
+
+.sheetGap {
+  font-size: 1.3125rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: var(--ink);
+  margin: 0 0 var(--s4);
+}
+
+.sheetCond {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 0 0 var(--s12);
+}
+
+.sheetCond b {
+  color: var(--ink);
+}
+
+.sheetWhy {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.sheetSug {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: var(--sunken);
+  border-radius: var(--r-md);
+  padding: 14px;
+  font-size: 0.84375rem;
+  color: var(--ink);
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.sheetSug b {
+  font-size: 0.71875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--faint);
+}
+
+/* ── Per-gap-type action script ("What to do", P1-18) ── */
+.sheetScript {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 14px;
+  margin-bottom: 18px;
+  font-size: 0.84375rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.sheetScript > b {
+  font-size: 0.71875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--faint);
+}
+
+.scriptWhat {
+  margin: 0;
+  color: var(--muted);
+}
+
+.scriptSteps {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.scriptFacts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  margin: 0;
+  padding-top: var(--s8);
+  border-top: 1px solid var(--line-soft);
+}
+
+.scriptFact {
+  display: flex;
+  gap: var(--s8);
+}
+
+.scriptFact dt {
+  flex-shrink: 0;
+  width: 92px;
+  font-size: 0.78125rem;
+  font-weight: 700;
+  color: var(--faint);
+}
+
+.scriptFact dd {
+  margin: 0;
+  min-width: 0; /* flex child: wrap long values instead of widening the row */
+  font-size: 0.78125rem;
+  color: var(--muted);
+}
+
+.scriptLearn {
+  align-self: flex-start;
+  font-size: 0.78125rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.scriptLearn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.sheetActs {
+  display: flex;
+  gap: 10px;
+}
+
+.sheetActs > * {
+  flex: 1;
+}
+
+/* ── Mobile (.cp-ceiling / .cp-stepcard) ── */
+@media (max-width: 759.98px) {
+  .ceiling {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--s16);
+    padding: 18px;
+    border-radius: var(--r-lg);
+    margin-bottom: var(--s16);
+  }
+
+  .ceilingTx {
+    gap: 12px;
+  }
+
+  .ceilingTitle {
+    font-size: 1.0625rem;
+  }
+
+  .ceilingNote {
+    max-width: none;
+    font-size: 0.8125rem;
+  }
+
+  .ceilingStats {
+    margin-top: 0;
+  }
+
+  .stat {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    text-align: left;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .statLabel {
+    margin-top: 2px;
+    font-size: 0.71875rem;
+    font-weight: 600;
+  }
+
+  .heading {
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+
+  .steprows {
+    gap: 11px;
+  }
+
+  /* Step rows become taller, full-card mobile rows. */
+  .steprow {
+    padding: var(--s16);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .steprow[data-hero="1"] {
+    padding: var(--s16);
+    border-radius: var(--r-lg);
+  }
+
+  .rowGap {
+    font-size: 0.9375rem;
+  }
+
+  .rowSub {
+    font-size: 0.8125rem;
+    white-space: normal;
+  }
+
+  /* Actions stack vertically on mobile (.cp-stepsheet-actions). */
+  .sheetActs {
+    flex-direction: column;
+  }
+}

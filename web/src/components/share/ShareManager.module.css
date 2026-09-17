@@ -1,0 +1,250 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+  max-width: 560px;
+}
+.lead {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+  padding: var(--s20);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+.fieldLabel {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.field input {
+  padding: 13px 14px;
+  /* ≥16px so iOS never zooms on focus (P1-23 in base.css). */
+  font-size: max(1rem, 16px);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--ink);
+}
+.field input:focus-visible {
+  border-color: var(--focus);
+  outline: none;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s12);
+  padding: var(--s10) 0;
+  text-align: left;
+}
+.toggleRow:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.toggleTx {
+  flex: 1;
+  min-width: 0; /* let the label column shrink/wrap beside the fixed switch */
+  display: flex;
+  flex-direction: column;
+}
+.toggleTx b {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+.toggleTx small {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.switch {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 26px;
+  border-radius: var(--r-pill);
+  background: var(--line);
+  position: relative;
+  transition: background 0.15s ease;
+}
+.switch > span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease;
+}
+.switch[data-on="1"] {
+  background: var(--strong-dot);
+}
+.switch[data-on="1"] > span {
+  transform: translateX(18px);
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--strong-bg);
+  color: var(--strong);
+  font-size: 0.84rem;
+}
+.notice b {
+  font-weight: 700;
+}
+.noticeBody {
+  margin: 0;
+}
+.noticeMeta {
+  font-size: 0.78rem;
+}
+.linkRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+}
+.linkRow input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--s8) var(--s10);
+  /* ≥16px so iOS never zooms on tap-focus (P1-23 in base.css). */
+  font-size: max(0.8rem, 16px);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--ink);
+}
+.linkRow input:focus-visible {
+  border-color: var(--focus);
+  outline: none;
+}
+.error {
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.84rem;
+}
+.errorLink {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Owner-Pro dependency disclosure under the analysis toggle (P0-8). */
+.proNote {
+  margin: calc(-1 * var(--s6)) 0 0;
+  font-size: 0.78rem;
+  color: var(--faint);
+}
+
+.secLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--faint);
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--s12);
+  padding: var(--s12) var(--s14);
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+.avatar {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy100);
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 0.84rem;
+}
+.rowTx {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.rowTx b {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rowTx small {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.revoke {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--faint);
+}
+.revoke:hover {
+  background: var(--missing-bg);
+  color: var(--missing);
+}
+
+/* Lifecycle line + per-row actions (P2-2). */
+.lifecycle {
+  color: var(--faint);
+}
+.rowActions {
+  display: flex;
+  gap: var(--s8);
+  margin-top: var(--s6);
+  flex-wrap: wrap;
+}
+
+/* Revoke confirm modal (P2-2). */
+.modalBody {
+  margin: 0 0 var(--s16);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.modalBody b {
+  color: var(--ink);
+  font-weight: 700;
+}
+.modalActions {
+  display: flex;
+  gap: var(--s10);
+}
+.confirmDanger {
+  background: var(--missing);
+  border-color: var(--missing);
+}

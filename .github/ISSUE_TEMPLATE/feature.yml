@@ -1,0 +1,80 @@
+name: Feature Request
+description: Propose a new feature with clear, testable acceptance criteria
+title: "[Feature] "
+labels: ["type-feature", "priority-medium"]
+projects: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Specification
+        Fill out the sections below. Clear acceptance criteria help reviewers and
+        contributors agree on what "done" means before any code is written.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is this feature and why does it matter?
+      placeholder: "One paragraph describing the feature and its value."
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Who is this for and what do they need?
+      placeholder: "As a [type of user], I want [goal] so that [reason]."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: |
+        Testable conditions that define "done". Use checkboxes and be specific —
+        "looks good" is not testable, "pricing table has 3 columns" is.
+      placeholder: |
+        - [ ] Criterion 1: specific, testable condition
+        - [ ] Criterion 2: specific, testable condition
+        - [ ] Criterion 3: specific, testable condition
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated Effort
+      description: Rough size estimate, if you have one.
+      options:
+        - "Small (< 1 hour)"
+        - "Medium (1-4 hours)"
+        - "Large (4-8 hours)"
+        - "XL (> 8 hours)"
+      default: 1
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes (optional)
+      description: Any implementation hints, constraints, or architecture decisions.
+      placeholder: "e.g., Use the existing auth middleware, store in Postgres, etc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of Scope
+      description: What should this feature explicitly NOT do or change?
+      placeholder: "e.g., Don't change the existing API endpoints, don't add new dependencies."
+    validations:
+      required: false

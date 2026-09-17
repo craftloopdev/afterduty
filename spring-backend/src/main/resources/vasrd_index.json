@@ -1,0 +1,4351 @@
+{
+ "as_of": "2026-09-01",
+ "source": "38 CFR Part 4 via the eCFR versioner API (public domain)",
+ "generated_by": "scripts/generate_vasrd_index.py",
+ "codes": [
+  {
+   "code": "5000",
+   "title": "Osteomyelitis, acute, subacute, or chronic",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5001",
+   "title": "Bones and joints, tuberculosis of, active or inactive",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5002",
+   "title": "Multi-joint arthritis (except post-traumatic and gout), 2 or more joints, as an active process",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5003",
+   "title": "Degenerative arthritis, other than post-traumatic",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5004",
+   "title": "Arthritis, gonorrheal.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5005",
+   "title": "Arthritis, pneumococcic.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5006",
+   "title": "Arthritis, typhoid.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5007",
+   "title": "Arthritis, syphilitic.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5008",
+   "title": "Arthritis, streptococcic.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5009",
+   "title": "Other specified forms of arthropathy (excluding gout).",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5010",
+   "title": "Post-traumatic arthritis: Rate as limitation of motion, dislocation, or other specified instability under the affected joint.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5011",
+   "title": "Decompression illness: Rate manifestations under the appropriate diagnostic code within the affected body system, such as arthritis for…",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5012",
+   "title": "Bones, neoplasm, malignant, primary or secondary",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5013",
+   "title": "Osteoporosis, residuals of.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5014",
+   "title": "Osteomalacia, residuals of.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5015",
+   "title": "Bones, neoplasm, benign.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5016",
+   "title": "Osteitis deformans.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5017",
+   "title": "Gout.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5019",
+   "title": "Bursitis.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5021",
+   "title": "Myositis.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5023",
+   "title": "Heterotopic ossification.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5024",
+   "title": "Tenosynovitis, tendinitis, tendinosis or tendinopathy.",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5025",
+   "title": "Fibromyalgia (fibrositis, primary fibromyalgia syndrome)",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5051",
+   "title": "Shoulder replacement (prosthesis).",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5052",
+   "title": "Elbow replacement (prosthesis).",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5053",
+   "title": "Wrist replacement (prosthesis).",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5054",
+   "title": "Hip, resurfacing or replacement (prosthesis)",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5055",
+   "title": "Knee, resurfacing or replacement (prosthesis)",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5056",
+   "title": "Ankle replacement (prosthesis).",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5104",
+   "title": "Anatomical loss of one hand and loss of use of one foot",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5105",
+   "title": "Anatomical loss of one foot and loss of use of one hand",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5106",
+   "title": "Anatomical loss of both hands",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5107",
+   "title": "Anatomical loss of both feet",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5108",
+   "title": "Anatomical loss of one hand and one foot",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5109",
+   "title": "Loss of use of both hands",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5110",
+   "title": "Loss of use of both feet",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5111",
+   "title": "Loss of use of one hand and one foot",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5120",
+   "title": "Complete amputation, upper extremity",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5121",
+   "title": "Above insertion of deltoid",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5122",
+   "title": "Below insertion of deltoid",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5123",
+   "title": "Above insertion of pronator teres",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5124",
+   "title": "Below insertion of pronator teres",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5125",
+   "title": "Hand, loss of use of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5126",
+   "title": "Five digits of one hand, amputation of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5127",
+   "title": "Thumb, index, long and ring",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5128",
+   "title": "Thumb, index, long and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5129",
+   "title": "Thumb, index, ring and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5130",
+   "title": "Thumb, long, ring and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5131",
+   "title": "Index, long, ring and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5132",
+   "title": "Thumb, index and long",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5133",
+   "title": "Thumb, index and ring",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5134",
+   "title": "Thumb, index and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5135",
+   "title": "Thumb, long and ring",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5136",
+   "title": "Thumb, long and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5137",
+   "title": "Thumb, ring and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5138",
+   "title": "Index, long and ring",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5139",
+   "title": "Index, long and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5140",
+   "title": "Index, ring and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5141",
+   "title": "Long, ring and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5142",
+   "title": "Thumb and index",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5143",
+   "title": "Thumb and long",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5144",
+   "title": "Thumb and ring",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5145",
+   "title": "Thumb and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5146",
+   "title": "Index and long",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5147",
+   "title": "Index and ring",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5148",
+   "title": "Index and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5149",
+   "title": "Long and ring",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5150",
+   "title": "Long and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5151",
+   "title": "Ring and little",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5152",
+   "title": "Thumb, amputation of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5153",
+   "title": "Index finger, amputation of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5154",
+   "title": "Long finger, amputation of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5155",
+   "title": "Ring finger, amputation of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5156",
+   "title": "Little finger, amputation of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5160",
+   "title": "Complete amputation, lower extremity",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5161",
+   "title": "Upper third, one-third of the distance from perineum to knee joint measured from perineum",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5162",
+   "title": "Middle or lower thirds",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5163",
+   "title": "With defective stump, thigh amputation recommended",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5164",
+   "title": "Amputation not improvable by prosthesis controlled by natural knee action",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5165",
+   "title": "At a lower level, permitting prosthesis",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5166",
+   "title": "Forefoot, amputation proximal to metatarsal bones (more than one-half of metatarsal loss)",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5167",
+   "title": "Foot, loss of use of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5170",
+   "title": "Toes, all, amputation of, without metatarsal loss or transmetatarsal, amputation of, with up to half of metatarsal loss",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5171",
+   "title": "Toe, great, amputation of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5172",
+   "title": "Toes, other than great, amputation of, with removal of metatarsal head",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5173",
+   "title": "Toes, three or four, amputation of, without metatarsal involvement",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5200",
+   "title": "Scapulohumeral articulation, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5201",
+   "title": "Arm, limitation of motion of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5202",
+   "title": "Humerus, other impairment of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5203",
+   "title": "Clavicle or scapula, impairment of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5205",
+   "title": "Elbow, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5206",
+   "title": "Forearm, limitation of flexion of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5207",
+   "title": "Forearm, limitation of extension of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5208",
+   "title": "Forearm, flexion limited to 100° and extension to 45°",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5209",
+   "title": "Elbow, other impairment of Flail joint",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5210",
+   "title": "Radius and ulna, nonunion of, with flail false joint",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5211",
+   "title": "Ulna, impairment of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5212",
+   "title": "Radius, impairment of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5213",
+   "title": "Supination and pronation, impairment of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5214",
+   "title": "Wrist, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5215",
+   "title": "Wrist, limitation of motion of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5216",
+   "title": "Five digits of one hand, unfavorable ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5217",
+   "title": "Four digits of one hand, unfavorable ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5218",
+   "title": "Three digits of one hand, unfavorable ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5219",
+   "title": "Two digits of one hand, unfavorable ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5220",
+   "title": "Five digits of one hand, favorable ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5221",
+   "title": "Four digits of one hand, favorable ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5222",
+   "title": "Three digits of one hand, favorable ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5223",
+   "title": "Two digits of one hand, favorable ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5224",
+   "title": "Thumb, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5225",
+   "title": "Index finger, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5226",
+   "title": "Long finger, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5227",
+   "title": "Ring or little finger, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5228",
+   "title": "Thumb, limitation of motion",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5229",
+   "title": "Index or long finger, limitation of motion",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5230",
+   "title": "Ring or little finger, limitation of motion",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5235",
+   "title": "Vertebral fracture or dislocation",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5236",
+   "title": "Sacroiliac injury and weakness",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5237",
+   "title": "Lumbosacral or cervical strain",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5238",
+   "title": "Spinal stenosis",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5239",
+   "title": "Spondylolisthesis or segmental instability",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5240",
+   "title": "Ankylosing spondylitis",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5241",
+   "title": "Spinal fusion",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5242",
+   "title": "Degenerative arthritis, degenerative disc disease other than intervertebral disc syndrome (also, see either DC 5003 or 5010)",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5243",
+   "title": "Intervertebral disc syndrome: Assign this diagnostic code only when there is disc herniation with compression and/or irritation of the…",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5244",
+   "title": "Traumatic paralysis, complete",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5250",
+   "title": "Hip, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5251",
+   "title": "Thigh, limitation of extension of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5252",
+   "title": "Thigh, limitation of flexion of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5253",
+   "title": "Thigh, impairment of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5254",
+   "title": "Hip, flail joint",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5255",
+   "title": "Femur, impairment of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5256",
+   "title": "Knee, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5257",
+   "title": "Knee, other impairment of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5258",
+   "title": "Cartilage, semilunar, dislocated, with frequent episodes of “locking,” pain, and effusion into the joint",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5259",
+   "title": "Cartilage, semilunar, removal of, symptomatic",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5260",
+   "title": "Leg, limitation of flexion of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5261",
+   "title": "Leg, limitation of extension of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5262",
+   "title": "Tibia and fibula, impairment of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5263",
+   "title": "Genu recurvatum (acquired, traumatic, with weakness and insecurity in weight-bearing objectively demonstrated)",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5269",
+   "title": "Plantar fasciitis",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5270",
+   "title": "Ankle, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5271",
+   "title": "Ankle, limited motion of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5272",
+   "title": "Subastragalar or tarsal joint, ankylosis of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5273",
+   "title": "Os calcis or astragalus, malunion of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5274",
+   "title": "Astragalectomy",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5275",
+   "title": "Bones, of the lower extremity, shortening of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5276",
+   "title": "Flatfoot, acquired",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5277",
+   "title": "Weak foot, bilateral",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5278",
+   "title": "Claw foot (pes cavus), acquired",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5279",
+   "title": "Metatarsalgia, anterior (Morton's disease), unilateral, or bilateral",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5280",
+   "title": "Hallux valgus, unilateral",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5281",
+   "title": "Hallux rigidus, unilateral, severe",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5282",
+   "title": "Hammer toe",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5283",
+   "title": "Tarsal, or metatarsal bones, malunion of, or nonunion of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5284",
+   "title": "Foot injuries, other",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5296",
+   "title": "Skull, loss of part of, both inner and outer tables",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5297",
+   "title": "Ribs, removal of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5298",
+   "title": "Coccyx, removal of",
+   "body_system": "Schedule of ratings—musculoskeletal system.",
+   "cfr_section": "4.71a"
+  },
+  {
+   "code": "5301",
+   "title": "Group I. Function: Upward rotation of scapula; elevation of arm above shoulder level. Extrinsic muscles of shoulder girdle: (1) Trapezius…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5302",
+   "title": "Group II. Function: Depression of arm from vertical overhead to hanging at side (1, 2); downward rotation of scapula (3, 4); 1 and 2 act…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5303",
+   "title": "Group III. Function: Elevation and abduction of arm to level of shoulder; act with 1 and 2 of Group II in forward and backward swing of…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5304",
+   "title": "Group IV. Function: Stabilization of shoulder against injury in strong movements, holding head of humerus in socket; abduction; outward…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5305",
+   "title": "Group V. Function: Elbow supination (1) (long head of biceps is stabilizer of shoulder joint); flexion of elbow (1, 2, 3). Flexor muscles…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5306",
+   "title": "Group VI. Function: Extension of elbow (long head of triceps is stabilizer of shoulder joint). Extensor muscles of the elbow: (1) Triceps…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5307",
+   "title": "Group VII. Function: Flexion of wrist and fingers. Muscles arising from internal condyle of humerus: Flexors of the carpus and long flexors…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5308",
+   "title": "Group VIII. Function: Extension of wrist, fingers, and thumb; abduction of thumb. Muscles arising mainly from external condyle of humerus…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5309",
+   "title": "Group IX. Function: The forearm muscles act in strong grasping movements and are supplemented by the intrinsic muscles in delicate…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5310",
+   "title": "Group X. Function: Movements of forefoot and toes; propulsion thrust in walking. Intrinsic muscles of the foot: Plantar: (1) Flexor…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5311",
+   "title": "Group XI. Function: Propulsion, plantar flexion of foot (1); stabilization of arch (2, 3); flexion of toes (4, 5); Flexion of knee (6).…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5312",
+   "title": "Group XII. Function: Dorsiflexion (1); extension of toes (2); stabilization of arch (3). Anterior muscles of the leg: (1) Tibialis…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5313",
+   "title": "Group XIII. Function: Extension of hip and flexion of knee; outward and inward rotation of flexed knee; acting with rectus femoris and…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5314",
+   "title": "Group XIV. Function: Extension of knee (2, 3, 4, 5); simultaneous flexion of hip and flexion of knee (1); tension of fascia lata and…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5315",
+   "title": "Group XV. Function: Adduction of hip (1, 2, 3, 4); flexion of hip (1, 2); flexion of knee (4). Mesial thigh group: (1) Adductor longus; (2)…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5316",
+   "title": "Group XVI. Function: Flexion of hip (1, 2, 3). Pelvic girdle group 1: (1) Psoas; (2) iliacus; (3) pectineus",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5317",
+   "title": "Group XVII. Function: Extension of hip (1); abduction of thigh; elevation of opposite side of pelvis (2, 3); tension of fascia lata and…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5318",
+   "title": "Group XVIII. Function: Outward rotation of thigh and stabilization of hip joint. Pelvic girdle group 3: (1) Pyriformis; (2) gemellus…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5319",
+   "title": "Group XIX. Function: Support and compression of abdominal wall and lower thorax; flexion and lateral motions of spine; synergists in strong…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5320",
+   "title": "Group XX. Function: Postural support of body; extension and lateral movements of spine. Spinal muscles: Sacrospinalis (erector spinae and…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5321",
+   "title": "Group XXI. Function: Respiration. Muscles of respiration: Thoracic muscle group",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5322",
+   "title": "Group XXII. Function: Rotary and forward movements of the head; respiration; deglutition. Muscles of the front of the neck: (Lateral…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5323",
+   "title": "Group XXIII. Function: Movements of the head; fixation of shoulder movements. Muscles of the side and back of the neck: Suboccipital…",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5324",
+   "title": "Diaphragm, rupture of, with herniation. Rate under diagnostic code 7346",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5325",
+   "title": "Muscle injury, facial muscles.",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5326",
+   "title": "Muscle hernia, extensive. Without other injury to the muscle—10",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5327",
+   "title": "Muscle, neoplasm of, malignant (excluding soft tissue sarcoma)—100",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5328",
+   "title": "Muscle, neoplasm of, benign, postoperative. Rate on impairment of function, i.e., limitation of motion, or scars, diagnostic code 7805, etc",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5329",
+   "title": "Sarcoma, soft tissue (of muscle, fat, or fibrous connective tissue)—100",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5330",
+   "title": "Rhabdomyolysis, residuals of",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "5331",
+   "title": "Compartment syndrome",
+   "body_system": "Schedule of ratings—muscle injuries.",
+   "cfr_section": "4.73"
+  },
+  {
+   "code": "6000",
+   "title": "Choroidopathy, including uveitis, iritis, cyclitis, or choroiditis.",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6001",
+   "title": "Keratopathy.",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6002",
+   "title": "Scleritis.",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6006",
+   "title": "Retinopathy or maculopathy not otherwise specified",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6007",
+   "title": "Intraocular hemorrhage.",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6008",
+   "title": "Detachment of retina.",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6009",
+   "title": "Unhealed eye injury.",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6010",
+   "title": "Tuberculosis of eye",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6011",
+   "title": "Retinal scars, atrophy, or irregularities",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6012",
+   "title": "Angle-closure glaucoma",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6013",
+   "title": "Open-angle glaucoma",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6014",
+   "title": "Malignant neoplasms of the eye, orbit, and adnexa (excluding skin)",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6015",
+   "title": "Benign neoplasms of the eye, orbit, and adnexa (excluding skin)",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6016",
+   "title": "Nystagmus, central",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6017",
+   "title": "Trachomatous conjunctivitis",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6018",
+   "title": "Chronic conjunctivitis (nontrachomatous)",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6019",
+   "title": "Ptosis, unilateral or bilateral",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6020",
+   "title": "Ectropion",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6021",
+   "title": "Entropion",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6022",
+   "title": "Lagophthalmos",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6023",
+   "title": "Loss of eyebrows, complete, unilateral or bilateral",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6024",
+   "title": "Loss of eyelashes, complete, unilateral or bilateral",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6025",
+   "title": "Disorders of the lacrimal apparatus (epiphora, dacryocystitis, etc.)",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6026",
+   "title": "Optic neuropathy",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6027",
+   "title": "Cataract",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6029",
+   "title": "Aphakia or dislocation of crystalline lens",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6030",
+   "title": "Paralysis of accommodation (due to neuropathy of the Oculomotor Nerve (cranial nerve III)).",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6032",
+   "title": "Loss of eyelids, partial or complete",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6034",
+   "title": "Pterygium",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6035",
+   "title": "Keratoconus",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6036",
+   "title": "Status post corneal transplant",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6037",
+   "title": "Pinguecula",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6040",
+   "title": "Diabetic retinopathy",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6042",
+   "title": "Retinal dystrophy (including retinitis pigmentosa, wet or dry macular degeneration, early-onset macular degeneration, rod and/or cone…",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6046",
+   "title": "Post-chiasmal disorders",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6061",
+   "title": "Anatomical loss of both eyes 1",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6062",
+   "title": "No more than light perception in both eyes 1",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6063",
+   "title": "Anatomical loss of one eye: 1",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6064",
+   "title": "No more than light perception in one eye: 1",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6065",
+   "title": "Vision in one eye 5/200 (1.5/60)",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6066",
+   "title": "Visual acuity in one eye 10/200 (3/60) or better",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6067",
+   "title": "Blindness in one eye, only light perception; other eye 5/200",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6080",
+   "title": "Visual field defects",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6081",
+   "title": "Scotoma, unilateral",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6090",
+   "title": "Diplopia (double vision)",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6091",
+   "title": "Symblepharon",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6092",
+   "title": "Diplopia, limited muscle function",
+   "body_system": "Schedule of ratings—eye.",
+   "cfr_section": "4.79"
+  },
+  {
+   "code": "6100",
+   "title": "Hearing impairment",
+   "body_system": "Evaluation of hearing impairment.",
+   "cfr_section": "4.85"
+  },
+  {
+   "code": "6200",
+   "title": "Chronic suppurative otitis media, mastoiditis, or cholesteatoma (or any combination)",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6201",
+   "title": "Chronic nonsuppurative otitis media with effusion (serous otitis media)",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6202",
+   "title": "Otosclerosis",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6204",
+   "title": "Peripheral vestibular disorders",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6205",
+   "title": "Meniere's syndrome (endolymphatic hydrops)",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6207",
+   "title": "Loss of auricle",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6208",
+   "title": "Malignant neoplasm of the ear (other than skin only)",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6209",
+   "title": "Benign neoplasms of the ear (other than skin only)",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6210",
+   "title": "Chronic otitis externa",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6211",
+   "title": "Tympanic membrane, perforation of",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6260",
+   "title": "Tinnitus, recurrent",
+   "body_system": "Schedule of ratings—ear.",
+   "cfr_section": "4.87"
+  },
+  {
+   "code": "6275",
+   "title": "Sense of smell, complete loss",
+   "body_system": "Schedule of ratings—other sense organs.",
+   "cfr_section": "4.87a"
+  },
+  {
+   "code": "6276",
+   "title": "Sense of taste, complete loss",
+   "body_system": "Schedule of ratings—other sense organs.",
+   "cfr_section": "4.87a"
+  },
+  {
+   "code": "6300",
+   "title": "Vibriosis (Cholera, Non-cholera)",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6301",
+   "title": "Visceral leishmaniasis",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6302",
+   "title": "Leprosy (Hansen's disease)",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6304",
+   "title": "Malaria",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6305",
+   "title": "Lymphatic filariasis, to include elephantiasis",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6306",
+   "title": "Bartonellosis",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6307",
+   "title": "Plague",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6308",
+   "title": "Relapsing Fever",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6309",
+   "title": "Rheumatic fever",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6310",
+   "title": "Syphilis, and other treponema infections",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6311",
+   "title": "Tuberculosis, miliary",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6312",
+   "title": "Nontuberculosis mycobacterium infection",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6313",
+   "title": "Avitaminosis",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6314",
+   "title": "Beriberi",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6315",
+   "title": "Pellagra",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6316",
+   "title": "Brucellosis",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6317",
+   "title": "Rickettsial, ehrlichia, and anaplasma infections",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6318",
+   "title": "Melioidosis",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6319",
+   "title": "Lyme disease",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6320",
+   "title": "Parasitic diseases otherwise not specified",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6325",
+   "title": "Hyperinfection syndrome or disseminated strongyloidiasis",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6326",
+   "title": "Schistosomiasis",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6329",
+   "title": "Hemorrhagic fevers, including dengue, yellow fever, and others",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6330",
+   "title": "Campylobacter jejuni infection",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6331",
+   "title": "Coxiella burnetii infection (Q fever)",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6333",
+   "title": "Nontyphoid salmonella infections",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6334",
+   "title": "Shigella infections",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6335",
+   "title": "West Nile virus infection",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6350",
+   "title": "Lupus erythematosus, systemic (disseminated)",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6351",
+   "title": "HIV-related illness",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6354",
+   "title": "Chronic fatigue syndrome (CFS)",
+   "body_system": "Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.",
+   "cfr_section": "4.88b"
+  },
+  {
+   "code": "6502",
+   "title": "Septum, nasal, deviation of",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6504",
+   "title": "Nose, loss of part of, or scars",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6510",
+   "title": "Sinusitis, pansinusitis, chronic.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6511",
+   "title": "Sinusitis, ethmoid, chronic.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6512",
+   "title": "Sinusitis, frontal, chronic.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6513",
+   "title": "Sinusitis, maxillary, chronic.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6514",
+   "title": "Sinusitis, sphenoid, chronic.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6515",
+   "title": "Laryngitis, tuberculous, active or inactive.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6516",
+   "title": "Laryngitis, chronic",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6518",
+   "title": "Laryngectomy, total.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6519",
+   "title": "Aphonia, complete organic",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6520",
+   "title": "Larynx, stenosis of, including residuals of laryngeal trauma (unilateral or bilateral)",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6521",
+   "title": "Pharynx, injuries to",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6522",
+   "title": "Allergic or vasomotor rhinitis",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6523",
+   "title": "Bacterial rhinitis",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6524",
+   "title": "Granulomatous rhinitis",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6600",
+   "title": "Bronchitis, chronic",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6601",
+   "title": "Bronchiectasis",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6602",
+   "title": "Asthma, bronchial",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6603",
+   "title": "Emphysema, pulmonary",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6604",
+   "title": "Chronic obstructive pulmonary disease",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6701",
+   "title": "Tuberculosis, pulmonary, chronic, far advanced, active",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6702",
+   "title": "Tuberculosis, pulmonary, chronic, moderately advanced, active",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6703",
+   "title": "Tuberculosis, pulmonary, chronic, minimal, active",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6704",
+   "title": "Tuberculosis, pulmonary, chronic, active, advancement unspecified",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6721",
+   "title": "Tuberculosis, pulmonary, chronic, far advanced, inactive",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6722",
+   "title": "Tuberculosis, pulmonary, chronic, moderately advanced, inactive",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6723",
+   "title": "Tuberculosis, pulmonary, chronic, minimal, inactive",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6724",
+   "title": "Tuberculosis, pulmonary, chronic, inactive, advancement unspecified",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6730",
+   "title": "Tuberculosis, pulmonary, chronic, active",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6731",
+   "title": "Tuberculosis, pulmonary, chronic, inactive",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6732",
+   "title": "Pleurisy, tuberculous, active or inactive",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6817",
+   "title": "Pulmonary Vascular Disease",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6819",
+   "title": "Neoplasms, malignant, any specified part of respiratory system exclusive of skin growths",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6820",
+   "title": "Neoplasms, benign, any specified part of respiratory system. Evaluate using an appropriate respiratory analogy.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6822",
+   "title": "Actinomycosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6823",
+   "title": "Nocardiosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6824",
+   "title": "Chronic lung abscess.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6825",
+   "title": "Diffuse interstitial fibrosis (interstitial pneumonitis, fibrosing alveolitis).",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6826",
+   "title": "Desquamative interstitial pneumonitis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6827",
+   "title": "Pulmonary alveolar proteinosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6828",
+   "title": "Eosinophilic granuloma of lung.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6829",
+   "title": "Drug-induced pulmonary pneumonitis and fibrosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6830",
+   "title": "Radiation-induced pulmonary pneumonitis and fibrosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6831",
+   "title": "Hypersensitivity pneumonitis (extrinsic allergic alveolitis).",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6832",
+   "title": "Pneumoconiosis (silicosis, anthracosis, etc.).",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6833",
+   "title": "Asbestosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6834",
+   "title": "Histoplasmosis of lung.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6835",
+   "title": "Coccidioidomycosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6836",
+   "title": "Blastomycosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6837",
+   "title": "Cryptococcosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6838",
+   "title": "Aspergillosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6839",
+   "title": "Mucormycosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6840",
+   "title": "Diaphragm paralysis or paresis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6841",
+   "title": "Spinal cord injury with respiratory insufficiency.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6842",
+   "title": "Kyphoscoliosis, pectus excavatum, pectus carinatum.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6843",
+   "title": "Traumatic chest wall defect, pneumothorax, hernia, etc.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6844",
+   "title": "Post-surgical residual (lobectomy, pneumonectomy, etc.).",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6845",
+   "title": "Chronic pleural effusion or fibrosis.",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6846",
+   "title": "Sarcoidosis",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "6847",
+   "title": "Sleep Apnea Syndromes (Obstructive, Central, Mixed)",
+   "body_system": "Schedule of ratings—respiratory system.",
+   "cfr_section": "4.97"
+  },
+  {
+   "code": "7000",
+   "title": "Valvular heart disease (including rheumatic heart disease),",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7001",
+   "title": "Endocarditis, or",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7002",
+   "title": "Pericarditis",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7003",
+   "title": "Pericardial adhesions.",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7004",
+   "title": "Syphilitic heart disease",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7005",
+   "title": "Arteriosclerotic heart disease (coronary artery disease).",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7006",
+   "title": "Myocardial infarction",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7007",
+   "title": "Hypertensive heart disease.",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7008",
+   "title": "Hyperthyroid heart disease",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7009",
+   "title": "Bradycardia (Bradyarrhythmia), symptomatic, requiring permanent pacemaker implantation",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7010",
+   "title": "Supraventricular tachycardia",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7011",
+   "title": "Ventricular arrhythmias (sustained)",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7015",
+   "title": "Atrioventricular block",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7016",
+   "title": "Heart valve replacement (prosthesis)",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7017",
+   "title": "Coronary bypass surgery",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7018",
+   "title": "Implantable cardiac pacemakers",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7019",
+   "title": "Cardiac transplantation",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7020",
+   "title": "Cardiomyopathy.",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7101",
+   "title": "Hypertensive vascular disease (hypertension and isolated systolic hypertension)",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7110",
+   "title": "Aortic aneurysm: Ascending, thoracic, or abdominal",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7111",
+   "title": "Aneurysm, any large artery",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7112",
+   "title": "Aneurysm, any small artery",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7113",
+   "title": "Arteriovenous fistula, traumatic",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7114",
+   "title": "Peripheral arterial disease",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7115",
+   "title": "Thrombo-angiitis obliterans (Buerger's Disease)",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7117",
+   "title": "Raynaud's syndrome (also known as secondary Raynaud's phenomenon or secondary Raynaud's)",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7118",
+   "title": "Angioneurotic edema",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7119",
+   "title": "Erythromelalgia",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7120",
+   "title": "Varicose veins",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7121",
+   "title": "Post-phlebitic syndrome of any etiology",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7122",
+   "title": "Cold injury residuals",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7123",
+   "title": "Soft tissue sarcoma (of vascular origin)",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7124",
+   "title": "Raynaud's disease (also known as primary Raynaud's)",
+   "body_system": "Schedule of ratings—cardiovascular system.",
+   "cfr_section": "4.104"
+  },
+  {
+   "code": "7200",
+   "title": "Soft tissue injury of the mouth, other than tongue or lips",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7201",
+   "title": "Lips, injuries of",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7202",
+   "title": "Tongue, loss of whole or part",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7203",
+   "title": "Esophagus, stricture of",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7204",
+   "title": "Esophageal motility disorder",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7205",
+   "title": "Esophagus, diverticulum of, acquired",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7206",
+   "title": "Gastroesophageal reflux disease",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7207",
+   "title": "Barrett's esophagus",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7301",
+   "title": "Peritoneum, adhesions of, due to surgery, trauma, disease, or infection",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7303",
+   "title": "Chronic complications of upper gastrointestinal surgery",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7304",
+   "title": "Peptic ulcer disease",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7307",
+   "title": "Gastritis, chronic",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7308",
+   "title": "Postgastrectomy syndrome",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7309",
+   "title": "Stomach, stenosis of",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7310",
+   "title": "Stomach, injury of, residuals",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7311",
+   "title": "Residuals of injury of the liver",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7312",
+   "title": "Cirrhosis of the liver",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7314",
+   "title": "Chronic biliary tract disease",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7315",
+   "title": "Cholelithiasis, chronic",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7317",
+   "title": "Gallbladder, injury of",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7318",
+   "title": "Cholecystectomy (gallbladder removal), complications of (such as strictures and biliary leaks)",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7319",
+   "title": "Irritable bowel syndrome (IBS)",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7323",
+   "title": "Colitis, ulcerative",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7325",
+   "title": "Enteritis, chronic",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7326",
+   "title": "Crohn's disease or undifferentiated form of inflammatory bowel disease",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7327",
+   "title": "Diverticulitis and diverticulosis",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7328",
+   "title": "Intestine, small, resection of",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7329",
+   "title": "Intestine, large, resection of",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7330",
+   "title": "Intestinal fistulous disease, external",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7331",
+   "title": "Peritonitis, tuberculous, active or inactive",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7332",
+   "title": "Rectum and anus, impairment of sphincter control",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7333",
+   "title": "Rectum and anus, stricture of",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7334",
+   "title": "Rectum, prolapse of",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7335",
+   "title": "Ano, fistula in, including anorectal fistula and anorectal abscess",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7336",
+   "title": "Hemorrhoids, external or internal",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7337",
+   "title": "Pruritus ani (anal itching)",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7338",
+   "title": "Hernia, including femoral, inguinal, umbilical, ventral, incisional, and other (but not including hiatal).",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7342",
+   "title": "Visceroptosis, symptomatic, marked",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7343",
+   "title": "Malignant neoplasms of the digestive system, exclusive of skin growths",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7344",
+   "title": "Benign neoplasms, exclusive of skin growths",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7345",
+   "title": "Chronic liver disease without cirrhosis",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7346",
+   "title": "Hiatal hernia and paraesophageal hernia",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7347",
+   "title": "Pancreatitis, chronic",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7348",
+   "title": "Vagotomy with pyloroplasty or gastroenterostomy",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7350",
+   "title": "Liver abscess",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7351",
+   "title": "Liver transplant",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7352",
+   "title": "Pancreas transplant",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7354",
+   "title": "Hepatitis C (or non-A, non-B hepatitis)",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7355",
+   "title": "Celiac disease",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7356",
+   "title": "Gastrointestinal dysmotility syndrome",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7357",
+   "title": "Post pancreatectomy syndrome",
+   "body_system": "Schedule of ratings—digestive system.",
+   "cfr_section": "4.114"
+  },
+  {
+   "code": "7500",
+   "title": "Kidney, removal of one",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7501",
+   "title": "Kidney, abscess of",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7502",
+   "title": "Nephritis, chronic",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7504",
+   "title": "Pyelonephritis, chronic",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7505",
+   "title": "Kidney, tuberculosis of",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7507",
+   "title": "Nephrosclerosis, arteriolar",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7508",
+   "title": "Nephrolithiasis/Ureterolithiasis/Nephrocalcinosis",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7509",
+   "title": "Hydronephrosis",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7511",
+   "title": "Ureter, stricture of",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7512",
+   "title": "Cystitis, chronic, includes interstitial and all etiologies, infectious and non-infectious",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7515",
+   "title": "Bladder, calculus in, with symptoms interfering with function",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7516",
+   "title": "Bladder, fistula of",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7517",
+   "title": "Bladder, injury of",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7518",
+   "title": "Urethra, stricture of",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7519",
+   "title": "Urethra, fistula of",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7520",
+   "title": "Penis, removal of half or more",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7521",
+   "title": "Penis, removal of glans",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7522",
+   "title": "Erectile dysfunction, with or without penile deformity",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7523",
+   "title": "Testis, atrophy complete",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7524",
+   "title": "Testis, removal",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7525",
+   "title": "Prostatitis, urethritis, epididymitis, orchitis (unilateral or bilateral), chronic only",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7527",
+   "title": "Prostate gland injuries, infections, hypertrophy, postoperative residuals, bladder outlet obstruction",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7528",
+   "title": "Malignant neoplasms of the genitourinary system",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7529",
+   "title": "Benign neoplasms of the genitourinary system",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7530",
+   "title": "Chronic renal disease requiring regular dialysis",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7531",
+   "title": "Kidney transplant",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7532",
+   "title": "Renal tubular disorders (such as renal glycosurias, aminoacidurias, renal tubular acidosis, Fanconi's syndrome, Bartter's syndrome, related…",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7533",
+   "title": "Cystic diseases of the kidneys",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7534",
+   "title": "Atherosclerotic renal disease (renal artery stenosis, atheroembolic renal disease, or large vessel disease, unspecified)",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7535",
+   "title": "Toxic nephropathy (antibotics, radiocontrast agents, nonsteroidal anti-inflammatory agents, heavy metals, and similar agents)",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7536",
+   "title": "Glomerulonephritis",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7537",
+   "title": "Interstitial nephritis, including gouty nephropathy, disorders of calcium metabolism",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7538",
+   "title": "Papillary necrosis",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7539",
+   "title": "Renal amyloid disease",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7540",
+   "title": "Disseminated intravascular coagulation with renal cortical necrosis",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7541",
+   "title": "Renal involvement in diabetes mellitus type I or II",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7542",
+   "title": "Neurogenic bladder",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7543",
+   "title": "Varicocele/Hydrocele",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7544",
+   "title": "Renal disease caused by viral infection such as human immunodeficiency virus (HIV), Hepatitis B, and Hepatitis C",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7545",
+   "title": "Bladder, diverticulum of",
+   "body_system": "Ratings of the genitourinary system—diagnoses.",
+   "cfr_section": "4.115b"
+  },
+  {
+   "code": "7610",
+   "title": "Vulva or clitoris, disease or injury of (including vulvovaginitis)",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7611",
+   "title": "Vagina, disease or injury of.",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7612",
+   "title": "Cervix, disease or injury of.",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7613",
+   "title": "Uterus, disease, injury, or adhesions of.",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7614",
+   "title": "Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID)).",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7615",
+   "title": "Ovary, disease, injury, or adhesions of.",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7617",
+   "title": "Uterus and both ovaries, removal of, complete",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7618",
+   "title": "Uterus, removal of, including corpus",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7619",
+   "title": "Ovary, removal of",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7620",
+   "title": "Ovaries, atrophy of both, complete",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7621",
+   "title": "Complete or incomplete pelvic organ prolapse due to injury, disease, or surgical complications of pregnancy",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7624",
+   "title": "Fistula, rectovaginal",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7625",
+   "title": "Fistula, urethrovaginal",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7626",
+   "title": "Breast, surgery of",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7627",
+   "title": "Malignant neoplasms of gynecological system",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7628",
+   "title": "Benign neoplasms of gynecological system.",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7629",
+   "title": "Endometriosis",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7630",
+   "title": "Malignant neoplasms of the breast",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7631",
+   "title": "Benign neoplasms of the breast and other injuries of the breast.",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7632",
+   "title": "Female sexual arousal disorder (FSAD)",
+   "body_system": "Schedule of ratings—gynecological conditions and disorders of the breast.",
+   "cfr_section": "4.116"
+  },
+  {
+   "code": "7702",
+   "title": "Agranulocytosis, acquired",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7703",
+   "title": "Leukemia (except for chronic myelogenous leukemia)",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7704",
+   "title": "Polycythemia vera",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7705",
+   "title": "Immune thrombocytopenia",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7706",
+   "title": "Splenectomy",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7707",
+   "title": "Spleen, injury of, healed.",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7709",
+   "title": "Hodgkin's lymphoma",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7710",
+   "title": "Adenitis, tuberculous, active or inactive",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7712",
+   "title": "Multiple myeloma",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7714",
+   "title": "Sickle cell anemia",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7715",
+   "title": "Non-Hodgkin's lymphoma",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7716",
+   "title": "Aplastic anemia",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7717",
+   "title": "AL amyloidosis (primary amyloidosis)",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7718",
+   "title": "Essential thrombocythemia and primary myelofibrosis",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7719",
+   "title": "Chronic myelogenous leukemia (CML) (chronic myeloid leukemia or chronic granulocytic leukemia)",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7720",
+   "title": "Iron deficiency anemia",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7721",
+   "title": "Folic acid deficiency",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7722",
+   "title": "Pernicious anemia and Vitamin B12 deficiency anemia",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7723",
+   "title": "Acquired hemolytic anemia",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7724",
+   "title": "Solitary plasmacytoma",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7725",
+   "title": "Myelodysplastic syndromes",
+   "body_system": "Schedule of ratings—hemic and lymphatic systems.",
+   "cfr_section": "4.117"
+  },
+  {
+   "code": "7800",
+   "title": "Burn scar(s) of the head, face, or neck; scar(s) of the head, face, or neck due to other causes; or other disfigurement of the head, face…",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7801",
+   "title": "Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are associated with underlying soft tissue damage",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7802",
+   "title": "Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are not associated with underlying soft tissue damage",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7804",
+   "title": "Scar(s), unstable or painful",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7805",
+   "title": "Scars, other; and other effects of scars evaluated under diagnostic codes 7800, 7801, 7802, or 7804",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7806",
+   "title": "Dermatitis or eczema.",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7807",
+   "title": "American (New World) leishmaniasis (mucocutaneous, espundia)",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7808",
+   "title": "Old World leishmaniasis (cutaneous, Oriental sore)",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7809",
+   "title": "Discoid lupus erythematosus.",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7811",
+   "title": "Tuberculosis luposa (lupus vulgaris), active or inactive",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7813",
+   "title": "Dermatophytosis (ringworm: Of body, tinea corporis; of head, tinea capitis; of feet, tinea pedis; of beard area, tinea barbae; of nails…",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7815",
+   "title": "Bullous disorders (including pemphigus vulgaris, pemphigus foliaceous, bullous pemphigoid, dermatitis herpetiformis, epidermolysis bullosa…",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7816",
+   "title": "Psoriasis.",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7817",
+   "title": "Erythroderma",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7818",
+   "title": "Malignant skin neoplasms (other than malignant melanoma)",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7819",
+   "title": "Benign skin neoplasms",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7820",
+   "title": "Infections of the skin not listed elsewhere (including bacterial, fungal, viral, treponemal, and parasitic diseases).",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7821",
+   "title": "Cutaneous manifestations of collagen-vascular diseases not listed elsewhere (including scleroderma, calcinosis cutis, subacute cutaneous…",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7822",
+   "title": "Papulosquamous disorders not listed elsewhere (including lichen planus, large or small plaque parapsoriasis, pityriasis lichenoides et…",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7823",
+   "title": "Vitiligo",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7824",
+   "title": "Diseases of keratinization (including icthyoses, Darier's disease, and palmoplantar keratoderma).",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7825",
+   "title": "Chronic urticaria",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7826",
+   "title": "Vasculitis, primary cutaneous",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7827",
+   "title": "Erythema multiforme; Toxic epidermal necrolysis",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7828",
+   "title": "Acne",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7829",
+   "title": "Chloracne",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7830",
+   "title": "Scarring alopecia",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7831",
+   "title": "Alopecia areata",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7832",
+   "title": "Hyperhidrosis",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7833",
+   "title": "Malignant melanoma",
+   "body_system": "Schedule of ratings—skin.",
+   "cfr_section": "4.118"
+  },
+  {
+   "code": "7900",
+   "title": "Hyperthyroidism, including, but not limited to, Graves' disease",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7901",
+   "title": "Thyroid enlargement, toxic",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7902",
+   "title": "Thyroid enlargement, nontoxic",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7903",
+   "title": "Hypothyroidism",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7904",
+   "title": "Hyperparathyroidism",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7905",
+   "title": "Hypoparathyroidism",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7906",
+   "title": "Thyroiditis",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7907",
+   "title": "Cushing's syndrome",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7908",
+   "title": "Acromegaly",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7909",
+   "title": "Diabetes insipidus",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7911",
+   "title": "Addison's disease (adrenocortical insufficiency)",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7912",
+   "title": "Polyglandular syndrome (multiple endocrine neoplasia, autoimmune polyglandular syndrome)",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7913",
+   "title": "Diabetes mellitus",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7914",
+   "title": "Neoplasm, malignant, any specified part of the endocrine system",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7915",
+   "title": "Neoplasm, benign, any specified part of the endocrine system",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7916",
+   "title": "Hyperpituitarism (prolactin secreting pituitary dysfunction)",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7917",
+   "title": "Hyperaldosteronism (benign or malignant)",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7918",
+   "title": "Pheochromocytoma (benign or malignant)",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "7919",
+   "title": "C-cell hyperplasia of the thyroid",
+   "body_system": "Schedule of ratings—endocrine system.",
+   "cfr_section": "4.119"
+  },
+  {
+   "code": "8000",
+   "title": "Encephalitis, epidemic, chronic",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8002",
+   "title": "Malignant",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8003",
+   "title": "Benign, minimum",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8004",
+   "title": "Paralysis agitans",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8005",
+   "title": "Bulbar palsy",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8007",
+   "title": "Brain, vessels, embolism of.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8008",
+   "title": "Brain, vessels, thrombosis of.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8009",
+   "title": "Brain, vessels, hemorrhage from",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8010",
+   "title": "Myelitis",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8011",
+   "title": "Poliomyelitis, anterior",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8012",
+   "title": "Hematomyelia",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8013",
+   "title": "Syphilis, cerebrospinal.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8014",
+   "title": "Syphilis, meningovascular.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8015",
+   "title": "Tabes dorsalis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8017",
+   "title": "Amyotrophic lateral sclerosis",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8018",
+   "title": "Multiple sclerosis",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8019",
+   "title": "Meningitis, cerebrospinal, epidemic",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8020",
+   "title": "Brain, abscess of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8021",
+   "title": "Malignant",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8022",
+   "title": "Benign, minimum rating",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8023",
+   "title": "Progressive muscular atrophy",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8024",
+   "title": "Syringomyelia",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8025",
+   "title": "Myasthenia gravis",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8045",
+   "title": "Residuals of traumatic brain injury (TBI)",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8046",
+   "title": "Cerebral arteriosclerosis",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8100",
+   "title": "Migraine",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8103",
+   "title": "Tic, convulsive",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8104",
+   "title": "Paramyoclonus multiplex (convulsive state, myoclonic type)",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8105",
+   "title": "Chorea, Sydenham's",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8106",
+   "title": "Chorea, Huntington's.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8107",
+   "title": "Athetosis, acquired.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8108",
+   "title": "Narcolepsy.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8205",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8207",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8209",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8210",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8211",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8212",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8305",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8307",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8309",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8310",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8311",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8312",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8405",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8407",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8409",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8410",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8411",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8412",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8510",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8511",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8512",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8513",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8514",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8515",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8516",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8517",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8518",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8519",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8520",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8521",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8522",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8523",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8524",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8525",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8526",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8527",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8528",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8529",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8530",
+   "title": "Paralysis of",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8540",
+   "title": "Soft-tissue sarcoma (of neurogenic origin)",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8610",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8611",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8612",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8613",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8614",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8615",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8616",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8617",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8618",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8619",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8620",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8621",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8622",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8623",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8624",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8625",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8626",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8627",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8628",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8629",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8630",
+   "title": "Neuritis.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8710",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8711",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8712",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8713",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8714",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8715",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8716",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8717",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8718",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8719",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8720",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8721",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8722",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8723",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8724",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8725",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8726",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8727",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8728",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8729",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8730",
+   "title": "Neuralgia.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8910",
+   "title": "Epilepsy, grand mal.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8911",
+   "title": "Epilepsy, petit mal.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8912",
+   "title": "Epilepsy, Jacksonian and focal motor or sensory.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8913",
+   "title": "Epilepsy, diencephalic.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "8914",
+   "title": "Epilepsy, psychomotor.",
+   "body_system": "Schedule of ratings—neurological conditions and convulsive disorders.",
+   "cfr_section": "4.124a"
+  },
+  {
+   "code": "9201",
+   "title": "Schizophrenia",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9208",
+   "title": "Delusional disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9210",
+   "title": "Other specified and unspecified schizophrenia spectrum and other psychotic disorders",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9211",
+   "title": "Schizoaffective disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9300",
+   "title": "Delirium",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9301",
+   "title": "Major or mild neurocognitive disorder due to HIV or other infections",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9304",
+   "title": "Major or mild neurocognitive disorder due to traumatic brain injury",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9305",
+   "title": "Major or mild vascular neurocognitive disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9310",
+   "title": "Unspecified neurocognitive disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9312",
+   "title": "Major or mild neurocognitive disorder due to Alzheimer's disease",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9326",
+   "title": "Major or mild neurocognitive disorder due to another medical condition or substance/medication-induced major or mild neurocognitive disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9400",
+   "title": "Generalized anxiety disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9403",
+   "title": "Specific phobia; social anxiety disorder (social phobia)",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9404",
+   "title": "Obsessive compulsive disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9410",
+   "title": "Other specified anxiety disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9411",
+   "title": "Posttraumatic stress disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9412",
+   "title": "Panic disorder and/or agoraphobia",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9413",
+   "title": "Unspecified anxiety disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9416",
+   "title": "Dissociative amnesia; dissociative identity disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9417",
+   "title": "Depersonalization/Derealization disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9421",
+   "title": "Somatic symptom disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9422",
+   "title": "Other specified somatic symptom and related disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9423",
+   "title": "Unspecified somatic symptom and related disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9424",
+   "title": "Conversion disorder (functional neurological symptom disorder)",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9425",
+   "title": "Illness anxiety disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9431",
+   "title": "Cyclothymic disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9432",
+   "title": "Bipolar disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9433",
+   "title": "Persistent depressive disorder (dysthymia)",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9434",
+   "title": "Major depressive disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9435",
+   "title": "Unspecified depressive disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9440",
+   "title": "Chronic adjustment disorder",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9520",
+   "title": "Anorexia nervosa",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9521",
+   "title": "Bulimia nervosa",
+   "body_system": "Schedule of ratings—Mental disorders.",
+   "cfr_section": "4.130"
+  },
+  {
+   "code": "9900",
+   "title": "Maxilla or mandible, chronic osteomyelitis, osteonecrosis or osteoradionecrosis of",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9901",
+   "title": "Mandible, loss of, complete, between angles",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9902",
+   "title": "Mandible, loss of, including ramus, unilaterally or bilaterally",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9903",
+   "title": "Mandible, nonunion of, confirmed by diagnostic imaging studies",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9904",
+   "title": "Mandible, malunion of",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9905",
+   "title": "Temporomandibular disorder (TMD)",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9908",
+   "title": "Condyloid process, loss of, one or both sides",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9909",
+   "title": "Coronoid process, loss of",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9911",
+   "title": "Hard palate, loss of",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9913",
+   "title": "Teeth, loss of, due to loss of substance of body of maxilla or mandible without loss of continuity",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9914",
+   "title": "Maxilla, loss of more than half",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9915",
+   "title": "Maxilla, loss of half or less",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9916",
+   "title": "Maxilla, malunion or nonunion of",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9917",
+   "title": "Neoplasm, hard and soft tissue, benign",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  },
+  {
+   "code": "9918",
+   "title": "Neoplasm, hard and soft tissue, malignant",
+   "body_system": "Schedule of ratings—dental and oral conditions.",
+   "cfr_section": "4.150"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "case_id": "gc-001",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        { "name_pattern": "(?i)post.?traumatic|PTSD", "vasrd_code": "9411",
+          "body_system": "mental", "rating_band": { "min": 50, "max": 70 },
+          "presumptive": false, "must_be_found": true },
+        { "name_pattern": "(?i)tinnitus", "vasrd_code": "6260",
+          "rating_band": { "min": 10, "max": 10 }, "must_be_found": true,
+          "deterministic_rating_expected": true },
+        { "name_pattern": "(?i)knee", "vasrd_code": "5260", "laterality": "right",
+          "rating_band": { "min": 10, "max": 30 }, "must_be_found": true }
+      ],
+      "forbidden_conditions": [
+        { "vasrd_code": "7101", "reason": "hypertension explicitly within normal limits in doc 02" }
+      ],
+      "combined_rating_band": { "min": 70, "max": 90 },
+      "gaps": [
+        { "condition_vasrd": "9411", "pattern": "(?i)nexus|medical opinion", "must_be_flagged": true },
+        { "condition_vasrd": "5260", "pattern": "(?i)range of motion|ROM", "must_be_flagged": true }
+      ],
+      "pyramiding": [ { "vasrd_code": "6260", "max_rating": 10 } ],
+      "abstention": { "expected": false }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-02-02",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Obstructive sleep apnea",
+      "icd10_code": "G47.33",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": true,
+  "service_records": null,
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "treatment",
+      "value": "Uses CPAP machine nightly for obstructive sleep apnea",
+      "source": "Sleep study",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

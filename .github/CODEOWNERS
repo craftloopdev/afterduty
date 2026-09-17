@@ -1,0 +1,17 @@
+# Code owners — GitHub auto-requests review from these owners on matching paths.
+# (VCP-HARD-03) Security-sensitive areas require maintainer review.
+
+# Default owner for everything in the repo
+*                                                              @craftloop-eng
+
+# CI / automation — a malicious workflow change is high-impact on a public repo
+/.github/                                                      @craftloop-eng
+
+# Backend auth, authorization, and security config
+/spring-backend/src/main/java/com/afterduty/config/          @craftloop-eng
+/spring-backend/src/main/java/com/afterduty/security/        @craftloop-eng
+/spring-backend/src/main/java/com/afterduty/controller/      @craftloop-eng
+
+# Security review + remediation tracker
+/docs/security/                                                @craftloop-eng
+/SECURITY.md                                                   @craftloop-eng

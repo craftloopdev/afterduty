@@ -1,0 +1,34 @@
+{
+  "id": "gc-001",
+  "slug": "ptsd-tinnitus-knee",
+  "title": "Multi-condition: PTSD + tinnitus + right knee, solid evidence",
+  "tags": ["multi-condition", "deterministic-rating"],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": { "status": "unreviewed", "reviewer": null, "date": null, "notes": null },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        { "file": "docs/01-va-mental-health-note.txt", "filename": "VA_MH_note_2023.txt",
+          "canned_extraction": "canned/extraction/01-va-mental-health-note.json" },
+        { "file": "docs/02-audiology-and-knee-exam.txt", "filename": "VA_audiology_knee_2023.txt",
+          "canned_extraction": "canned/extraction/02-audiology-and-knee-exam.json" }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_rate_by_vasrd": { "9411": "canned/synthesis_rate/9411.json",
+                                 "6260": null,
+                                 "5260": "canned/synthesis_rate/5260.json" },
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "gap_evidence_by_vasrd": { "9411": "canned/gap_evidence/9411.json",
+                               "5260": "canned/gap_evidence/5260.json" },
+    "gap_validation_by_vasrd": { "9411": "canned/gap_validation/9411.json",
+                                 "5260": "canned/gap_validation/5260.json" },
+    "gap_whatif_by_vasrd": { "9411": "canned/gap_whatif/9411.json",
+                             "5260": "canned/gap_whatif/5260.json" }
+  }
+}

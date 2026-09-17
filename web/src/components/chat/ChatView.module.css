@@ -1,0 +1,232 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+  height: calc(100dvh - 180px);
+  min-height: 420px;
+}
+
+.thread {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+  padding: var(--s4);
+}
+
+.intro {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s10);
+  padding: var(--s24);
+}
+.introIc {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: var(--ai-bg);
+  color: var(--ai-fg);
+}
+.intro h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+.intro p {
+  font-size: 0.85rem;
+  color: var(--faint);
+}
+.suggest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s8);
+  justify-content: center;
+  margin-top: var(--s8);
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 9px 14px;
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+.chip:hover {
+  background: var(--sunken);
+}
+.proBadge {
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: var(--r-pill);
+  background: var(--ai-bg);
+  color: var(--ai-fg);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+.row[data-role="user"] {
+  align-items: flex-end;
+}
+.row[data-role="assistant"] {
+  align-items: flex-start;
+}
+.bubble {
+  max-width: 78%;
+  padding: 11px 14px;
+  border-radius: var(--r-lg);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.bubble[data-role="user"] {
+  background: var(--navy);
+  color: var(--on-navy);
+  border-bottom-right-radius: var(--r-sm);
+}
+.bubble[data-role="assistant"] {
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: var(--r-sm);
+  white-space: normal;
+}
+.bubbleFailed {
+  opacity: 0.6;
+}
+.bubbleFailed[data-role="user"] {
+  background: var(--missing-bg);
+  color: var(--missing);
+}
+.phase {
+  color: var(--faint);
+  font-style: italic;
+}
+
+.failActions {
+  display: flex;
+  gap: var(--s8);
+  margin-top: 6px;
+}
+.failBtn,
+.failBtnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+.failBtnGhost {
+  color: var(--faint);
+  font-weight: 600;
+}
+
+/* Monthly usage-cap banner (P1-10) — informational amber, distinct from the
+   red failure banner, and deliberately without a retry affordance. */
+.cap {
+  display: flex;
+  align-items: center;
+  gap: var(--s10);
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--partial-bg);
+  color: var(--partial);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+.cap svg {
+  flex: none;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s10);
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.84rem;
+}
+.errorRetry {
+  font-weight: 700;
+  color: var(--missing);
+  text-decoration: underline;
+  flex: none;
+}
+
+.composer {
+  display: flex;
+  gap: var(--s8);
+  align-items: flex-end;
+}
+.input {
+  flex: 1;
+  min-width: 0; /* textareas refuse to shrink below intrinsic width otherwise */
+  padding: 13px 14px;
+  /* iOS zooms on focus below 16px; at the A− text scale 1rem dips under it,
+     so floor at a physical 16px (matches the base-layer zoom guard). */
+  font-size: max(1rem, 16px);
+  line-height: 1.4;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--ink);
+  resize: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+.input:focus-visible {
+  border-color: var(--focus);
+  outline: none;
+}
+
+.locked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--s8);
+  padding: var(--s16);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+}
+.lockedIc {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: var(--ai-bg);
+  color: var(--ai-fg);
+}
+.locked b {
+  font-size: 1rem;
+  color: var(--ink);
+}
+.locked p {
+  font-size: 0.85rem;
+  color: var(--faint);
+  max-width: 38ch;
+}
+.lockedCta {
+  margin-top: var(--s4);
+}

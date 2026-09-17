@@ -1,0 +1,69 @@
+{
+  "case_id": "gc-024",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)PTSD|post.?traumatic",
+          "vasrd_code": "9411",
+          "rating_band": {
+            "min": 30,
+            "max": 70
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)tinnitus",
+          "vasrd_code": "6260",
+          "rating_band": {
+            "min": 10,
+            "max": 10
+          },
+          "must_be_found": true,
+          "deterministic_rating_expected": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 50,
+        "max": 70
+      },
+      "abstention": {
+        "expected": false
+      }
+    },
+    "delta-duplicate": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)PTSD|post.?traumatic",
+          "vasrd_code": "9411",
+          "rating_band": {
+            "min": 30,
+            "max": 70
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)tinnitus",
+          "vasrd_code": "6260",
+          "rating_band": {
+            "min": 10,
+            "max": 10
+          },
+          "must_be_found": true,
+          "deterministic_rating_expected": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 50,
+        "max": 70
+      },
+      "carry_forward_min": 2,
+      "dirty_conditions_max": 0,
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

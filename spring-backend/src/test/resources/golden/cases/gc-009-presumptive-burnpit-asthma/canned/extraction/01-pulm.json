@@ -1,0 +1,54 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-04-01",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Asthma",
+      "icd10_code": "J45.909",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": false,
+  "service_records": {
+    "rank": "Sergeant",
+    "branch": "Air Force",
+    "enlistment_date": "2006-01-01",
+    "separation_date": "2012-01-01",
+    "deployments": [
+      {
+        "location": "Bagram",
+        "start_date": "2010-01-01",
+        "end_date": "2011-01-01",
+        "combat_zone": true
+      }
+    ],
+    "awards_decorations": []
+  },
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "exposure",
+      "value": "Documented burn-pit exposure at Bagram, 2010",
+      "source": "Service record",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "treatment",
+      "value": "Daily inhaled bronchodilator (albuterol) therapy",
+      "source": "Pulmonary note",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

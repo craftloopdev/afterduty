@@ -1,0 +1,43 @@
+{
+  "case_id": "gc-006",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)left knee",
+          "vasrd_code": "5260",
+          "rating_band": {
+            "min": 0,
+            "max": 30
+          },
+          "must_be_found": true,
+          "laterality": "left"
+        },
+        {
+          "name_pattern": "(?i)right knee",
+          "vasrd_code": "5260",
+          "rating_band": {
+            "min": 0,
+            "max": 30
+          },
+          "must_be_found": true,
+          "laterality": "right"
+        }
+      ],
+      "combined_rating_band": {
+        "min": 20,
+        "max": 20
+      },
+      "pyramiding": [
+        {
+          "vasrd_code": "5260",
+          "bilateral_pair": true
+        }
+      ],
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/* Compact "shared with you" switcher row (P0-8). */
+
+.bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s8);
+  background: var(--card);
+  border-bottom: 1px solid var(--line-soft);
+  padding: var(--s8) var(--s24);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.entry {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--s12);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--navy50);
+  color: var(--navy);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.entry:hover {
+  border-color: var(--navy500);
+}
+
+.entry:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.err {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+@media (max-width: 759.98px) {
+  .bar {
+    padding: var(--s8) var(--s16);
+  }
+}

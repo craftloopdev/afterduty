@@ -1,0 +1,109 @@
+{
+  "doc_type": "health_summary",
+  "doc_date": "2023-06-01",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Post-traumatic stress disorder",
+      "icd10_code": "F43.10",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    },
+    {
+      "diagnosis_name": "Tinnitus",
+      "icd10_code": "H93.13",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    },
+    {
+      "diagnosis_name": "Right shoulder strain",
+      "icd10_code": "M25.511",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    },
+    {
+      "diagnosis_name": "Gastroesophageal reflux disease",
+      "icd10_code": "K21.9",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "mild",
+      "status": "chronic"
+    },
+    {
+      "diagnosis_name": "Erectile dysfunction",
+      "icd10_code": "N52.9",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": false,
+  "service_records": {
+    "rank": "Sergeant",
+    "branch": "Army",
+    "enlistment_date": "2005-01-01",
+    "separation_date": "2011-01-01",
+    "deployments": [
+      {
+        "location": "Iraq",
+        "start_date": "2007-01-01",
+        "end_date": "2008-01-01",
+        "combat_zone": true
+      }
+    ],
+    "awards_decorations": [
+      "Army Commendation Medal"
+    ]
+  },
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "diagnosis",
+      "value": "Tinnitus, constant bilateral ringing since blast exposure",
+      "source": "Summary",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "diagnosis",
+      "value": "Erectile dysfunction, organic",
+      "source": "Summary",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "symptom",
+      "value": "Reduced reliability and productivity from PTSD",
+      "source": "Summary",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "test_result",
+      "value": "Right shoulder abduction limited to shoulder level",
+      "source": "Summary",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "symptom",
+      "value": "GERD with two or more symptoms weekly",
+      "source": "Summary",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

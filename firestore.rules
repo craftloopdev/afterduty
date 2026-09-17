@@ -1,0 +1,15 @@
+rules_version = '2';
+
+// VCP-HARD-04: This app stores all data in Cloud SQL (Postgres) via the
+// authenticated Spring backend API — clients NEVER read or write Firestore
+// directly (the Flutter app depends only on firebase_core + firebase_auth).
+// Therefore: default-deny everything. If a future feature legitimately needs
+// client-side Firestore, add a narrowly-scoped, per-uid rule here (and test it
+// in the Firebase Local Emulator Suite) rather than loosening this default.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

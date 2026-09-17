@@ -1,0 +1,169 @@
+.side {
+  position: sticky;
+  top: 0;
+  flex: 0 0 264px;
+  width: 264px;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s18);
+  padding: var(--s20) var(--s16);
+  /* Hero scale, not --navy: this surface must STAY dark navy in dark mode,
+     where --navy remaps to a light text/fill blue (P1-24). --hero-b/--hero-c
+     equal --navy/--navy900 in every light theme, so rendering is unchanged. */
+  background: linear-gradient(180deg, var(--hero-b) 0%, var(--hero-c) 100%);
+  color: var(--on-navy);
+}
+
+/* Hidden on mobile — MobileNav takes over below 760px. */
+@media (max-width: 759.98px) {
+  .side {
+    display: none;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s10);
+  padding: var(--s4) var(--s6);
+}
+.mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.12);
+}
+.brandText {
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  font-size: 0.94rem;
+  letter-spacing: -0.01em;
+}
+.brandText small {
+  font-weight: 500;
+  font-size: 0.66rem;
+  color: var(--on-navy-muted);
+  letter-spacing: 0;
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s8);
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-sm);
+}
+.addBtn:active {
+  transform: scale(0.985);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--s12);
+  padding: 11px 12px;
+  border-radius: var(--r-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--on-navy-muted);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--on-navy);
+}
+.navItem[data-active="1"] {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--on-navy);
+}
+
+.foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+}
+.pro {
+  display: flex;
+  align-items: center;
+  gap: var(--s10);
+  padding: var(--s12);
+  border-radius: var(--r-md);
+  background: rgba(124, 92, 230, 0.18);
+  text-align: left;
+}
+.proIc {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--on-navy);
+}
+.proTx {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.84rem;
+}
+.proTx b {
+  font-weight: 700;
+}
+.proTx small {
+  color: var(--on-navy-muted);
+  font-size: 0.69rem;
+}
+
+.userChip {
+  display: flex;
+  align-items: center;
+  gap: var(--s10);
+  padding: var(--s8) var(--s10);
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.06);
+}
+.userChip:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.avatar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+.userTx {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+.userTx b {
+  font-weight: 700;
+  font-size: 0.84rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.userTx small {
+  color: var(--on-navy-muted);
+  font-size: 0.69rem;
+}

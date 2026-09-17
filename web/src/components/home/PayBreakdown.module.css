@@ -1,0 +1,289 @@
+/* Mirrors web.jsx `.w-card` + `.w-paycard`. Desktop-first; collapses for mobile. */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--s20);
+  box-shadow: var(--shadow-sm);
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+  margin: 0 0 var(--s4);
+}
+
+/* Big headline number — mono, tabular for clean alignment. */
+.big {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.8rem;
+  font-weight: 850;
+  letter-spacing: -1px;
+  color: var(--ink);
+  margin: var(--s6) 0 var(--s14);
+}
+
+.big small {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--faint);
+  margin-left: 2px;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+  padding-bottom: var(--s14);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Excluded line in the SUMMARY, near the combined-rating headline (task #185). */
+.excludedSummary {
+  margin: var(--s4) 0 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s12);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.row b {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* THE hedge — one consistent line under every headline number (P1-4). */
+.hedge {
+  margin: calc(-1 * var(--s8)) 0 var(--s12);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* ── "What makes up your NN%" — grouped labeled contributors (lead view) ── */
+.contrib {
+  margin-top: var(--s14);
+  padding-top: var(--s14);
+  border-top: 1px solid var(--line);
+}
+
+.contribHead {
+  margin: 0 0 var(--s8);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.contribList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+
+.contribItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Name (left, wraps for long condition names) + effective % (right, never shrinks). */
+.contribRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s12);
+  font-size: 0.8125rem;
+  color: var(--ink);
+}
+
+.contribName {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-weight: 600;
+}
+
+.contribPct {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Absorbed-members / group-detail sub-note under a contributor row. */
+.contribSub {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* The "N excluded at your request" row — same small print, slightly set apart. */
+.excluded {
+  margin-top: var(--s4);
+  padding-top: var(--s8);
+  border-top: 1px dashed var(--line);
+}
+
+/* ── Labeled sequential combine (primary breakdown, task #185) ── */
+.combineList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+  counter-reset: combine;
+}
+
+.combineItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* Label + its % on the left (wraps for long names), running combined on the right. */
+.combineTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s10);
+  flex-wrap: wrap;
+  font-size: 0.8125rem;
+  color: var(--ink);
+}
+
+.combineLabel {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-weight: 600;
+}
+
+/* Running "combined NN%, MM% left" — mono, tabular, never shrinks the label away. */
+.combineRun {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* Absorbed-members sub-note under a grouped contributor. */
+.combineSub {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Final "Rounded to nearest 10 → NN%" step — set apart, emphasized. */
+.combineRounding {
+  margin-top: var(--s4);
+  padding-top: var(--s8);
+  border-top: 1px dashed var(--line);
+}
+
+.combineArrow {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* "What is pyramiding?" inline link — house navy, native-safe href. */
+.pyramidLink {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+/* "How VA math got NN%" — the server's step-by-step combination walk. */
+.math {
+  margin-top: var(--s12);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.math summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.mathSteps {
+  margin: var(--s8) 0 0;
+  padding-left: var(--s20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* Pyramiding / bilateral-factor notes (small print). */
+.notes {
+  margin: var(--s12) 0 0;
+  padding-left: var(--s16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* ── Estimate-unavailable (calc failed) ── */
+.unavail {
+  margin: var(--s6) 0 var(--s8);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+/* ── Assumptions footnote (rate basis) ── */
+.assume {
+  margin: var(--s12) 0 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* ── Mobile (.cp-*) ── slightly tighter padding, same stacked layout. */
+@media (max-width: 759.98px) {
+  .card {
+    padding: var(--s16);
+  }
+  .big {
+    font-size: 1.625rem;
+  }
+}

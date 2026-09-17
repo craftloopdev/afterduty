@@ -1,0 +1,57 @@
+{
+  "id": "gc-023",
+  "slug": "incremental-delta-one-of-three",
+  "title": "Incremental: delta doc re-rates 1 of 3 conditions",
+  "tags": [
+    "incremental"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-three.txt",
+          "filename": "Three_conditions.txt",
+          "canned_extraction": "canned/extraction/01-three.json"
+        }
+      ]
+    },
+    {
+      "name": "delta-new-knee-dbq",
+      "docs": [
+        {
+          "file": "docs/02-knee-dbq.txt",
+          "filename": "Knee_DBQ.txt",
+          "canned_extraction": "canned/extraction/02-knee-dbq.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "9411": "canned/synthesis_rate/9411.json",
+      "6260": null,
+      "5260": "canned/synthesis_rate/5260.json"
+    },
+    "gap_evidence_by_vasrd": {
+      "5260": "canned/gap_evidence/5260.json"
+    },
+    "gap_validation_by_vasrd": {
+      "5260": "canned/gap_validation/5260.json"
+    },
+    "gap_whatif_by_vasrd": {
+      "5260": "canned/gap_whatif/5260.json"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DIV5 N="4" TYPE="PART">
+  <HEAD>PART 4—SCHEDULE FOR RATING DISABILITIES</HEAD>
+
+  <!-- Section WITH a well-formed GPOTABLE rating table -->
+  <DIV8 N="4.71a" TYPE="SECTION">
+    <HEAD>§ 4.71a Schedule of ratings—musculoskeletal system.</HEAD>
+    <P>The following ratings apply to the knee and leg.</P>
+    <GPOTABLE>
+      <ROW>
+        <ENT>5260</ENT>
+        <ENT>Leg, limitation of flexion of</ENT>
+        <ENT></ENT>
+      </ROW>
+      <ROW>
+        <ENT></ENT>
+        <ENT>Flexion limited to 15&#176;</ENT>
+        <ENT>30</ENT>
+      </ROW>
+      <ROW>
+        <ENT></ENT>
+        <ENT>Flexion limited to 30&#176;</ENT>
+        <ENT>20</ENT>
+      </ROW>
+      <ROW>
+        <ENT></ENT>
+        <ENT>Flexion limited to 45&#176;</ENT>
+        <ENT>10</ENT>
+      </ROW>
+      <ROW>
+        <ENT></ENT>
+        <ENT>Flexion limited to 60&#176;</ENT>
+        <ENT>0</ENT>
+      </ROW>
+    </GPOTABLE>
+  </DIV8>
+
+  <!-- Section with NO table — narrative only. Chunks, no records. -->
+  <DIV8 N="4.10" TYPE="SECTION">
+    <HEAD>§ 4.10 Functional impairment.</HEAD>
+    <P>The basis of disability evaluations is the ability of the body as a whole, or
+    of the psyche, or of a system or organ of the body to function under the ordinary
+    conditions of daily life including employment. Whether the upper or lower
+    extremities, the back or abdominal wall, the eyes or ears, or the cardiovascular,
+    digestive, or other system, or psyche are affected, evaluations are based upon
+    lack of usefulness, of these parts or systems, especially in self-support.</P>
+  </DIV8>
+
+  <!-- Section whose GPOTABLE is malformed (no parseable DC / pct cells). The parser
+       must WARN and produce chunks only — no records, no throw. -->
+  <DIV8 N="4.150" TYPE="SECTION">
+    <HEAD>§ 4.150 Schedule of ratings—dental and oral conditions.</HEAD>
+    <P>Ratings for dental and oral conditions are described below.</P>
+    <GPOTABLE>
+      <BOXHD>
+        <CHED>Condition</CHED>
+        <CHED>Note</CHED>
+      </BOXHD>
+      <ROW>
+        <ENT>See the general rating formula for dental and oral conditions.</ENT>
+      </ROW>
+    </GPOTABLE>
+  </DIV8>
+
+</DIV5>

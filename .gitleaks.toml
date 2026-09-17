@@ -1,0 +1,31 @@
+# gitleaks config for After Duty.
+# Start from the default ruleset and add allowlist entries for known
+# false positives that are obvious-fake test inputs.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Placeholders + obvious-fake values used in tests"
+regexes = [
+    # Intentionally-malformed bearer token used to assert that the API
+    # rejects bad tokens. Not a real credential.
+    '''invalid\.token\.here''',
+    # Stripe SDK test placeholder used by unit tests — the literal
+    # "sk_test_anything" is documented as a sentinel in Stripe's docs
+    # and is not associated with any account.
+    '''sk_test_anything''',
+]
+paths = [
+    # Build artifacts contain font checksums and other high-entropy
+    # strings that trip the default ruleset. They're never tracked
+    # (already covered by .gitignore) but the `gitleaks dir` scan
+    # walks them anyway; explicitly skip.
+    '''(^|/)build/''',
+    '''(^|/)\.dart_tool/''',
+    '''(^|/)\.gradle/''',
+    '''(^|/)\.idea/''',
+    '''(^|/)node_modules/''',
+    # CocoaPods lockfile: its SPEC CHECKSUMS section is a list of SHA-1 hashes
+    # that the generic-api-key rule mistakes for credentials. Tracked on purpose.
+    '''(^|/)Podfile\.lock$''',
+]
