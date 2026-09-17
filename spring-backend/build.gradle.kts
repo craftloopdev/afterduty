@@ -43,7 +43,7 @@ dependencies {
     // Database
     runtimeOnly("com.h2database:h2")
     runtimeOnly("org.postgresql:postgresql")
-    runtimeOnly("com.google.cloud:spring-cloud-gcp-starter-sql-postgresql:6.3.0")
+    runtimeOnly("com.google.cloud:spring-cloud-gcp-starter-sql-postgresql:8.2.1")
 
     // Jackson
     implementation("com.fasterxml.jackson.core:jackson-databind")
