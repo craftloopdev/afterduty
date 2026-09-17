@@ -38,7 +38,7 @@ dependencies {
     implementation("com.google.cloud:google-cloud-storage:2.73.0")
 
     // Firebase Admin SDK
-    implementation("com.google.firebase:firebase-admin:9.4.3")
+    implementation("com.google.firebase:firebase-admin:9.10.0")
 
     // Database
     runtimeOnly("com.h2database:h2")
