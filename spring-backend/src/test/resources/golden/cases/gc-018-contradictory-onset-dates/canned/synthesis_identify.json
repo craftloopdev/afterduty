@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Post-traumatic stress disorder",
+    "vasrd_code": "9411",
+    "body_system": "mental",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Post-traumatic stress disorder",
+    "vasrd_code": "9411",
+    "body_system": "mental",
+    "is_presumptive": false,
+    "confidence": 0.9
+  }
+]

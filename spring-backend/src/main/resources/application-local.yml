@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/vaclaim
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+va-claim:
+  auth:
+    dev-mode: true
+
+logging:
+  level:
+    com.afterduty: DEBUG
+    org.springframework.web: DEBUG

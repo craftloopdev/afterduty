@@ -1,0 +1,153 @@
+/* Education pack furniture (P1-18): the /learn hub cards + article shell.
+   Static content, house tokens only. */
+
+/* ── Hub ── */
+.hub {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+  max-width: 720px;
+}
+.topicList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+}
+.topicCard {
+  display: flex;
+  align-items: center;
+  gap: var(--s14);
+  padding: var(--s16) var(--s18);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  min-height: 44px;
+}
+.topicCard:hover {
+  border-color: var(--navy500);
+}
+.topicIcon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--r-md);
+  background: var(--navy50);
+  color: var(--navy);
+}
+.topicTx {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.topicTitle {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.topicBlurb {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+.topicChevron {
+  flex: 0 0 auto;
+  color: var(--faint);
+}
+
+/* ── Article shell ── */
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+  max-width: 680px;
+}
+.back {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s6);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  padding: var(--s6) 0;
+}
+.back:hover {
+  text-decoration: underline;
+}
+.h1 {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  color: var(--ink);
+}
+.lede {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--s18) var(--s20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+}
+.h2 {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.section p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.section ul,
+.section ol {
+  margin: 0;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+.section li {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.section li::marker {
+  color: var(--navy500);
+  font-weight: 700;
+}
+.section a {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* Honest-hedge footnote at the bottom of every article. */
+.hedge {
+  margin: 0;
+  padding: 0 var(--s4);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--faint);
+}

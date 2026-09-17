@@ -1,0 +1,26 @@
+# VCP-HARD-01: automated dependency + action updates. A public repo
+# advertises exact versions, so something must watch for advisories.
+version: 2
+updates:
+  # Backend — Spring Boot / Gradle
+  - package-ecosystem: gradle
+    directory: /spring-backend
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    labels: [dependencies, backend]
+
+  # Frontend — Next.js BFF + Capacitor shells
+  - package-ecosystem: npm
+    directory: /web
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    labels: [dependencies, frontend]
+
+  # GitHub Actions used by our workflows (keeps the SHA pins fresh)
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    labels: [dependencies, ci]

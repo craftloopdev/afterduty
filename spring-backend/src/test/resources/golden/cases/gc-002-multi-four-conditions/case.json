@@ -1,0 +1,61 @@
+{
+  "id": "gc-002",
+  "slug": "multi-four-conditions",
+  "title": "Multi-condition: PTSD, GERD, lumbar strain, migraines",
+  "tags": [
+    "multi-condition"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-mh-note.txt",
+          "filename": "MH_note.txt",
+          "canned_extraction": "canned/extraction/01-mh-note.json"
+        },
+        {
+          "file": "docs/02-gi-note.txt",
+          "filename": "GI_note.txt",
+          "canned_extraction": "canned/extraction/02-gi-note.json"
+        },
+        {
+          "file": "docs/03-ortho-neuro.txt",
+          "filename": "Ortho_neuro.txt",
+          "canned_extraction": "canned/extraction/03-ortho-neuro.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "9411": "canned/synthesis_rate/9411.json",
+      "7346": "canned/synthesis_rate/7346.json",
+      "5237": "canned/synthesis_rate/5237.json",
+      "8100": "canned/synthesis_rate/8100.json"
+    },
+    "gap_evidence_by_vasrd": {
+      "9411": "canned/gap_evidence/9411.json",
+      "5237": "canned/gap_evidence/5237.json"
+    },
+    "gap_validation_by_vasrd": {
+      "9411": "canned/gap_validation/9411.json",
+      "5237": "canned/gap_validation/5237.json"
+    },
+    "gap_whatif_by_vasrd": {
+      "9411": "canned/gap_whatif/9411.json",
+      "5237": "canned/gap_whatif/5237.json"
+    }
+  }
+}

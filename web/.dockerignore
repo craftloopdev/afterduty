@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.auth
+.env*
+test-results
+playwright-report
+coverage
+**/*.test.ts
+**/*.test.tsx
+tests/e2e
+.playwright-mcp

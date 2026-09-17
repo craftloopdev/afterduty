@@ -1,0 +1,196 @@
+/*
+ * After Duty — design token layer.
+ * Ported 1:1 from flutter_frontend/lib/theme/vcp_tokens.dart and the redesign
+ * mockups' :root blocks. Components reference var(--…) only — never raw hex.
+ *
+ * Theming model (applied to the app root element by ThemeProvider / RootLayout):
+ *   data-theme="navy" | "warm" | "ai"   — only the navy scale + the In-Service
+ *                                          triad leg change between themes
+ *   class .ad-dark                       — one shared dark palette
+ *   data-scale="0" | "1" | "2"           — text-scale multiplier --m
+ */
+
+:root {
+  /* ── Brand navy scale ───────────────────────────────────────── */
+  --navy: #1B2A4A;
+  --navy-ink: #0a1833;
+  --navy900: #0f1e3d;
+  --navy700: #1b3566;
+  --navy500: #3c66a8;
+  --navy100: #e4ecf7;
+  --navy50: #eef2fa;
+
+  /* ── Surfaces ───────────────────────────────────────────────── */
+  --bg: #f4f5f9;
+  --card: #ffffff;
+  --sunken: #f0f2f7;
+  --line: #e2e6ef;
+  --line-soft: #edeff4;
+
+  /* ── Text / ink ─────────────────────────────────────────────── */
+  --ink: #0a1833;
+  --muted: #475069;
+  --faint: #6c7690;
+  --on-navy: #ffffff;
+  --on-navy-muted: #b9c5dd;
+
+  /* ── Strength triples (Diagnosis/In-Service/Nexus leg status) ── */
+  --strong: #1d6a2e;
+  --strong-bg: #e3f1e5;
+  --strong-dot: #2f9347;
+  --partial: #8a5a0f;
+  --partial-bg: #fff1d6;
+  --partial-dot: #d08a1a;
+  --missing: #9a2626;
+  --missing-bg: #fce4e4;
+  --missing-dot: #c63a3a;
+  /* Bright green for strength bars sitting on the navy hero. */
+  --strength-on-navy: #5fc98a;
+
+  /* ── Triad leg identity colors ──────────────────────────────── */
+  --leg-dx: #2f9347; /* Diagnosis      */
+  --leg-is: #3c66a8; /* In-Service     */
+  --leg-nx: #7c5ce6; /* Nexus          */
+
+  /* ── AI / indigo (presumptive, "Ask AI", Pro) ──────────────── */
+  --ai: #7c5ce6;
+  --ai-bg: #f2eefb;
+  --ai-fg: #4b2da0;
+
+  /* ── Hero gradient ──────────────────────────────────────────── */
+  --hero-a: #26477f;
+  --hero-b: #1B2A4A;
+  --hero-c: #0f1e3d;
+
+  /* ── Radii ──────────────────────────────────────────────────── */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  /* ── Spacing scale ──────────────────────────────────────────── */
+  --s4: 4px;
+  --s6: 6px;
+  --s8: 8px;
+  --s10: 10px;
+  --s12: 12px;
+  --s14: 14px;
+  --s16: 16px;
+  --s18: 18px;
+  --s20: 20px;
+  --s24: 24px;
+
+  /* ── Shadows ────────────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px rgba(10, 24, 51, 0.06);
+  --shadow: 0 1px 2px rgba(10, 24, 51, 0.05), 0 8px 26px rgba(10, 24, 51, 0.06);
+  --shadow-lg: 0 14px 36px rgba(14, 30, 61, 0.28);
+
+  /* ── Focus ring (token, not a hardcoded blue) ──────────────── */
+  --focus: #3c66a8;
+
+  /* ── Mobile shell geometry (P1-23) ──────────────────────────────
+     Single source of truth for the fixed bottom nav's total height.
+     The safe-area inset ADDS to the 72px bar — it must never eat into
+     the tabs' hit area. Shell files and any bottom-anchored composer
+     (chat) offset themselves with this same token. */
+  --mobile-nav-h: calc(72px + env(safe-area-inset-bottom, 0px));
+
+  /* ── Text-scale multiplier (plumbing; UI toggle ships later) ── */
+  --m: 1;
+
+  /* ── Typography families (wired to next/font vars in base.css) ─ */
+  --font-sans: var(--font-inter-tight, "Inter Tight", system-ui, sans-serif);
+  --font-mono: var(--font-jetbrains-mono, "JetBrains Mono", ui-monospace, monospace);
+}
+
+/* ── Warm theme — only navy scale + In-Service leg change ──────── */
+[data-theme="warm"] {
+  --navy: #4e381e;
+  --navy-ink: #2a1f11;
+  --navy900: #3b2a17;
+  --navy700: #6a4c2a;
+  --navy500: #ac7f46;
+  --navy100: #f1e7d4;
+  --navy50: #faf5eb;
+  --bg: #f7f4ee;
+  --card: #ffffff;
+  --sunken: #efe9dd;
+  --line: #e3d8bf;
+  --line-soft: #eee5d0;
+  --ink: #2a1f11;
+  --muted: #5b4a33;
+  --faint: #85745b;
+  --leg-is: #ac7f46;
+  --hero-a: #6a4c2a;
+  --hero-b: #4e381e;
+  --hero-c: #3b2a17;
+  --focus: #ac7f46;
+}
+
+/* ── AI theme — only navy scale + In-Service leg change ────────── */
+[data-theme="ai"] {
+  --navy: #1d1766;
+  --navy-ink: #0e0a2e;
+  --navy900: #14104d;
+  --navy700: #2a2185;
+  --navy500: #5b46d9;
+  --navy100: #e9e4fb;
+  --navy50: #f3f0fd;
+  --ink: #0e0a2e;
+  --muted: #463b78;
+  --faint: #6a5fa0;
+  --leg-is: #5b46d9;
+  --hero-a: #2a2185;
+  --hero-b: #1d1766;
+  --hero-c: #14104d;
+  --focus: #5b46d9;
+}
+
+/* ── Text scale ───────────────────────────────────────────────── */
+[data-scale="0"] {
+  --m: 0.92;
+}
+[data-scale="2"] {
+  --m: 1.13;
+}
+
+/* ── Dark palette (shared across all themes) ──────────────────── */
+.ad-dark {
+  --bg: #0a1120;
+  --card: #111a30;
+  --sunken: #0d1526;
+  --line: #25314f;
+  --line-soft: #1a2540;
+  --ink: #f0f4fd;
+  --muted: #a5b2cf;
+  --faint: #6f7ca0;
+  --navy100: #1b2743;
+  --strong: #7bd491;
+  --strong-bg: #163523;
+  --strong-dot: #2f9347;
+  --partial: #f0b562;
+  --partial-bg: #352911;
+  --partial-dot: #d08a1a;
+  --missing: #f28686;
+  --missing-bg: #3a1818;
+  --missing-dot: #c63a3a;
+  --ai: #b8a8ff;
+  --ai-bg: #1e1747;
+  --ai-fg: #b8a8ff;
+  --hero-a: #1b3566;
+  --hero-b: #1B2A4A;
+  --hero-c: #0f1e3d;
+
+  /* ── Navy scale in dark (P1-24) ─────────────────────────────────
+     --navy doubles as TEXT (ratings, ghost buttons, links: needs to be
+     light on dark cards) and as the PRIMARY-BUTTON FILL (needs white
+     --on-navy to keep ≥4.5:1 on top of it). #4a76b8 satisfies both:
+     4.6:1 under white, 3.8:1 as text on --card (was ~1.2:1 — invisible).
+     Surfaces that must STAY dark navy in dark mode (sidebar, hero) use
+     the --hero-* scale, never --navy. */
+  --navy: #4a76b8;
+  --navy500: #7d9fd8;
+  --navy700: #9db8e8;
+  --navy50: #16223c;
+  --focus: #7d9fd8;
+}

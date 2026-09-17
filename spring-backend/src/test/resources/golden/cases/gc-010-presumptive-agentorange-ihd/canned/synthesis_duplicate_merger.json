@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Ischemic heart disease (presumptive, Agent Orange)",
+    "vasrd_code": "7005",
+    "body_system": "cardiovascular",
+    "is_presumptive": true,
+    "confidence": 0.9,
+    "presumptive_basis": "Agent Orange Vietnam presumption"
+  }
+]

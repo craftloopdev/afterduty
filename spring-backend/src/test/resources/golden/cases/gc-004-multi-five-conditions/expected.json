@@ -1,0 +1,72 @@
+{
+  "case_id": "gc-004",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)PTSD|post.?traumatic",
+          "vasrd_code": "9411",
+          "rating_band": {
+            "min": 30,
+            "max": 70
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)tinnitus",
+          "vasrd_code": "6260",
+          "rating_band": {
+            "min": 10,
+            "max": 10
+          },
+          "must_be_found": true,
+          "deterministic_rating_expected": true
+        },
+        {
+          "name_pattern": "(?i)shoulder",
+          "vasrd_code": "5201",
+          "rating_band": {
+            "min": 10,
+            "max": 30
+          },
+          "must_be_found": true,
+          "laterality": "right"
+        },
+        {
+          "name_pattern": "(?i)reflux|GERD",
+          "vasrd_code": "7346",
+          "rating_band": {
+            "min": 10,
+            "max": 30
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)erectile",
+          "vasrd_code": "7522",
+          "rating_band": {
+            "min": 0,
+            "max": 0
+          },
+          "must_be_found": true,
+          "deterministic_rating_expected": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 60,
+        "max": 85
+      },
+      "gaps": [
+        {
+          "condition_vasrd": "9411",
+          "pattern": "(?i)nexus|medical opinion",
+          "must_be_flagged": true
+        }
+      ],
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s14);
+}
+
+.lead {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+
+.choice {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s8);
+  padding: var(--s12) var(--s14);
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  text-align: left;
+  font-weight: 600;
+  color: var(--ink);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.choice:hover {
+  background: var(--sunken);
+}
+
+.choice[data-active="true"] {
+  border-color: var(--navy);
+  background: var(--navy100);
+}
+
+.dim {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+
+.fieldLabel {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.field input {
+  width: 100%;
+  padding: 14px 14px;
+  /* ≥16px so iOS never zooms on focus (P1-23 in base.css). */
+  font-size: max(1rem, 16px);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--ink);
+}
+
+.field input:focus-visible {
+  border-color: var(--focus);
+  outline: none;
+}
+
+.code {
+  letter-spacing: 0.4em;
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+.error {
+  padding: var(--s12);
+  border-radius: var(--r-md);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.875rem;
+}
+
+.actions {
+  display: flex;
+  gap: var(--s10);
+}

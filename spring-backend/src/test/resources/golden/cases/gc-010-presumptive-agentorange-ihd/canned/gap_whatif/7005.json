@@ -1,0 +1,12 @@
+[
+  {
+    "scenario": "Obtain an echocardiogram with LVEF",
+    "action": "Obtain the evidence",
+    "current_rating": 60,
+    "potential_rating": 100,
+    "monthly_delta": 1700,
+    "action_required": "Submit the evidence",
+    "confidence": 0.6,
+    "timeline": "1-3 months"
+  }
+]

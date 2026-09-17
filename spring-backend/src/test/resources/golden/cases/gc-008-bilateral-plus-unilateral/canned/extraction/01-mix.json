@@ -1,0 +1,64 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-09-01",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Bilateral hearing loss",
+      "icd10_code": "H90.3",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    },
+    {
+      "diagnosis_name": "Right knee strain",
+      "icd10_code": "M22.91",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": false,
+  "service_records": {
+    "rank": "Sergeant",
+    "branch": "Army",
+    "enlistment_date": "2005-01-01",
+    "separation_date": "2011-01-01",
+    "deployments": [
+      {
+        "location": "Iraq",
+        "start_date": "2007-01-01",
+        "end_date": "2008-01-01",
+        "combat_zone": true
+      }
+    ],
+    "awards_decorations": [
+      "Army Commendation Medal"
+    ]
+  },
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "test_result",
+      "value": "Right knee flexion limited to 30 degrees",
+      "source": "Ortho",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "test_result",
+      "value": "Bilateral sensorineural hearing loss on audiogram",
+      "source": "Audiology",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

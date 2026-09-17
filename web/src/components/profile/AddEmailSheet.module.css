@@ -1,0 +1,77 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s14);
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+  overflow-wrap: anywhere; /* the echoed email address must never overflow */
+}
+
+/* Field idiom mirrored from ShareManager (.field / .fieldLabel). */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+.fieldLabel {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.field input {
+  padding: 13px 14px;
+  /* ≥16px so iOS never zooms on focus (P1-23 in base.css). */
+  font-size: max(1rem, 16px);
+  font-family: var(--font-sans);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--ink);
+}
+.field input:focus-visible {
+  border-color: var(--focus);
+  outline: none;
+}
+.field input:disabled {
+  opacity: 0.6;
+}
+
+.error {
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+  margin-top: var(--s4);
+}
+
+.linkBtn {
+  min-height: 44px; /* tap target (P1-25) */
+  background: transparent;
+  border: none;
+  color: var(--navy);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.86rem;
+  cursor: pointer;
+  border-radius: var(--r-md);
+}
+.linkBtn:hover:not(:disabled) {
+  text-decoration: underline;
+}
+.linkBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

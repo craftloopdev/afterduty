@@ -1,0 +1,69 @@
+{
+  "runId" : "2026-06-12T0622-baseline",
+  "gitSha" : "4f060a2",
+  "startedAt" : "2026-06-12T06:22:02.748862Z",
+  "routing" : {
+    "extraction_diagnosis" : "vertex-gemini/gemini-3.1-pro-preview",
+    "extraction_medication" : "vertex-gemini/gemini-3.1-pro-preview",
+    "extraction_service_record" : "vertex-gemini/gemini-3.1-pro-preview",
+    "extraction_atom" : "vertex-gemini/gemini-3.1-pro-preview",
+    "extraction_event_segment" : "vertex-gemini/gemini-3.1-pro-preview",
+    "extraction_event" : "vertex-gemini/gemini-3.1-pro-preview",
+    "extraction_doc" : "vertex-gemini/gemini-3.1-pro-preview",
+    "synthesis_identify" : "anthropic-batch/claude-sonnet-4-6",
+    "synthesis_duplicate_merger" : "anthropic-batch/claude-sonnet-4-6",
+    "synthesis_rate" : "anthropic-batch/claude-sonnet-4-6",
+    "synthesis_verify" : "anthropic-batch/claude-opus-4-8",
+    "gap_evidence" : "anthropic-batch/claude-sonnet-4-6",
+    "gap_validation" : "anthropic-batch/claude-sonnet-4-6",
+    "gap_whatif" : "anthropic-batch/claude-sonnet-4-6",
+    "chat" : "vertex-anthropic/claude-sonnet-4-6",
+    "eval_judge" : "vertex-gemini/gemini-3.1-pro-preview"
+  },
+  "promptVersions" : {
+    "judge_prompt_version" : "1",
+    "rating_prompt_version" : "v1",
+    "extraction_schema_version" : "1",
+    "extraction_prompt_version" : "1"
+  },
+  "cases" : [ {
+    "caseId" : "gc-001",
+    "status" : "scored",
+    "deterministic" : {
+      "condition_recall" : 0.0,
+      "condition_precision" : 1.0,
+      "rating_band_accuracy" : 1.0,
+      "gap_structural" : 0.0
+    },
+    "judge" : {
+      "case_id" : "gc-001",
+      "judge_model" : "gemini-3.1-pro-preview",
+      "judge_prompt_version" : "1",
+      "hard_fails" : {
+        "legal_advice" : false,
+        "fabricated_citation" : false
+      },
+      "violations" : [ ],
+      "scores" : { },
+      "rationale" : null
+    },
+    "costUsd" : 0.034593
+  } ],
+  "aggregate" : {
+    "means" : {
+      "condition_recall" : 0.0,
+      "condition_precision" : 1.0,
+      "rating_band_accuracy" : 1.0,
+      "gap_structural" : 0.0
+    },
+    "hardFailCount" : 0
+  },
+  "cost" : {
+    "pipelineUsd" : 0.034593,
+    "judgeUsd" : 0.0,
+    "totalUsd" : 0.034593,
+    "abortedReason" : null
+  },
+  "baseline" : null,
+  "verdict" : "BASELINE"
+}

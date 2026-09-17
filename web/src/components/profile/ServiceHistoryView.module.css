@@ -1,0 +1,418 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+}
+
+/* Back link — mirrors conditions.module.css .back */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s6);
+  align-self: flex-start;
+  padding: var(--s6) var(--s10);
+  border-radius: var(--r-md);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.back:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+
+/* ── Header ── */
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.total {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.total b {
+  color: var(--ink);
+  font-weight: 800;
+}
+.lede {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 46ch;
+}
+
+/* ── Empty state ── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s12);
+  text-align: center;
+  padding: var(--s24) var(--s20);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+}
+.emptyIc {
+  display: inline-flex;
+  color: var(--faint);
+}
+.emptyMsg {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 34ch;
+}
+
+/* ── Conclusion list ── */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s12);
+  width: 100%;
+  text-align: left;
+  padding: var(--s16);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.row:hover {
+  border-color: var(--navy);
+  background: var(--sunken);
+}
+.row:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.rowTx {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.rowTitle {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+  /* Long branch + component can exceed the row — truncate, keep it one line. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rowMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s4) var(--s8);
+  min-width: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.rowRange {
+  font-weight: 600;
+}
+.rowRankMos {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* "N sources ▸" control — fixed UI copy, stays on one line, never shrinks. */
+.sourcesCtl {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s4);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--navy100);
+  border-radius: var(--r-pill);
+  padding: 5px var(--s10);
+  white-space: nowrap;
+}
+
+/* ── Modal body ── */
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s20);
+}
+.modalSecLabel {
+  font-size: 0.71rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--faint);
+  margin-bottom: var(--s10);
+}
+
+.sources {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+}
+.source {
+  padding: var(--s12);
+  background: var(--sunken);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+}
+.sourceHead {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: var(--s8);
+  overflow-wrap: anywhere;
+}
+
+.facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--s6) var(--s12);
+  align-items: baseline;
+}
+.facts dt {
+  font-size: 0.71rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--faint);
+}
+.facts dd {
+  margin: 0;
+  min-width: 0;
+}
+
+.factVal {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--s6);
+  font-size: 0.875rem;
+  color: var(--muted);
+  min-width: 0;
+}
+.factVal[data-adopted="1"] {
+  color: var(--ink);
+  font-weight: 700;
+}
+.factMark {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-self: center;
+  color: var(--strong);
+}
+.factDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--line);
+}
+.factText {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.factsNote {
+  display: flex;
+  align-items: center;
+  gap: var(--s6);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.factsNote svg {
+  flex: 0 0 auto;
+  color: var(--strong);
+}
+
+.reconciledLine {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.reasoning {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── "Corrected by you" marker ── */
+.correctedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s6);
+  align-self: flex-start;
+  padding: var(--s4) var(--s10);
+  border-radius: var(--r-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--strong);
+  background: var(--strong-soft, var(--sunken));
+}
+.correctedBadge svg {
+  flex: 0 0 auto;
+  color: var(--strong);
+}
+
+/* ── Veteran-override affordance + inline form ── */
+.correctSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+  padding-top: var(--s16);
+  border-top: 1px solid var(--line-soft);
+}
+
+.correctCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s6);
+  align-self: flex-start;
+  padding: var(--s8) var(--s12);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  overflow-wrap: anywhere;
+}
+.correctCta:hover {
+  border-color: var(--navy);
+  background: var(--sunken);
+}
+.correctCta svg {
+  flex: 0 0 auto;
+  color: var(--navy);
+}
+
+.undoCta {
+  align-self: flex-start;
+  padding: var(--s4) var(--s8);
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.undoCta:hover:not(:disabled) {
+  color: var(--ink);
+}
+.undoCta:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.correctLede {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 44ch;
+}
+
+.overrideForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+}
+
+.fieldRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s12);
+}
+.fieldRow .field {
+  flex: 1 1 8rem;
+  min-width: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  min-width: 0;
+}
+.fieldLabel {
+  font-size: 0.71rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--faint);
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: var(--s8) var(--s10);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  font-family: var(--font-sans);
+  /* ≥16px so iOS never zooms on focus (P1-23 in base.css). */
+  font-size: max(0.9rem, 16px);
+  color: var(--ink);
+}
+.input:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+  border-color: var(--navy);
+}
+
+.overrideActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--s8);
+}
+
+.overrideError {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--danger, #b42318);
+  overflow-wrap: anywhere;
+}

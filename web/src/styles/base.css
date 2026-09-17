@@ -1,0 +1,110 @@
+/* After Duty — base resets + typography wiring. Tokens live in styles.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  /* Text-scale: --m comes from [data-scale]; rem-based type scales with it. */
+  font-size: calc(16px * var(--m));
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  /* Overflow discipline: pipeline-generated content (condition names, gap
+     titles, filenames, emails) can carry tokens longer than a phone viewport.
+     break-word inherits everywhere so any long unbreakable token wraps inside
+     its box instead of escaping it. Intentional `white-space: nowrap` elements
+     are unaffected (nowrap suppresses wrapping entirely), and unlike
+     `anywhere` this does not change intrinsic (min-content) sizing. */
+  overflow-wrap: break-word;
+  /* The page NEVER scrolls horizontally — only vertically. Anything wider than
+     the viewport (headers live outside the AppShell content clip) is clipped
+     here at the root, so iOS Safari can't pan the layout left/right. */
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  overflow-x: clip;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  /* iOS Safari zooms any focused control under 16px. At the A− text scale
+     (--m: 0.92) 1rem is only ~14.7px, which re-enables zoom-on-focus — hold
+     every control at ≥16px effective regardless of scale (P1-23). Component
+     styles must use the same max(…, 16px) pattern, never a bare rem. */
+  font-size: max(1rem, 16px);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Screen-reader-only text: visually hidden but exposed to assistive tech. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Numeric/monospace helper — tabular figures for ratings and money. */
+.cp-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,686 @@
+[
+  {
+    "code": "9411",
+    "name": "Post-Traumatic Stress Disorder (PTSD)",
+    "body_system": "Mental Disorders",
+    "rating_levels": {
+      "0": "Diagnosed but symptoms not severe enough to interfere with occupational/social functioning or require continuous medication.",
+      "10": "Occupational and social impairment due to mild or transient symptoms which decrease work efficiency only during periods of significant stress, or symptoms controlled by continuous medication.",
+      "30": "Occupational and social impairment with occasional decrease in work efficiency and intermittent periods of inability to perform occupational tasks due to depressed mood, anxiety, suspiciousness, panic attacks, chronic sleep impairment, mild memory loss.",
+      "50": "Occupational and social impairment with reduced reliability and productivity due to flattened affect, circumstantial speech, panic attacks more than once a week, difficulty understanding complex commands, impairment of short/long-term memory, impaired judgment, disturbances of motivation and mood, difficulty establishing and maintaining effective work and social relationships.",
+      "70": "Occupational and social impairment with deficiencies in most areas such as work, school, family relations, judgment, thinking, or mood due to suicidal ideation, obsessional rituals, intermittently illogical speech, near-continuous panic or depression, impaired impulse control, spatial disorientation, neglect of personal appearance, difficulty adapting to stressful circumstances, inability to establish and maintain effective relationships.",
+      "100": "Total occupational and social impairment due to gross impairment in thought processes or communication, persistent delusions or hallucinations, grossly inappropriate behavior, persistent danger of hurting self or others, intermittent inability to perform activities of daily living, disorientation to time or place, memory loss for names of close relatives or own name."
+    },
+    "common_evidence_needed": [
+      "Current diagnosis from licensed psychologist/psychiatrist",
+      "Service treatment records showing in-service stressor",
+      "Nexus letter linking PTSD to service",
+      "Buddy statements corroborating stressor event",
+      "VA C&P exam or private DBQ",
+      "Treatment records showing ongoing symptoms"
+    ]
+  },
+  {
+    "code": "5237",
+    "name": "Lumbosacral Strain",
+    "body_system": "Musculoskeletal - Spine",
+    "rating_levels": {
+      "0": "No compensable symptoms.",
+      "10": "Forward flexion of thoracolumbar spine greater than 60 degrees but not greater than 85 degrees; combined range of motion greater than 120 degrees but not greater than 235 degrees; muscle spasm, guarding, or localized tenderness not resulting in abnormal gait or abnormal spinal contour.",
+      "20": "Forward flexion of thoracolumbar spine greater than 30 degrees but not greater than 60 degrees; combined range of motion not greater than 120 degrees; muscle spasm or guarding severe enough to result in abnormal gait or abnormal spinal contour.",
+      "40": "Forward flexion of thoracolumbar spine 30 degrees or less; or favorable ankylosis of the entire thoracolumbar spine."
+    },
+    "common_evidence_needed": [
+      "Range of motion measurements (goniometer)",
+      "Service treatment records showing back injury/complaints",
+      "X-ray or MRI imaging",
+      "Nexus letter linking to service",
+      "Documentation of flare-ups and functional loss",
+      "VA C&P exam with range of motion testing"
+    ]
+  },
+  {
+    "code": "5003",
+    "name": "Degenerative Arthritis",
+    "body_system": "Musculoskeletal",
+    "rating_levels": {
+      "10": "X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups.",
+      "20": "X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups, with occasional incapacitating exacerbations."
+    },
+    "common_evidence_needed": [
+      "X-ray evidence of arthritis",
+      "Range of motion measurements",
+      "Service connection evidence",
+      "Documentation of painful motion",
+      "Medical opinion on progression"
+    ]
+  },
+  {
+    "code": "6260",
+    "name": "Tinnitus",
+    "body_system": "Ear",
+    "rating_levels": {
+      "10": "Recurrent tinnitus. (Maximum schedular rating)"
+    },
+    "common_evidence_needed": [
+      "Audiological evaluation documenting tinnitus",
+      "Service records showing noise exposure",
+      "Buddy statement about onset during/after service",
+      "Nexus letter linking tinnitus to noise exposure"
+    ]
+  },
+  {
+    "code": "6100",
+    "name": "Hearing Loss",
+    "body_system": "Ear",
+    "rating_levels": {
+      "0": "Level I hearing in both ears.",
+      "10": "Various combinations per Table VI/VIA (e.g., Level II in one ear and Level V in the other).",
+      "20": "Various combinations per Table VI/VIA.",
+      "30": "Various combinations per Table VI/VIA.",
+      "40": "Various combinations per Table VI/VIA.",
+      "50": "Various combinations per Table VI/VIA.",
+      "60": "Various combinations per Table VI/VIA.",
+      "70": "Various combinations per Table VI/VIA.",
+      "80": "Various combinations per Table VI/VIA.",
+      "90": "Various combinations per Table VI/VIA.",
+      "100": "Various combinations per Table VI/VIA (e.g., Level XI in both ears)."
+    },
+    "common_evidence_needed": [
+      "Current audiogram (puretone threshold & speech discrimination)",
+      "In-service audiograms showing threshold shift",
+      "Evidence of noise exposure in service (MOS, duty stations)",
+      "Nexus letter from audiologist",
+      "VA C&P audiological exam"
+    ]
+  },
+  {
+    "code": "7913",
+    "name": "Diabetes Mellitus",
+    "body_system": "Endocrine",
+    "rating_levels": {
+      "10": "Manageable by restricted diet only.",
+      "20": "Requiring insulin and restricted diet, or oral hypoglycemic agent and restricted diet.",
+      "40": "Requiring insulin, restricted diet, and regulation of activities.",
+      "60": "Requiring insulin, restricted diet, and regulation of activities with episodes of ketoacidosis or hypoglycemic reactions requiring one or two hospitalizations per year or twice a month visits to a diabetic care provider, plus complications that would not be compensable if separately evaluated.",
+      "100": "Requiring more than one daily injection of insulin, restricted diet, and regulation of activities with episodes of ketoacidosis or hypoglycemic reactions requiring at least three hospitalizations per year or weekly visits to a diabetic care provider, plus either progressive loss of weight and strength or complications that would be compensable if separately evaluated."
+    },
+    "common_evidence_needed": [
+      "Diagnosis of diabetes mellitus",
+      "Evidence of herbicide exposure (Agent Orange) or in-service onset",
+      "Current treatment records (insulin, oral meds, diet restrictions)",
+      "Documentation of regulation of activities",
+      "Lab results (A1C, blood glucose)",
+      "List of secondary conditions"
+    ]
+  },
+  {
+    "code": "5201",
+    "name": "Limitation of Arm Motion",
+    "body_system": "Musculoskeletal - Upper Extremities",
+    "rating_levels": {
+      "20": "Arm motion limited at shoulder level (dominant or non-dominant).",
+      "30": "Arm motion limited midway between side and shoulder level (dominant) / 20% non-dominant.",
+      "40": "Arm motion limited to 25 degrees from side (dominant) / 30% non-dominant."
+    },
+    "common_evidence_needed": [
+      "Range of motion measurements with goniometer",
+      "Service treatment records",
+      "MRI or X-ray of shoulder",
+      "Documentation of painful motion and functional loss",
+      "VA C&P exam"
+    ]
+  },
+  {
+    "code": "7101",
+    "name": "Hypertension",
+    "body_system": "Cardiovascular",
+    "rating_levels": {
+      "0": "Confirmed diagnosis; no compensable symptoms.",
+      "10": "Diastolic pressure predominantly 100 or more, or systolic pressure predominantly 160 or more, or minimum evaluation for an individual with a history of diastolic pressure predominantly 100 or more who requires continuous medication for control.",
+      "20": "Diastolic pressure predominantly 110 or more, or systolic pressure predominantly 200 or more.",
+      "40": "Diastolic pressure predominantly 120 or more.",
+      "60": "Diastolic pressure predominantly 130 or more."
+    },
+    "common_evidence_needed": [
+      "Blood pressure readings over time",
+      "Service treatment records showing elevated BP",
+      "Current diagnosis and medication list",
+      "Nexus letter (especially for secondary to PTSD, diabetes, etc.)",
+      "Lab results"
+    ]
+  },
+  {
+    "code": "8520",
+    "name": "Sciatic Nerve Paralysis",
+    "body_system": "Neurological",
+    "rating_levels": {
+      "10": "Mild incomplete paralysis.",
+      "20": "Moderate incomplete paralysis.",
+      "40": "Moderately severe incomplete paralysis.",
+      "60": "Severe incomplete paralysis with marked muscular atrophy.",
+      "80": "Complete paralysis \u2014 foot dangles and drops, no active movement possible of muscles below the knee, flexion of knee weakened or lost."
+    },
+    "common_evidence_needed": [
+      "EMG/nerve conduction study",
+      "Neurological examination",
+      "Service treatment records",
+      "MRI showing nerve impingement",
+      "Nexus letter linking to service or secondary to back condition"
+    ]
+  },
+  {
+    "code": "5242",
+    "name": "Degenerative Arthritis of the Spine",
+    "body_system": "Musculoskeletal - Spine",
+    "rating_levels": {
+      "10": "Forward flexion of thoracolumbar spine greater than 60 degrees but not greater than 85 degrees.",
+      "20": "Forward flexion greater than 30 degrees but not greater than 60 degrees.",
+      "40": "Forward flexion 30 degrees or less; or favorable ankylosis.",
+      "50": "Unfavorable ankylosis of entire thoracolumbar spine.",
+      "100": "Unfavorable ankylosis of the entire spine."
+    },
+    "common_evidence_needed": [
+      "X-ray or MRI showing degenerative changes",
+      "Range of motion measurements",
+      "Service treatment records",
+      "Nexus letter",
+      "Documentation of incapacitating episodes",
+      "VA C&P spine exam"
+    ]
+  },
+  {
+    "code": "7120",
+    "name": "Varicose Veins",
+    "body_system": "Cardiovascular",
+    "rating_levels": {
+      "0": "Asymptomatic, palpable or visible varicose veins.",
+      "10": "Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery.",
+      "20": "Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema.",
+      "40": "Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration.",
+      "60": "Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration.",
+      "100": "Massive board-like edema with constant pain at rest."
+    },
+    "common_evidence_needed": [
+      "Venous duplex ultrasound",
+      "Photos of affected veins",
+      "Service treatment records",
+      "Documentation of symptoms and impact on daily activities"
+    ]
+  },
+  {
+    "code": "5271",
+    "name": "Limited Ankle Motion",
+    "body_system": "Musculoskeletal - Lower Extremities",
+    "rating_levels": {
+      "10": "Moderate limitation of motion.",
+      "20": "Marked limitation of motion."
+    },
+    "common_evidence_needed": [
+      "Range of motion measurements",
+      "X-ray or MRI of ankle",
+      "Service treatment records showing ankle injury",
+      "Documentation of painful motion"
+    ]
+  },
+  {
+    "code": "5260",
+    "name": "Knee Limitation of Flexion",
+    "body_system": "Musculoskeletal - Lower Extremities",
+    "rating_levels": {
+      "0": "Flexion limited to 60 degrees.",
+      "10": "Flexion limited to 45 degrees.",
+      "20": "Flexion limited to 30 degrees.",
+      "30": "Flexion limited to 15 degrees."
+    },
+    "common_evidence_needed": [
+      "Range of motion measurements with goniometer",
+      "X-ray or MRI of knee",
+      "Service treatment records",
+      "Documentation of painful motion and flare-ups",
+      "VA C&P knee exam"
+    ]
+  },
+  {
+    "code": "5261",
+    "name": "Knee Limitation of Extension",
+    "body_system": "Musculoskeletal - Lower Extremities",
+    "rating_levels": {
+      "0": "Extension limited to 5 degrees.",
+      "10": "Extension limited to 10 degrees.",
+      "20": "Extension limited to 15 degrees.",
+      "30": "Extension limited to 20 degrees.",
+      "40": "Extension limited to 30 degrees.",
+      "50": "Extension limited to 45 degrees."
+    },
+    "common_evidence_needed": [
+      "Range of motion measurements with goniometer",
+      "X-ray or MRI of knee",
+      "Service treatment records",
+      "Documentation of painful motion and flare-ups",
+      "VA C&P knee exam"
+    ]
+  },
+  {
+    "code": "7800",
+    "name": "Burn Scars of the Head, Face, or Neck",
+    "body_system": "Skin",
+    "rating_levels": {
+      "10": "One characteristic of disfigurement.",
+      "30": "Visible or palpable tissue loss and either gross distortion or asymmetry of one feature or paired set of features, or two or three characteristics of disfigurement.",
+      "50": "Visible or palpable tissue loss and either gross distortion or asymmetry of two features or paired sets of features, or four or five characteristics of disfigurement.",
+      "80": "Visible or palpable tissue loss and either gross distortion or asymmetry of three or more features or paired sets of features, or six or more characteristics of disfigurement."
+    },
+    "common_evidence_needed": [
+      "Photos of scars with measurements",
+      "Service treatment records documenting burn",
+      "Scar examination (size, texture, pain, instability)",
+      "Impact on function or disfigurement"
+    ]
+  },
+  {
+    "code": "5010",
+    "name": "Traumatic Arthritis",
+    "body_system": "Musculoskeletal",
+    "rating_levels": {
+      "10": "X-ray evidence with noncompensable limitation of motion. Rated as degenerative arthritis under 5003.",
+      "20": "X-ray evidence with occasional incapacitating exacerbations. Rated as degenerative arthritis under 5003."
+    },
+    "common_evidence_needed": [
+      "X-ray evidence of traumatic arthritis",
+      "Service treatment records showing joint trauma/injury",
+      "Range of motion measurements",
+      "Nexus letter linking arthritis to in-service injury"
+    ]
+  },
+  {
+    "code": "8515",
+    "name": "Median Nerve Paralysis (Carpal Tunnel)",
+    "body_system": "Neurological",
+    "rating_levels": {
+      "10": "Mild incomplete paralysis (dominant or non-dominant).",
+      "30": "Moderate incomplete paralysis (dominant) / 20% non-dominant.",
+      "50": "Severe incomplete paralysis (dominant) / 40% non-dominant.",
+      "70": "Complete paralysis (dominant) / 60% non-dominant."
+    },
+    "common_evidence_needed": [
+      "EMG/nerve conduction study confirming carpal tunnel",
+      "Service treatment records",
+      "Documentation of occupation requiring repetitive hand use",
+      "Nexus letter",
+      "Current treatment records"
+    ]
+  },
+  {
+    "code": "9434",
+    "name": "Major Depressive Disorder",
+    "body_system": "Mental Disorders",
+    "rating_levels": {
+      "0": "Diagnosed but symptoms not severe enough to interfere with functioning or require medication.",
+      "10": "Mild or transient symptoms decreasing work efficiency only during significant stress; or controlled by medication.",
+      "30": "Occasional decrease in work efficiency with depressed mood, anxiety, chronic sleep impairment, mild memory loss.",
+      "50": "Reduced reliability and productivity due to flattened affect, panic attacks weekly, impaired memory, disturbances of motivation and mood.",
+      "70": "Deficiencies in most areas due to suicidal ideation, near-continuous depression, impaired impulse control, inability to maintain relationships.",
+      "100": "Total occupational and social impairment."
+    },
+    "common_evidence_needed": [
+      "Current diagnosis from mental health professional",
+      "Service treatment records or stressor evidence",
+      "Nexus letter linking depression to service",
+      "Treatment records showing ongoing symptoms",
+      "Buddy statements about behavioral changes",
+      "VA C&P mental health exam"
+    ]
+  },
+  {
+    "code": "5055",
+    "name": "Knee Replacement (Prosthesis)",
+    "body_system": "Musculoskeletal - Lower Extremities",
+    "rating_levels": {
+      "30": "Minimum rating following prosthetic replacement.",
+      "60": "Chronic residuals consisting of severe painful motion or weakness.",
+      "100": "For 1 year following implantation of prosthesis (then rated on residuals, minimum 30%)."
+    },
+    "common_evidence_needed": [
+      "Surgical records of knee replacement",
+      "Service connection for underlying knee condition",
+      "Post-operative treatment records",
+      "Range of motion measurements",
+      "Documentation of residual symptoms"
+    ]
+  },
+  {
+    "code": "7110",
+    "name": "Aortic Aneurysm",
+    "body_system": "Cardiovascular",
+    "rating_levels": {
+      "60": "Precluding exertion.",
+      "100": "If 5cm or larger in diameter, or if symptomatic, or for an indefinite period from date of hospital admission for surgical correction."
+    },
+    "common_evidence_needed": [
+      "CT scan or ultrasound showing aneurysm size",
+      "Service treatment records",
+      "Nexus letter",
+      "Surgical records if applicable",
+      "Current treatment and monitoring records"
+    ]
+  },
+  {
+    "code": "6602",
+    "name": "Asthma (Bronchial)",
+    "body_system": "Respiratory",
+    "rating_levels": {
+      "10": "FEV-1 of 71 to 80 percent predicted, or FEV-1/FVC of 71 to 80 percent, or intermittent inhalational or oral bronchodilator therapy.",
+      "30": "FEV-1 of 56 to 70 percent predicted, or FEV-1/FVC of 56 to 70 percent, or daily inhalational or oral bronchodilator therapy, or inhalational anti-inflammatory medication.",
+      "60": "FEV-1 of 40 to 55 percent predicted, or FEV-1/FVC of 40 to 55 percent, or at least monthly visits to a physician for required care of exacerbations, or intermittent (at least three per year) courses of systemic corticosteroids.",
+      "100": "FEV-1 less than 40 percent predicted, or FEV-1/FVC less than 40 percent, or more than one attack per week with episodes of respiratory failure, or requires daily use of systemic high dose corticosteroids or immuno-suppressive medications."
+    },
+    "common_evidence_needed": [
+      "Pulmonary function test (PFT) results",
+      "Service treatment records",
+      "Current medication list (inhalers, steroids)",
+      "Documentation of exacerbations and ER visits",
+      "Nexus letter"
+    ]
+  },
+  {
+    "code": "5276",
+    "name": "Flatfoot (Pes Planus)",
+    "body_system": "Musculoskeletal - Foot",
+    "rating_levels": {
+      "0": "Mild; symptoms relieved by built-up shoe or arch support.",
+      "10": "Moderate; weight-bearing line over or medial to great toe, inward bowing of Achilles, pain on manipulation and use of feet (bilateral).",
+      "30": "Severe; objective evidence of marked deformity, pain on manipulation and use, indication of swelling on use, characteristic callosities (bilateral).",
+      "50": "Pronounced; marked pronation, extreme tenderness of plantar surfaces, marked inward displacement and severe spasm of Achilles on manipulation, not improved by orthopedic shoes or appliances (bilateral)."
+    },
+    "common_evidence_needed": [
+      "X-ray of feet",
+      "Service entrance and separation physicals (comparison)",
+      "Documentation of arch support or orthotics use",
+      "Podiatry treatment records",
+      "Nexus letter if not noted at entry"
+    ]
+  },
+  {
+    "code": "9400",
+    "name": "Generalized Anxiety Disorder",
+    "body_system": "Mental Disorders",
+    "rating_levels": {
+      "0": "Diagnosed but symptoms not severe enough to interfere with functioning.",
+      "10": "Mild or transient symptoms decreasing work efficiency only during significant stress.",
+      "30": "Occasional decrease in work efficiency with anxiety, chronic sleep impairment.",
+      "50": "Reduced reliability and productivity due to panic attacks, impaired memory, disturbances of motivation.",
+      "70": "Deficiencies in most areas due to near-continuous anxiety, impaired impulse control.",
+      "100": "Total occupational and social impairment."
+    },
+    "common_evidence_needed": [
+      "Current diagnosis from mental health professional",
+      "Service treatment records or stressor evidence",
+      "Nexus letter linking anxiety to service",
+      "Treatment records",
+      "Buddy statements",
+      "VA C&P mental health exam"
+    ]
+  },
+  {
+    "code": "7528",
+    "name": "Malignant Neoplasms of Genitourinary System",
+    "body_system": "Genitourinary",
+    "rating_levels": {
+      "100": "Active malignancy or during antineoplastic treatment. Rated on residuals following cessation of treatment (minimum 0%)."
+    },
+    "common_evidence_needed": [
+      "Pathology report confirming malignancy",
+      "Service treatment records or exposure evidence (Agent Orange, burn pits)",
+      "Treatment records (surgery, chemo, radiation)",
+      "Nexus letter",
+      "Documentation of residual symptoms post-treatment"
+    ]
+  },
+  {
+    "code": "5243",
+    "name": "Intervertebral Disc Syndrome (IVDS)",
+    "body_system": "Musculoskeletal - Spine",
+    "rating_levels": {
+      "10": "Incapacitating episodes having a total duration of at least 1 week but less than 2 weeks during the past 12 months.",
+      "20": "Incapacitating episodes having a total duration of at least 2 weeks but less than 4 weeks during the past 12 months.",
+      "40": "Incapacitating episodes having a total duration of at least 4 weeks but less than 6 weeks during the past 12 months.",
+      "60": "Incapacitating episodes having a total duration of at least 6 weeks during the past 12 months."
+    },
+    "common_evidence_needed": [
+      "MRI showing disc herniation/bulge",
+      "Documentation of incapacitating episodes (bed rest prescribed by physician)",
+      "Range of motion measurements",
+      "Service treatment records",
+      "Nexus letter",
+      "VA C&P spine exam"
+    ]
+  },
+  {
+    "code": "7806",
+    "name": "Dermatitis / Eczema",
+    "body_system": "Skin",
+    "rating_levels": {
+      "0": "Less than 5 percent of the entire body or less than 5 percent of exposed areas affected, and no more than topical therapy required during the past 12 months.",
+      "10": "At least 5 percent but less than 20 percent of the entire body, or at least 5 percent but less than 20 percent of exposed areas affected, or intermittent systemic therapy required for a total duration of less than 6 weeks during the past 12 months.",
+      "30": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or systemic therapy required for a total duration of 6 weeks or more but not constantly during the past 12 months.",
+      "60": "More than 40 percent of the entire body, or more than 40 percent of exposed areas affected, or constant or near-constant systemic therapy required during the past 12 months."
+    },
+    "common_evidence_needed": [
+      "Photos of affected skin areas",
+      "Dermatology treatment records",
+      "Service treatment records showing skin condition",
+      "Percentage of body affected (measured by physician)",
+      "Medication history (topical vs systemic)"
+    ]
+  },
+  {
+    "code": "6847",
+    "name": "Sleep Apnea (Obstructive)",
+    "body_system": "Respiratory",
+    "rating_levels": {
+      "0": "Asymptomatic but with documented sleep disorder breathing.",
+      "30": "Persistent daytime hypersomnolence.",
+      "50": "Requires use of breathing assistance device such as CPAP machine.",
+      "100": "Chronic respiratory failure with carbon dioxide retention or cor pulmonale, or requires tracheostomy."
+    },
+    "common_evidence_needed": [
+      "Sleep study (polysomnography) diagnosis",
+      "CPAP prescription and usage records",
+      "Service treatment records or buddy statements about snoring/apnea in service",
+      "Nexus letter linking sleep apnea to service",
+      "Documentation of daytime fatigue impact"
+    ]
+  },
+  {
+    "code": "7338",
+    "name": "Inguinal Hernia",
+    "body_system": "Digestive",
+    "rating_levels": {
+      "0": "Not operated, but remediable. Small, reducible, or without true hernia protrusion.",
+      "10": "Postoperative recurrent, readily reducible, well-supported by truss or belt.",
+      "30": "Small, postoperative recurrent, or unoperated irremediable, not well supported by truss, or not readily reducible.",
+      "60": "Large, postoperative, recurrent, not well supported under ordinary conditions and not readily reducible."
+    },
+    "common_evidence_needed": [
+      "Surgical records",
+      "Service treatment records showing hernia",
+      "Documentation of recurrence",
+      "Current examination findings"
+    ]
+  },
+  {
+    "code": "5257",
+    "name": "Knee Instability (Recurrent Subluxation or Lateral Instability)",
+    "body_system": "Musculoskeletal - Lower Extremities",
+    "rating_levels": {
+      "10": "Slight recurrent subluxation or lateral instability.",
+      "20": "Moderate recurrent subluxation or lateral instability.",
+      "30": "Severe recurrent subluxation or lateral instability."
+    },
+    "common_evidence_needed": [
+      "Ligament stability testing (anterior drawer, Lachman's, valgus/varus stress)",
+      "MRI showing ligament damage",
+      "Service treatment records showing knee injury",
+      "Documentation of knee giving way or buckling",
+      "Use of knee brace"
+    ]
+  },
+  {
+    "code": "8100",
+    "name": "Migraine Headaches",
+    "body_system": "Neurological",
+    "rating_levels": {
+      "0": "Less frequent attacks.",
+      "10": "Characteristic prostrating attacks averaging one in 2 months over the last several months.",
+      "30": "Characteristic prostrating attacks occurring on an average of once a month over the last several months.",
+      "50": "Very frequent completely prostrating and prolonged attacks productive of severe economic inadaptability."
+    },
+    "common_evidence_needed": [
+      "Headache diary/log showing frequency and severity",
+      "Service treatment records showing headache complaints",
+      "Current treatment records",
+      "Nexus letter linking migraines to service (TBI, stress, etc.)",
+      "Buddy statements about prostrating attacks",
+      "Documentation of missed work due to migraines"
+    ]
+  },
+  {
+    "code": "7005",
+    "name": "Ischemic Heart Disease",
+    "body_system": "Cardiovascular",
+    "presumptive_connections": [
+      "Agent Orange"
+    ],
+    "rating_levels": {
+      "10": "Workload greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope; or continuous medication required.",
+      "30": "Workload of greater than 5 METs but not greater than 7 METs.",
+      "60": "More than one episode of acute congestive heart failure in the past year; or workload of greater than 3 METs but not greater than 5 METs.",
+      "100": "Chronic congestive heart failure; or workload of 3 METs or less; or left ventricular dysfunction with ejection fraction less than 30 percent."
+    },
+    "common_evidence_needed": [
+      "Diagnosis of ischemic heart disease",
+      "Evidence of herbicide exposure or qualifying service",
+      "Cardiac stress test / METs results",
+      "Echocardiogram",
+      "Treatment records"
+    ]
+  },
+  {
+    "code": "8004",
+    "name": "Parkinson's Disease",
+    "body_system": "Neurological",
+    "presumptive_connections": [
+      "Agent Orange"
+    ],
+    "rating_levels": {
+      "30": "Minimum rating.",
+      "60": "Moderately disabling symptoms.",
+      "100": "Totally incapacitating."
+    },
+    "common_evidence_needed": [
+      "Neurologist diagnosis of Parkinson's disease",
+      "Evidence of herbicide exposure",
+      "Documentation of motor symptoms",
+      "Treatment records"
+    ]
+  },
+  {
+    "code": "5025",
+    "name": "Fibromyalgia",
+    "body_system": "Musculoskeletal",
+    "presumptive_connections": [
+      "Gulf War"
+    ],
+    "rating_levels": {
+      "10": "Widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms that require continuous medication for control.",
+      "20": "Symptoms as above that are episodic, with exacerbations often precipitated by environmental or emotional stress or by overexertion, but that are present more than one-third of the time.",
+      "40": "Symptoms as above that are constant, or nearly so, and refractory to therapy."
+    },
+    "common_evidence_needed": [
+      "Rheumatologist diagnosis of fibromyalgia",
+      "Documentation of tender points",
+      "Service in Southwest Asia (Gulf War)",
+      "Treatment records",
+      "Documentation of functional impact"
+    ]
+  },
+  {
+    "code": "6354",
+    "name": "Chronic Fatigue Syndrome",
+    "body_system": "Immune",
+    "presumptive_connections": [
+      "Gulf War"
+    ],
+    "rating_levels": {
+      "10": "Signs and symptoms that wax and wane but result in periods of incapacitation of at least 1 but less than 2 weeks total during the past 12 months; or symptoms controlled by continuous medication.",
+      "20": "Periods of incapacitation of at least 2 but less than 4 weeks total during the past 12 months.",
+      "40": "Periods of incapacitation of at least 4 but less than 6 weeks total during the past 12 months.",
+      "60": "Nearly constant and so severe as to restrict routine daily activities almost completely and which may occasionally preclude self-care.",
+      "100": "Debilitating fatigue, cognitive impairments, and other symptoms nearly constant and so severe as to restrict routine daily activities to less than 50% of pre-illness level."
+    },
+    "common_evidence_needed": [
+      "Diagnosis of chronic fatigue syndrome",
+      "Service in qualifying Gulf War theater",
+      "Documentation of fatigue severity and duration",
+      "Exclusion of other medical conditions",
+      "Impact on daily activities"
+    ]
+  },
+  {
+    "code": "7319",
+    "name": "Irritable Bowel Syndrome",
+    "body_system": "Digestive",
+    "presumptive_connections": [
+      "Gulf War"
+    ],
+    "rating_levels": {
+      "0": "Mild; disturbances of bowel function with occasional episodes of abdominal distress.",
+      "10": "Moderate; frequent episodes of bowel disturbance with abdominal distress.",
+      "30": "Severe; diarrhea, or alternating diarrhea and constipation, with more or less constant abdominal distress."
+    },
+    "common_evidence_needed": [
+      "Gastroenterologist diagnosis of IBS",
+      "Service in qualifying Gulf War theater",
+      "Documentation of symptom frequency and severity",
+      "Treatment records",
+      "Dietary and functional impact"
+    ]
+  },
+  {
+    "code": "6819",
+    "name": "Lung Cancer (Malignant Neoplasm)",
+    "body_system": "Respiratory",
+    "presumptive_connections": [
+      "Agent Orange",
+      "PACT Act"
+    ],
+    "rating_levels": {
+      "100": "Active malignancy or antineoplastic treatment. Following cessation of treatment, rated on residuals (minimum 0%)."
+    },
+    "common_evidence_needed": [
+      "Pathology report confirming malignancy",
+      "Evidence of qualifying service / exposure",
+      "Treatment records (surgery, chemo, radiation)",
+      "Documentation of residual symptoms"
+    ]
+  },
+  {
+    "code": "7715",
+    "name": "Non-Hodgkin's Lymphoma",
+    "body_system": "Hemic and Lymphatic",
+    "presumptive_connections": [
+      "Agent Orange",
+      "PACT Act"
+    ],
+    "rating_levels": {
+      "100": "Active disease or during treatment. Rated on residuals following cessation of treatment."
+    },
+    "common_evidence_needed": [
+      "Pathology report",
+      "Evidence of herbicide exposure or burn pit exposure",
+      "Treatment records",
+      "Residual symptoms documentation"
+    ]
+  }
+]

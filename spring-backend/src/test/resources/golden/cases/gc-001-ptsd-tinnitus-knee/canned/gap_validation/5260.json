@@ -1,0 +1,5 @@
+{"validated_gaps": [
+  {"original_index": 0, "keep": true, "is_real": true, "is_critical": true, "is_needed": true,
+   "rater_priority": "medium",
+   "rater_note": "A current ROM measurement is the objective evidence a rater needs for DC 5260."}
+]}

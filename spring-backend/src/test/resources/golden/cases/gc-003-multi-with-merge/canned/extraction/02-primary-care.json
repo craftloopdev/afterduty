@@ -1,0 +1,57 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-03-15",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Sleep apnea",
+      "icd10_code": "G47.33",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    },
+    {
+      "diagnosis_name": "Hypertension",
+      "icd10_code": "I10",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": false,
+  "medications": [
+    {
+      "drug_name": "Lisinopril",
+      "dosage": "10mg",
+      "frequency": "daily",
+      "prescriber": "Dr. Lin Patel",
+      "start_date": "2023-01-01",
+      "purpose": "hypertension"
+    }
+  ],
+  "service_record_not_found": true,
+  "service_records": null,
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "treatment",
+      "value": "CPAP use reaffirmed",
+      "source": "Primary care",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "symptom",
+      "value": "Diastolic pressure predominantly 110 or more",
+      "source": "Primary care",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

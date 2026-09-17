@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Left shoulder strain",
+    "vasrd_code": "5201",
+    "body_system": "musculoskeletal",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Right shoulder strain",
+    "vasrd_code": "5201",
+    "body_system": "musculoskeletal",
+    "is_presumptive": false,
+    "confidence": 0.9
+  }
+]

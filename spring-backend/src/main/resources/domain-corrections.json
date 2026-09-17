@@ -1,0 +1,54 @@
+{
+  "_readme": [
+    "Self-correction knowledge base (owner-curated). Each entry records a claim",
+    "the analysis once made that turned out to be WRONG, with the authoritative",
+    "correction. Entries are enforced two ways:",
+    "  1. DETERMINISTIC — DomainCorrectionsService.enforce() runs at the",
+    "     synthesis flip and strips/repairs any condition matching an entry's",
+    "     `match` + `action`, no matter which lane (rules engine or LLM)",
+    "     asserted it. This is the guarantee.",
+    "  2. PROMPT — every entry's `correction` text is rendered into the",
+    "     identify + verification prompts so the model stops making the claim",
+    "     up front. This is the optimization.",
+    "Add entries when feedback (owner or user chat) disproves an analysis",
+    "claim. Keep them narrow and factual; cite authority. The file is",
+    "deliberately in-repo — it is part of the transparency log.",
+    "match fields: name_pattern / basis_pattern are case-insensitive regex,",
+    "matched against IdentifiedCondition.name / .presumptiveBasis. A BLANK",
+    "stored basis counts as matching (an unexplained presumptive assertion",
+    "cannot stand against a name-matched correction); conditions whose name",
+    "contains 'undiagnosed' are never stripped (different claim).",
+    "actions: strip_presumptive — clear is_presumptive/basis and rewrite the",
+    "nexus leg back to needs-direct-connection with the correction noted."
+  ],
+  "corrections": [
+    {
+      "id": "DC-2026-001",
+      "date": "2026-08-02",
+      "source": "owner feedback (live test, claim screenshot)",
+      "title": "Diagnosed migraines are not a Gulf War presumptive",
+      "wrong_claim": "Migraine Headaches (VASRD 8100) presumptively service-connected under Gulf War / 38 CFR 3.317",
+      "correction": "38 CFR 3.317 Gulf War presumptions cover UNDIAGNOSED illnesses and medically unexplained chronic multisymptom illnesses (chronic fatigue syndrome, fibromyalgia, functional GI disorders). Headache is only a sign/symptom of such an undiagnosed illness. Once headaches are DIAGNOSED as a known clinical condition (e.g. Migraine Headaches), the 3.317 presumption does not apply — service connection requires the standard triad (diagnosis, in-service event, nexus) or a secondary theory (e.g. secondary to PTSD or tinnitus). Migraines are also not on any PACT Act presumptive list.",
+      "authority": "38 CFR 3.317(a)(1)-(2), (b); M21-1 Part IV.ii.2.D",
+      "match": {
+        "name_pattern": "migraine",
+        "basis_pattern": "gulf war|southwest asia|3\\.317|undiagnosed"
+      },
+      "action": "strip_presumptive"
+    },
+    {
+      "id": "DC-2026-002",
+      "date": "2026-08-02",
+      "source": "same-class sweep after DC-2026-001 (code-collision audit)",
+      "title": "Diagnosed sleep apnea is not a Gulf War presumptive",
+      "wrong_claim": "Obstructive Sleep Apnea (VASRD 6847) presumptively service-connected under Gulf War via the 'sleep disturbances' sign/symptom lane",
+      "correction": "The 38 CFR 3.317 'sleep disturbances' lane covers signs/symptoms of an UNDIAGNOSED illness. Obstructive Sleep Apnea is a diagnosed condition with a known pathophysiology and is not a Gulf War (or PACT Act) presumptive. Service connection requires the standard triad — commonly an in-service onset shown by lay/buddy evidence plus a nexus opinion, or a secondary theory (e.g. secondary to rhinitis/deviated septum or weight gain from an SC condition).",
+      "authority": "38 CFR 3.317(a)(2)(i); no OSA entry on 3.317/3.320 or PACT lists",
+      "match": {
+        "name_pattern": "sleep apnea|obstructive sleep",
+        "basis_pattern": "gulf war|southwest asia|3\\.317|undiagnosed"
+      },
+      "action": "strip_presumptive"
+    }
+  ]
+}

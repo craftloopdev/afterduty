@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Major depressive disorder",
+    "vasrd_code": "9434",
+    "body_system": "mental",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Tinnitus",
+    "vasrd_code": "6260",
+    "body_system": "ear",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Left knee strain",
+    "vasrd_code": "5260",
+    "body_system": "musculoskeletal",
+    "is_presumptive": false,
+    "confidence": 0.9
+  }
+]

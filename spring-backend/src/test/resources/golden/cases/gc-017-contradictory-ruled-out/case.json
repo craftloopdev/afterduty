@@ -1,0 +1,50 @@
+{
+  "id": "gc-017",
+  "slug": "contradictory-ruled-out",
+  "title": "Contradictory: a diagnosis later ruled out is suppressed",
+  "tags": [
+    "contradictory-evidence"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-initial-dx.txt",
+          "filename": "Initial_dx.txt",
+          "canned_extraction": "canned/extraction/01-initial-dx.json"
+        },
+        {
+          "file": "docs/02-followup.txt",
+          "filename": "Followup.txt",
+          "canned_extraction": "canned/extraction/02-followup.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "9411": "canned/synthesis_rate/9411.json"
+    },
+    "gap_evidence_by_vasrd": {
+      "9411": "canned/gap_evidence/9411.json"
+    },
+    "gap_validation_by_vasrd": {
+      "9411": "canned/gap_validation/9411.json"
+    },
+    "gap_whatif_by_vasrd": {
+      "9411": "canned/gap_whatif/9411.json"
+    }
+  }
+}

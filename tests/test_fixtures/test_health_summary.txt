@@ -1,0 +1,41 @@
+SYNTHETIC TEST DATA — NOT A REAL VETERAN RECORD
+----------------------------------------------
+
+VA HEALTH SUMMARY - TEST DOCUMENT
+Patient: Regression Test User
+DOB: 1985-01-15
+Date: 2026-04-09
+
+CURRENT MEDICATIONS:
+- prednisone 20mg oral tablet, 1 tablet daily for 5 days, started 2026-01-15
+  Purpose: asthma exacerbation
+- albuterol HFA inhaler, 2 puffs every 4 hours as needed
+  Purpose: asthma
+- sertraline 100mg daily
+  Purpose: PTSD
+
+ACTIVE PROBLEMS:
+1. Asthma (ICD-10: J45.909) - diagnosed 2018-06-01
+   Severity: Moderate, requires daily bronchodilator
+   Functional impact: Unable to run or exercise vigorously
+
+2. PTSD (ICD-10: F43.10) - diagnosed 2019-03-15
+   Combat-related from Iraq deployment 2008
+   PCL-5 score: 62 (severe)
+   Functional impact: Hypervigilance, sleep disruption, unable to crowd situations
+
+3. Obstructive Sleep Apnea (ICD-10: G47.33) - diagnosed 2020-08-22
+   Uses CPAP machine nightly
+   Functional impact: Daytime fatigue without CPAP
+
+VITAL SIGNS:
+BP: 128/82 mmHg (slightly elevated)
+HR: 72 bpm
+Weight: 195 lbs
+
+RECENT LAB RESULTS:
+- Hemoglobin A1C: 5.8% (normal)
+- Total cholesterol: 195 mg/dL (normal)
+
+PROVIDER: Dr. Sarah Johnson, MD (Primary Care)
+Facility: VA Medical Center Des Moines

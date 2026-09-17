@@ -1,0 +1,16 @@
+{
+  "doc_type": "other",
+  "doc_date": "2023-01-31",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": true,
+  "diagnoses": [],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": true,
+  "service_records": null,
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": true,
+  "atoms": []
+}

@@ -1,0 +1,543 @@
+.wrap {
+  display: block;
+}
+
+/* ── Filter chips ── */
+.chips {
+  display: flex;
+  gap: var(--s8);
+  flex-wrap: wrap;
+  margin-bottom: var(--s12);
+}
+
+/* ── Triad key ── */
+.triadKey {
+  display: flex;
+  gap: var(--s12);
+  flex-wrap: wrap;
+  margin: 0 2px var(--s16);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.triadKey span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.kDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ── Empty state (filter matched nothing — P1-27) ── */
+.empty {
+  margin: var(--s8) 2px;
+  font-size: 0.875rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s10);
+}
+.emptyMsg {
+  margin: 0;
+}
+.emptyReset {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+}
+.emptyReset:hover {
+  border-color: var(--faint);
+}
+
+/* ── Desktop: table ── */
+.table {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+.thead,
+.trow {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) 108px 108px 108px 96px 30px;
+  align-items: center;
+  gap: var(--s12);
+  padding: 0 18px;
+  min-width: 640px;
+}
+.thead {
+  height: 42px;
+  background: var(--sunken);
+  border-bottom: 1px solid var(--line);
+}
+.thead span {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--faint);
+}
+.thRate {
+  text-align: right;
+}
+
+.trow {
+  min-height: 64px;
+  text-align: left;
+  width: 100%;
+  border-bottom: 1px solid var(--line-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.1s ease;
+}
+.trow:last-child {
+  border-bottom: none;
+}
+.trow:hover {
+  background: var(--sunken);
+}
+.trow:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+
+.tdName {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 11px 0;
+  min-width: 0;
+}
+.tdNameTop {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  min-width: 0;
+}
+.tdName b {
+  font-size: 0.90625rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--ink);
+}
+.tdName small {
+  font-size: 0.75rem;
+  color: var(--faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tdTri {
+  display: flex;
+}
+.tdRate {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tdRate em {
+  color: var(--faint);
+  font-style: normal;
+  font-weight: 700;
+}
+.tdArrow {
+  color: var(--faint);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ── Mobile: condition cards (hidden on desktop) ── */
+.cards {
+  display: none;
+  flex-direction: column;
+  gap: var(--s12);
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--s12);
+  width: 100%;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+.card:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+.cardMain {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.cardName {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+}
+.cardMeta {
+  font-size: 0.78125rem;
+  color: var(--faint);
+  font-weight: 500;
+}
+.cardRight {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  color: var(--faint);
+  flex-shrink: 0;
+}
+.cardRate {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+}
+.cardRatePending {
+  color: var(--faint);
+  font-weight: 700;
+  /* "Not yet rated" wording (P1-5) — small sans text, not a giant mono numeral. */
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  max-width: 9ch;
+  text-align: right;
+  line-height: 1.25;
+}
+
+/* ── Pyramiding grouped view (inline group treatment) ── */
+/* Desktop: a bordered block wrapping the group's header + member rows inside the
+   table. The header spans the full row width; members keep the normal grid. */
+.groupBlock {
+  border-top: 2px solid var(--ai-bg);
+  border-bottom: 1px solid var(--line);
+  background: var(--ai-bg);
+}
+.groupBlock:last-child {
+  border-bottom: none;
+}
+/* Mobile: a card-like container around the header + member cards. */
+.groupBlockCards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+  padding: 13px;
+  border: 1px solid var(--ai-bg);
+  border-radius: var(--r-lg);
+  background: var(--ai-bg);
+}
+
+.groupHeader {
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.groupBlockCards .groupHeader {
+  padding: 0;
+}
+.groupHeaderTop {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.groupTitle {
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+  /* Long group names truncate rather than blow the row width. */
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.groupCombined {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--ink);
+  /* Sentence content: wrap + break long words, never overflow (overflow discipline). */
+  overflow-wrap: anywhere;
+}
+.groupCombined b {
+  font-weight: 800;
+  color: var(--navy);
+}
+.groupWhy {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.groupWhyLink {
+  color: var(--ai-fg);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Inside a desktop group block, member rows drop their own border/hover bg tint so
+   the group's shared background reads as one unit; keep the grid + hover affordance. */
+.groupBlock .trow {
+  background: transparent;
+}
+.groupBlock .trow:hover {
+  background: var(--sunken);
+}
+
+/* ── Per-row overflow menu ("Don't include in my claim") ── */
+/* The row Link stays the full-width click target; the ⋯ menu is an ABSOLUTE
+   sibling overlaid at the right edge so we never nest a button inside the anchor. */
+.trowWrap,
+.cardWrap {
+  position: relative;
+}
+.trowWrap .trow {
+  /* Leave room at the right so the overlaid menu button never sits on the rating. */
+  padding-right: 40px;
+}
+.menuWrap {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+.cardWrap .menuWrap {
+  top: 12px;
+  right: 10px;
+  transform: none;
+}
+.menuBtn {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--faint);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.menuBtn:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+.menuBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 6;
+  min-width: 200px;
+  padding: var(--s4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.menuItem {
+  display: block;
+  width: 100%;
+  padding: var(--s8) var(--s10);
+  border: none;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.menuItem:hover {
+  background: var(--sunken);
+}
+.menuItem:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── Toggle error banner ── */
+.actErr {
+  margin: 0 2px var(--s12);
+  padding: var(--s8) var(--s12);
+  border-radius: var(--r-sm);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* ── "Not filing" section (excluded conditions, collapsed by default) ── */
+.notFiling {
+  margin-top: var(--s20);
+  border-top: 1px solid var(--line);
+  padding-top: var(--s12);
+}
+.notFilingToggle {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  padding: var(--s4) 2px;
+  cursor: pointer;
+}
+.notFilingChev {
+  display: inline-flex;
+  transition: transform 0.15s ease;
+}
+.notFilingChev[data-open="1"] {
+  transform: rotate(180deg);
+}
+.notFilingNote {
+  margin: var(--s4) 2px var(--s10);
+  font-size: 0.78125rem;
+  line-height: 1.4;
+  color: var(--faint);
+  overflow-wrap: anywhere;
+}
+.excludedList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+.excludedRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s12);
+  padding: var(--s10) var(--s12);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  /* De-emphasized vs. the main list: sunken bg, softer text. */
+  background: var(--sunken);
+}
+.excludedMain {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-decoration: none;
+  color: inherit;
+}
+.excludedName {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.excludedMeta {
+  font-size: 0.75rem;
+  color: var(--faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.includeBtn {
+  appearance: none;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.78125rem;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+}
+.includeBtn:hover {
+  border-color: var(--faint);
+}
+.includeBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── Responsive: become the mobile layout ── */
+@media (max-width: 759.98px) {
+  .chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 calc(-1 * var(--s16)) var(--s12);
+    padding: 2px var(--s16) var(--s4);
+    scrollbar-width: none;
+  }
+  .chips::-webkit-scrollbar {
+    display: none;
+  }
+  .table {
+    display: none;
+  }
+  .cards {
+    display: flex;
+  }
+}

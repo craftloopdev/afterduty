@@ -1,0 +1,45 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-09-14",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {"diagnosis_name": "Post-traumatic stress disorder", "icd10_code": "F43.10",
+     "date_diagnosed": "2009-01-01", "diagnosing_provider": "Phoenix VA",
+     "severity": "severe", "status": "chronic"}
+  ],
+  "medications_not_found": false,
+  "medications": [
+    {"drug_name": "Sertraline", "dosage": "100mg", "frequency": "daily",
+     "prescriber": "Dr. Lin Patel", "start_date": "2023-02-10", "purpose": "PTSD"},
+    {"drug_name": "Prazosin", "dosage": "2mg", "frequency": "at bedtime",
+     "prescriber": "Dr. Lin Patel", "start_date": "2023-06-01", "purpose": "nightmares"}
+  ],
+  "service_record_not_found": false,
+  "service_records": {
+    "rank": "Sergeant", "branch": "Army", "enlistment_date": "2005-01-01",
+    "separation_date": "2010-01-01",
+    "deployments": [{"location": "Kandahar", "start_date": "2008-01-01",
+                     "end_date": "2008-12-01", "combat_zone": true}],
+    "awards_decorations": ["Combat Action Badge"]
+  },
+  "events_not_found": false,
+  "events": [
+    {"event_date": "2023-09-14", "event_type": "mental_health",
+     "provider": "Dr. Lin Patel", "summary": "PTSD follow-up, nightmares 4x/week",
+     "diagnoses_mentioned": ["PTSD"]}
+  ],
+  "atoms_not_found": false,
+  "atoms": [
+    {"type": "symptom", "value": "Recurrent nightmares four nights per week",
+     "source": "MH progress note 2023-09-14", "confidence": 0.92, "date": "2023-09-14"},
+    {"type": "symptom", "value": "Hypervigilance and elevated startle response",
+     "source": "MH progress note 2023-09-14", "confidence": 0.9, "date": "2023-09-14"},
+    {"type": "functional_limitation",
+     "value": "Reduced reliability and productivity at work; changed jobs three times in two years",
+     "source": "MH progress note 2023-09-14", "confidence": 0.88, "date": "2023-09-14"},
+    {"type": "mental_health_score", "value": "GAF 52",
+     "source": "MH progress note 2023-09-14", "confidence": 0.85, "date": "2023-09-14"}
+  ]
+}

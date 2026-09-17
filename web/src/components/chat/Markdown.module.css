@@ -1,0 +1,77 @@
+/* Markdown rendered inside assistant bubbles. Inherits the bubble's font-size;
+   spacing tuned to read like chat prose, not a document. */
+.md {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+.md > :first-child {
+  margin-top: 0;
+}
+.md > :last-child {
+  margin-bottom: 0;
+}
+
+.p {
+  margin: 0;
+  line-height: 1.5;
+}
+.heading {
+  margin: 0;
+  font-weight: 800;
+  color: var(--ink);
+}
+.ul,
+.ol {
+  margin: 0;
+  padding-left: 1.25em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ul {
+  list-style: disc;
+}
+.ol {
+  list-style: decimal;
+}
+.li {
+  line-height: 1.45;
+}
+.strong {
+  font-weight: 700;
+}
+.code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 1px 5px;
+  border-radius: var(--r-sm);
+  background: var(--sunken);
+}
+.pre {
+  margin: 0;
+  padding: var(--s8) var(--s10);
+  border-radius: var(--r-md);
+  background: var(--sunken);
+  overflow-x: auto;
+}
+.pre .code {
+  background: none;
+  padding: 0;
+}
+.quote {
+  margin: 0;
+  padding-left: var(--s10);
+  border-left: 3px solid var(--line);
+  color: var(--muted);
+}
+.hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: var(--s4) 0;
+}
+.link {
+  color: var(--ai-fg);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

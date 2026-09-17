@@ -1,0 +1,43 @@
+{
+  "case_id": "gc-007",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)left shoulder",
+          "vasrd_code": "5201",
+          "rating_band": {
+            "min": 10,
+            "max": 30
+          },
+          "must_be_found": true,
+          "laterality": "left"
+        },
+        {
+          "name_pattern": "(?i)right shoulder",
+          "vasrd_code": "5201",
+          "rating_band": {
+            "min": 10,
+            "max": 30
+          },
+          "must_be_found": true,
+          "laterality": "right"
+        }
+      ],
+      "combined_rating_band": {
+        "min": 40,
+        "max": 40
+      },
+      "pyramiding": [
+        {
+          "vasrd_code": "5201",
+          "bilateral_pair": true
+        }
+      ],
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

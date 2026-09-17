@@ -1,0 +1,56 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-05-05",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Ischemic heart disease",
+      "icd10_code": "I25.10",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "severe",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": false,
+  "service_records": {
+    "rank": "Specialist",
+    "branch": "Army",
+    "enlistment_date": "1968-01-01",
+    "separation_date": "1971-01-01",
+    "deployments": [
+      {
+        "location": "Vietnam",
+        "start_date": "1969-01-01",
+        "end_date": "1970-01-01",
+        "combat_zone": true
+      }
+    ],
+    "awards_decorations": [
+      "Vietnam Service Medal"
+    ]
+  },
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "exposure",
+      "value": "Vietnam in-country service \u2014 Agent Orange presumed",
+      "source": "Service record",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "test_result",
+      "value": "Workload of 5 METs results in dyspnea and fatigue",
+      "source": "Cardiology",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

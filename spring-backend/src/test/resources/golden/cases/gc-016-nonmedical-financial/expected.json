@@ -1,0 +1,12 @@
+{
+  "case_id": "gc-016",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete_zero_conditions",
+      "conditions": [],
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

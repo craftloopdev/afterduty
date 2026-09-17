@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Post-traumatic stress disorder",
+    "vasrd_code": "9411",
+    "body_system": "mental",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Tinnitus",
+    "vasrd_code": "6260",
+    "body_system": "ear",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Right shoulder strain",
+    "vasrd_code": "5201",
+    "body_system": "musculoskeletal",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Gastroesophageal reflux disease",
+    "vasrd_code": "7346",
+    "body_system": "digestive",
+    "is_presumptive": false,
+    "confidence": 0.9
+  },
+  {
+    "name": "Erectile dysfunction",
+    "vasrd_code": "7522",
+    "body_system": "genitourinary",
+    "is_presumptive": false,
+    "confidence": 0.9
+  }
+]

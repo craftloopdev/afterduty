@@ -1,0 +1,12 @@
+{
+  "case_id": "gc-012",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "failed",
+      "conditions": [],
+      "abstention": {
+        "expected": true
+      }
+    }
+  }
+}

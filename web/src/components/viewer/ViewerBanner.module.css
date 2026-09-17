@@ -1,0 +1,73 @@
+/* Viewer-mode banner (P0-8) — persistent, calm, unmistakable. Navy-tinted so
+   it reads as "mode", not "error". */
+
+.banner {
+  background: var(--navy50);
+  border-bottom: 1px solid var(--line);
+  padding: var(--s8) var(--s24);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.ic {
+  display: inline-flex;
+  color: var(--navy500);
+  flex: none;
+}
+
+.text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--ink);
+  min-width: 0;
+}
+
+.hint {
+  color: var(--muted);
+}
+
+.exit {
+  margin-left: auto;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 var(--s12);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--navy);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.exit:hover {
+  border-color: var(--navy500);
+}
+
+.exit:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.notice {
+  max-width: 1240px;
+  margin: var(--s4) auto 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+@media (max-width: 759.98px) {
+  .banner {
+    padding: var(--s8) var(--s16);
+  }
+}

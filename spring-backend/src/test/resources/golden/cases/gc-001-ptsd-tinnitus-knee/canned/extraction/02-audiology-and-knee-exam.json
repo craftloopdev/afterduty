@@ -1,0 +1,34 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-10-02",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {"diagnosis_name": "Tinnitus, bilateral", "icd10_code": "H93.13",
+     "date_diagnosed": "2023-10-02", "diagnosing_provider": "Dr. Maria Okafor",
+     "severity": "moderate", "status": "chronic"},
+    {"diagnosis_name": "Right knee strain with limitation of flexion", "icd10_code": "M22.91",
+     "date_diagnosed": "2023-10-02", "diagnosing_provider": "Dr. Sam Reyes",
+     "severity": "moderate", "status": "chronic"}
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": true,
+  "events_not_found": false,
+  "events": [
+    {"event_date": "2023-10-02", "event_type": "specialty_consult",
+     "provider": "VA Audiology and Orthopedics",
+     "summary": "Tinnitus evaluation and right knee orthopedic exam",
+     "diagnoses_mentioned": ["Tinnitus", "Right knee strain"]}
+  ],
+  "atoms_not_found": false,
+  "atoms": [
+    {"type": "diagnosis", "value": "Tinnitus, bilateral, constant high-pitched ringing since 2008 blast exposure",
+     "source": "Audiology consult 2023-10-02", "confidence": 0.95, "date": "2023-10-02"},
+    {"type": "test_result", "value": "Right knee flexion limited to 30 degrees with pain at end range",
+     "source": "Orthopedic exam 2023-10-02", "confidence": 0.93, "date": "2023-10-02"},
+    {"type": "symptom", "value": "Tinnitus interferes with sleep and concentration",
+     "source": "Audiology consult 2023-10-02", "confidence": 0.9, "date": "2023-10-02"}
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "doc_type": "dd214",
+  "doc_date": "2011-01-01",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": true,
+  "diagnoses": [],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": false,
+  "service_records": {
+    "rank": "Sergeant",
+    "branch": "Army",
+    "enlistment_date": "2005-01-01",
+    "separation_date": "2011-01-01",
+    "deployments": [
+      {
+        "location": "Iraq",
+        "start_date": "2007-01-01",
+        "end_date": "2008-01-01",
+        "combat_zone": true
+      }
+    ],
+    "awards_decorations": [
+      "Army Commendation Medal"
+    ]
+  },
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "service_record",
+      "value": "Honorable discharge, Army, 2005-2011",
+      "source": "DD-214",
+      "confidence": 0.95,
+      "date": "2023-01-01"
+    }
+  ]
+}

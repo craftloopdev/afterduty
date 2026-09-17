@@ -1,0 +1,39 @@
+{
+  "id": "gc-021",
+  "slug": "deterministic-sleep-apnea-cpap",
+  "title": "Deterministic rating: sleep apnea 6847 with CPAP \u2192 50%",
+  "tags": [
+    "deterministic-rating"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-sleep.txt",
+          "filename": "Sleep.txt",
+          "canned_extraction": "canned/extraction/01-sleep.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "6847": null
+    },
+    "gap_evidence_by_vasrd": {},
+    "gap_validation_by_vasrd": {},
+    "gap_whatif_by_vasrd": {}
+  }
+}

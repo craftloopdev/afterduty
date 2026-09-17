@@ -1,0 +1,13 @@
+{
+  "merge_groups": [
+    {
+      "keep_index": 0,
+      "absorb_indices": [
+        1
+      ],
+      "canonical_name": "Post-traumatic stress disorder",
+      "reason": "same condition, conflicting onset dates"
+    }
+  ],
+  "standalone_indices": []
+}

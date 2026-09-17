@@ -1,0 +1,48 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-05-20",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Lumbar strain",
+      "icd10_code": "M54.5",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    },
+    {
+      "diagnosis_name": "Migraine headaches",
+      "icd10_code": "G43.909",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": true,
+  "service_records": null,
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "test_result",
+      "value": "Thoracolumbar forward flexion to 60 degrees",
+      "source": "Ortho note",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "symptom",
+      "value": "Characteristic prostrating migraine attacks once monthly",
+      "source": "Neuro note",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

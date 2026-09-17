@@ -1,0 +1,64 @@
+{
+  "doc_type": "clinical_note",
+  "doc_date": "2023-01-01",
+  "unreadable_or_unsupported": false,
+  "reason": null,
+  "diagnoses_not_found": false,
+  "diagnoses": [
+    {
+      "diagnosis_name": "Post-traumatic stress disorder",
+      "icd10_code": "F43.10",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    },
+    {
+      "diagnosis_name": "Tinnitus",
+      "icd10_code": "H93.13",
+      "date_diagnosed": "2023-01-01",
+      "diagnosing_provider": "Dr. Lin Patel",
+      "severity": "moderate",
+      "status": "chronic"
+    }
+  ],
+  "medications_not_found": true,
+  "medications": [],
+  "service_record_not_found": false,
+  "service_records": {
+    "rank": "Sergeant",
+    "branch": "Army",
+    "enlistment_date": "2005-01-01",
+    "separation_date": "2011-01-01",
+    "deployments": [
+      {
+        "location": "Iraq",
+        "start_date": "2007-01-01",
+        "end_date": "2008-01-01",
+        "combat_zone": true
+      }
+    ],
+    "awards_decorations": [
+      "Army Commendation Medal"
+    ]
+  },
+  "events_not_found": true,
+  "events": [],
+  "atoms_not_found": false,
+  "atoms": [
+    {
+      "type": "symptom",
+      "value": "PTSD reduced reliability and productivity",
+      "source": "Note",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    },
+    {
+      "type": "diagnosis",
+      "value": "Tinnitus, constant ringing",
+      "source": "Note",
+      "confidence": 0.92,
+      "date": "2023-01-01"
+    }
+  ]
+}

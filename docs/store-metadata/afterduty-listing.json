@@ -1,0 +1,76 @@
+{
+  "_comment": [
+    "Single source of truth for After Duty store metadata on BOTH stores (Stage 2 rebrand).",
+    "The push scripts read this file, so the docs and what is actually live cannot drift.",
+    "Copy is carried over from the VA Claim Path listings with three deliberate corrections:",
+    "  1. The iOS description claimed 'Sign in with Apple, Google, phone, or email'. That has",
+    "     been FALSE since login went pure passwordless OTP (owner decision 2026-07-01) and",
+    "     would be inaccurate-metadata grounds for rejection. The Play copy was already correct,",
+    "     so Play's auth line is the source of truth for both.",
+    "  2. Every URL moves to afterduty.app. The privacy URL is the canonical /privacy route.",
+    "  3. The not-affiliated-with-the-VA disclaimer is retained verbatim and stays in the",
+    "     description body -- it is the reason the rebrand exists, so it does not get trimmed."
+  ],
+
+  "identity": {
+    "appName": "After Duty",
+    "subtitle": "Organize your VA claim",
+    "shortDescription": "Organize and strengthen your VA disability claim — evidence, ratings, and gaps.",
+    "bundleId": "com.afterduty.app",
+    "packageName": "com.afterduty.app",
+    "appleBundleIdResource": "4LTFPMV6DF",
+    "appleTeamId": "3ZKP4S469J",
+    "iosSku": "afterduty-ios-001",
+    "primaryLocale": "en-US",
+    "firebaseIosAppId": "1:1048958573080:ios:614ae2267385cc89f8416d",
+    "firebaseAndroidAppId": "1:1048958573080:android:0ebdcb85e975bff8f8416d"
+  },
+
+  "urls": {
+    "privacyPolicy": "https://afterduty.app/privacy",
+    "support": "https://afterduty.app",
+    "marketing": "https://afterduty.app",
+    "contactWebsite": "https://afterduty.app",
+    "contactEmail": "stobryan@gmail.com",
+    "appleEula": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+  },
+
+  "keywords": "VA disability,veteran,VA claim,disability rating,VSO,benefits,nexus,DD-214,evidence,claims",
+
+  "descriptionBody": "After Duty helps veterans organize and strengthen their VA disability claim.\n\nUpload your medical records and DD-214, and the app helps you structure the evidence behind each condition using the VA's three-part standard: a current diagnosis, an in-service event, and a nexus connecting them. See an estimated combined rating, find the evidence gaps to address next, and generate a read-only link to share your organized claim with a VSO or accredited attorney.\n\nFEATURES\n- Secure document storage for medical records, service records, and supporting letters\n- Evidence organized by condition against the VA's diagnosis / in-service event / nexus framework\n- Estimated combined disability rating\n- Gap analysis showing what evidence to gather next\n- Share a read-only summary with your VSO or attorney\n- Passwordless sign-in with a one-time code sent to your phone or email\n\nFree includes document storage and VSO sharing. Pro adds AI-assisted evidence extraction, condition synthesis, and gap analysis.\n\nAfter Duty is an educational tool. It does not provide legal advice and is not affiliated with or endorsed by the U.S. Department of Veterans Affairs. Always consult a VA-accredited representative or attorney for advice on your specific claim.",
+
+  "iosDescriptionSuffix": "\n\nLEGAL\nTerms of Use (standard Apple EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\nPrivacy Policy: https://afterduty.app/privacy",
+
+  "playDescriptionSuffix": "\n\nPrivacy Policy: https://afterduty.app/privacy",
+
+  "categories": {
+    "ios": { "primary": "PRODUCTIVITY", "secondary": null },
+    "play": "Productivity",
+    "note": "Medical invites extra review on both stores; Productivity matches the approved VA Claim Path listing."
+  },
+
+  "subscriptions": {
+    "groupReferenceName": "After Duty Pro",
+    "entitlement": "pro",
+    "products": [
+      { "productId": "pro_monthly", "name": "Pro Monthly", "period": "ONE_MONTH", "priceUsd": "11.99" },
+      { "productId": "pro_annual",  "name": "Pro Annual",  "period": "ONE_YEAR",  "priceUsd": "119.99" }
+    ]
+  },
+
+  "reviewerAccess": {
+    "instructionsTemplate": "Sign in is passwordless (one-time code to a phone or email). Use this test phone number — it accepts a fixed code and sends no SMS:\nPhone: {TEST_PHONE} · Code: {TEST_CODE}\nEnter the number, tap \"Send me a code,\" enter the code. It lands on a set-up account's Home screen. AI features require the Pro subscription (sandbox purchase completes without charge: Profile → Upgrade to Pro).",
+    "_secrets": [
+      "{TEST_PHONE} and {TEST_CODE} are deliberately NOT stored here. They are a working",
+      "credential pair for a pre-provisioned demo account, and this repo is being prepared",
+      "for public release -- the demo-OTP exposure is already an open finding on that audit.",
+      "Read the live values from Firebase Console -> Authentication -> Sign-in method ->",
+      "Phone -> 'Phone numbers for testing', and paste the filled text into the store",
+      "console by hand. Do not commit the substituted string."
+    ],
+    "note": "Firebase test phone numbers are project-level, so the pair carries over to the new apps unchanged. There is no Sign in with Apple flow -- any reviewer note referencing one is dead."
+  },
+
+  "ageRating": "FOUR_PLUS",
+  "containsAds": false
+}

@@ -1,0 +1,42 @@
+{
+  "id": "gc-016",
+  "slug": "nonmedical-financial",
+  "title": "Non-medical: bank statements + lease \u21d2 zero conditions",
+  "tags": [
+    "non-medical-docs"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-bank.txt",
+          "filename": "Bank_statement.txt",
+          "canned_extraction": "canned/extraction/01-bank.json"
+        },
+        {
+          "file": "docs/02-lease.txt",
+          "filename": "Lease.txt",
+          "canned_extraction": "canned/extraction/02-lease.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {},
+    "gap_evidence_by_vasrd": {},
+    "gap_validation_by_vasrd": {},
+    "gap_whatif_by_vasrd": {}
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DIV5 N="3" TYPE="PART">
+  <HEAD>PART 3—ADJUDICATION</HEAD>
+
+  <!-- A presumptive-connection section: narrative text, no rating table. -->
+  <DIV8 N="3.307" TYPE="SECTION">
+    <HEAD>§ 3.307 Presumptive service connection for chronic, tropical or prisoner-of-war related disease, or disease associated with exposure to certain herbicide agents; wartime and service on or after January 1, 1947.</HEAD>
+    <P>A chronic, tropical, or prisoner-of-war related disease, or a disease associated with
+    exposure to certain herbicide agents listed in § 3.309 will be considered to have been
+    incurred in or aggravated by service under the circumstances outlined in this section even
+    though there is no evidence of such disease during the period of service.</P>
+  </DIV8>
+
+  <!-- A second backbone section so the cold-start allowlist has more than one to ingest. -->
+  <DIV8 N="3.309" TYPE="SECTION">
+    <HEAD>§ 3.309 Disease subject to presumptive service connection.</HEAD>
+    <P>The following diseases shall be granted service connection although not otherwise
+    established as incurred in or aggravated by service if the requirements of § 3.307 are
+    met.</P>
+  </DIV8>
+
+</DIV5>

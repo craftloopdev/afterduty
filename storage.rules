@@ -1,0 +1,15 @@
+rules_version = '2';
+
+// VCP-HARD-04: Veteran documents are stored in Google Cloud Storage by the
+// authenticated Spring backend (DocumentStorageService), keyed per user/claim —
+// never uploaded or read client-direct via Firebase Storage. The Flutter client
+// does not use firebase_storage at all. Therefore: default-deny everything.
+// Any future client-direct upload must add a narrowly-scoped, per-uid rule here
+// (validated in the Firebase Local Emulator Suite), not loosen this default.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

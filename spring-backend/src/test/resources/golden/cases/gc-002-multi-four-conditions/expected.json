@@ -1,0 +1,65 @@
+{
+  "case_id": "gc-002",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)PTSD|post.?traumatic",
+          "vasrd_code": "9411",
+          "rating_band": {
+            "min": 30,
+            "max": 70
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)reflux|GERD",
+          "vasrd_code": "7346",
+          "rating_band": {
+            "min": 10,
+            "max": 30
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)lumbar|back",
+          "vasrd_code": "5237",
+          "rating_band": {
+            "min": 10,
+            "max": 40
+          },
+          "must_be_found": true
+        },
+        {
+          "name_pattern": "(?i)migraine",
+          "vasrd_code": "8100",
+          "rating_band": {
+            "min": 30,
+            "max": 50
+          },
+          "must_be_found": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 70,
+        "max": 90
+      },
+      "gaps": [
+        {
+          "condition_vasrd": "9411",
+          "pattern": "(?i)nexus|medical opinion",
+          "must_be_flagged": true
+        },
+        {
+          "condition_vasrd": "5237",
+          "pattern": "(?i)range of motion|ROM",
+          "must_be_flagged": true
+        }
+      ],
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

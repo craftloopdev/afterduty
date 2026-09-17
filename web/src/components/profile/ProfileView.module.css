@@ -1,0 +1,527 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+  max-width: 560px;
+}
+
+/* ── Shared card (.w-card idiom) ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--s20);
+}
+
+/* ── Section labels ── */
+.secLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--faint);
+  margin: 0 0 var(--s8) var(--s4);
+}
+
+/* ── 1 · Profile header ── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--s16);
+}
+.avatar {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy100);
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.headerTx {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: -0.2px;
+}
+.sub {
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+/* Editable preferred name (What should we call you?) */
+.nameRow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s6);
+  min-width: 0;
+}
+.nameEditBtn {
+  position: relative; /* anchors the ::after tap-target extension */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 2px;
+  color: var(--faint);
+  cursor: pointer;
+  border-radius: var(--r-md);
+}
+.nameEditBtn:hover {
+  color: var(--navy);
+}
+.nameEditBtn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+/* 44px minimum tap target (P1-25) for the small pencil. */
+.nameEditBtn::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+}
+.setNameBtn {
+  align-self: flex-start;
+  min-height: 44px; /* tap target (P1-25) */
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--navy);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.setNameBtn:hover {
+  text-decoration: underline;
+}
+.setNameBtn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.nameEdit {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  flex-wrap: wrap;
+}
+.nameInput {
+  flex: 1 1 140px;
+  min-width: 0;
+  padding: 9px 12px;
+  /* ≥16px so iOS never zooms on focus (P1-23 in base.css). */
+  font-size: max(0.95rem, 16px);
+  font-family: var(--font-sans);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--ink);
+}
+.nameInput:focus-visible {
+  border-color: var(--focus);
+  outline: none;
+}
+.nameError {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--missing);
+}
+
+/* ── 2 · Upgrade to Pro ── */
+.proCard {
+  display: flex;
+  align-items: center;
+  gap: var(--s12);
+  background: var(--ai-bg);
+  border-color: transparent;
+}
+.proChip {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--ai-fg);
+}
+.proTx {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.proTx b {
+  font-weight: 700;
+  font-size: 0.94rem;
+  color: var(--ai-fg);
+}
+.proTx small {
+  font-size: 0.8rem;
+  color: var(--ai-fg);
+  opacity: 0.85;
+}
+
+/* ── 3 · Service summary rows ── */
+.dataRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s12);
+  padding: var(--s12) 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.dataRow:first-child {
+  padding-top: 0;
+}
+.dataRowLast {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.dataKey {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.dataVal {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--ink);
+  text-align: right;
+}
+
+/* Email row — value + just-attached note, or the "Add an email" affordance. */
+.emailVal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 0;
+}
+.emailVal .dataVal {
+  overflow-wrap: anywhere;
+}
+.emailNote {
+  font-size: 0.75rem;
+  color: var(--strong-dot);
+  font-weight: 600;
+}
+.addEmailBtn {
+  min-height: 44px; /* tap target (P1-25) */
+  padding: 0 var(--s4);
+  background: transparent;
+  border: none;
+  color: var(--navy);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: var(--r-md);
+}
+.addEmailBtn:hover {
+  text-decoration: underline;
+}
+.addEmailBtn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* ── Plan row (billing entry inside Account details) ── */
+.planRow {
+  padding: 0 0 var(--s12);
+  border-bottom: 1px solid var(--line-soft);
+}
+.planRow .dataRow {
+  padding: 0;
+  border-bottom: none;
+}
+.planFree {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s10);
+}
+.planUpgrade {
+  position: relative; /* anchors the ::after tap-target extension */
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+/* 44px minimum tap target (P1-25) for the inline Upgrade link. */
+.planUpgrade::after {
+  content: "";
+  position: absolute;
+  inset: -12px -6px;
+}
+.planUpgrade:hover {
+  text-decoration: underline;
+}
+.planManage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--s6);
+  margin-top: var(--s10);
+}
+.planRenews {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.manageBtn {
+  min-height: 44px;
+  padding: 0 var(--s14);
+  border: 1px solid var(--navy);
+  border-radius: var(--r-md);
+  background: transparent;
+  color: var(--navy);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.manageBtn:hover:not(:disabled) {
+  background: var(--navy100);
+}
+.manageBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.planError {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--missing);
+}
+
+/* ── 4 · Appearance controls ── */
+.ctrlRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s12);
+  padding: var(--s12) 0;
+}
+.ctrlRow:first-child {
+  padding-top: 0;
+}
+.ctrlRow:last-child {
+  padding-bottom: 0;
+}
+.ctrlRowLine {
+  border-bottom: 1px solid var(--line-soft);
+}
+.ctrlLabel {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+/* Switch — replicated from ShareManager .switch */
+.switch {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 26px;
+  border-radius: var(--r-pill);
+  background: var(--line);
+  position: relative;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background 0.15s ease;
+}
+.switch > span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease;
+}
+.switch[data-on="1"] {
+  background: var(--strong-dot);
+}
+.switch[data-on="1"] > span {
+  transform: translateX(18px);
+}
+.switch:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* 44px minimum tap target (P1-25): the 26px-tall track extends vertically. */
+.switch::after {
+  content: "";
+  position: absolute;
+  inset: -9px 0;
+}
+
+/* Segmented group — theme swatches & text-size steps */
+.segGroup {
+  display: inline-flex;
+  gap: var(--s6);
+}
+.seg {
+  position: relative; /* anchors the ::after tap-target extension */
+  min-width: 44px;
+  min-height: 36px;
+  padding: var(--s6) var(--s10);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.84rem;
+  color: var(--muted);
+  background: var(--sunken);
+  border: 1.5px solid transparent;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.seg:hover {
+  color: var(--ink);
+}
+.seg[data-active="1"] {
+  background: var(--card);
+  color: var(--navy);
+  border-color: var(--navy);
+}
+.seg:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* 44px minimum tap target (P1-25) — vertical only (6px sibling gaps). */
+.seg::after {
+  content: "";
+  position: absolute;
+  inset: -4px 0;
+}
+
+/* ── 5 · Account link rows ── */
+.linkRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s12);
+  width: 100%;
+  padding: var(--s12) 0;
+  background: transparent;
+  border: none;
+  text-align: left;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.linkRow:first-child {
+  padding-top: 0;
+}
+.linkRow:last-child {
+  padding-bottom: 0;
+}
+.linkRowLine {
+  border-bottom: 1px solid var(--line-soft);
+}
+.linkRow:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.linkIcon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  color: var(--navy);
+}
+.linkLabel {
+  flex: 1;
+  min-width: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+.linkRow > svg {
+  flex: 0 0 auto;
+  color: var(--faint);
+}
+
+/* ── 6 · Danger zone ── */
+.danger {
+  display: flex;
+  justify-content: center;
+  padding: var(--s4) 0 var(--s8);
+}
+.deleteBtn {
+  background: transparent;
+  border: none;
+  color: var(--missing);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  min-height: 44px; /* tap target (P1-25) */
+  padding: var(--s10) var(--s14);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.deleteBtn:hover {
+  background: var(--missing-bg);
+}
+.deleteBtn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* ── Delete confirm modal ── */
+.modalBody {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+/* P1-21: store-billing warning inside the delete-confirm modal. */
+.modalBillingNote {
+  margin: var(--s12) 0 0;
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--partial-bg);
+  color: var(--partial);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+.modalError {
+  margin-top: var(--s12);
+  padding: var(--s10) var(--s12);
+  border-radius: var(--r-md);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.84rem;
+}
+/* P2-4: the expired-session error carries its own way back in. */
+.errorLink {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.modalActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+  margin-top: var(--s20);
+}
+.confirmDanger {
+  background: var(--missing);
+  color: var(--on-navy);
+}
+.confirmDanger:hover:not(:disabled) {
+  background: var(--missing);
+  filter: brightness(0.94);
+}

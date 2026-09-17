@@ -1,0 +1,197 @@
+{
+  "cases": [
+    {
+      "id": "gc-001",
+      "slug": "ptsd-tinnitus-knee",
+      "tags": [
+        "multi-condition",
+        "deterministic-rating"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-002",
+      "slug": "multi-four-conditions",
+      "tags": [
+        "multi-condition"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-003",
+      "slug": "multi-with-merge",
+      "tags": [
+        "multi-condition"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-004",
+      "slug": "multi-five-conditions",
+      "tags": [
+        "multi-condition"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-005",
+      "slug": "multi-mixed-evidence",
+      "tags": [
+        "multi-condition"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-006",
+      "slug": "bilateral-knees",
+      "tags": [
+        "bilateral"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-007",
+      "slug": "bilateral-shoulders",
+      "tags": [
+        "bilateral"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-008",
+      "slug": "bilateral-plus-unilateral",
+      "tags": [
+        "bilateral"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-009",
+      "slug": "presumptive-burnpit-asthma",
+      "tags": [
+        "presumptive"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-010",
+      "slug": "presumptive-agentorange-ihd",
+      "tags": [
+        "presumptive"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-011",
+      "slug": "presumptive-gulfwar-illness",
+      "tags": [
+        "presumptive"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-012",
+      "slug": "abstention-garbage-identify",
+      "tags": [
+        "abstention-expected"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-013",
+      "slug": "abstention-unreadable-scan",
+      "tags": [
+        "abstention-expected"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-014",
+      "slug": "abstention-thin-readable",
+      "tags": [
+        "abstention-expected"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-015",
+      "slug": "nonmedical-dd214-only",
+      "tags": [
+        "non-medical-docs"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-016",
+      "slug": "nonmedical-financial",
+      "tags": [
+        "non-medical-docs"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-017",
+      "slug": "contradictory-ruled-out",
+      "tags": [
+        "contradictory-evidence"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-018",
+      "slug": "contradictory-onset-dates",
+      "tags": [
+        "contradictory-evidence"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-019",
+      "slug": "no-conditions-clean-exam",
+      "tags": [
+        "no-conditions-legitimate"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-020",
+      "slug": "deterministic-tinnitus",
+      "tags": [
+        "deterministic-rating"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-021",
+      "slug": "deterministic-sleep-apnea-cpap",
+      "tags": [
+        "deterministic-rating"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-022",
+      "slug": "pyramiding-anxiety-into-ptsd",
+      "tags": [
+        "pyramiding"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-023",
+      "slug": "incremental-delta-one-of-three",
+      "tags": [
+        "incremental"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gc-024",
+      "slug": "incremental-duplicate-reupload",
+      "tags": [
+        "incremental"
+      ],
+      "status": "active"
+    }
+  ]
+}

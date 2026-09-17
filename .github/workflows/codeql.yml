@@ -1,0 +1,48 @@
+# VCP-HARD-01: CodeQL static analysis. Free for public repositories;
+# results land in the Security tab. Uses build-mode "none" so the Java analysis
+# does not depend on provisioning JDK 25 / a full Gradle build in CI (robust over
+# precise). Dart is not a CodeQL language; the backend (java-kotlin) and the e2e /
+# any JS-TS sources are covered.
+name: codeql
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '27 3 * * 1' # weekly, Monday 03:27 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: analyze (${{ matrix.language }})
+    # Code scanning (SARIF upload) requires a public repo or GitHub Advanced
+    # Security. While the repo is private the upload 403s, so skip cleanly here;
+    # the job activates automatically once the repo is public. (Reliable on the
+    # push / pull_request events that produce PR checks.)
+    if: ${{ github.event.repository.private == false }}
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write # upload SARIF to the Security tab
+      actions: read
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: java-kotlin
+            build-mode: none
+          - language: javascript-typescript
+            build-mode: none
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: github/codeql-action/init@84498526a009a99c875e83ef4821a8ba52de7c22 # codeql-bundle-v2.25.5
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+      - uses: github/codeql-action/analyze@84498526a009a99c875e83ef4821a8ba52de7c22 # codeql-bundle-v2.25.5
+        with:
+          category: "/language:${{ matrix.language }}"

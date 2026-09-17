@@ -1,0 +1,32 @@
+{
+  "case_id": "gc-017",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)PTSD|post.?traumatic",
+          "vasrd_code": "9411",
+          "rating_band": {
+            "min": 30,
+            "max": 70
+          },
+          "must_be_found": true
+        }
+      ],
+      "forbidden_conditions": [
+        {
+          "vasrd_code": "8018",
+          "reason": "multiple sclerosis ruled out in doc 02"
+        }
+      ],
+      "combined_rating_band": {
+        "min": 30,
+        "max": 70
+      },
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

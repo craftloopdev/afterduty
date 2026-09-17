@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Obstructive sleep apnea",
+    "vasrd_code": "6847",
+    "body_system": "respiratory",
+    "is_presumptive": false,
+    "confidence": 0.9
+  }
+]

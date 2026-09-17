@@ -1,0 +1,129 @@
+.secLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0 0 var(--s8) var(--s4);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+  padding: var(--s16);
+  border-radius: var(--r-lg);
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.lead {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.dim {
+  font-size: 0.9rem;
+  color: var(--faint);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  padding: var(--s8) 0;
+  border-top: 1px solid var(--line);
+}
+
+.rowIcon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-md);
+  background: var(--navy100);
+  color: var(--navy);
+}
+
+.rowLabel {
+  flex: 1 1 auto;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowEdit {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--s6);
+}
+
+.nameInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 8px 10px;
+  /* ≥16px so iOS never zooms on focus (P1-23 in base.css). */
+  font-size: max(0.94rem, 16px);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: var(--ink);
+}
+.nameInput:focus-visible {
+  border-color: var(--focus);
+  outline: none;
+}
+
+.iconBtn {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--r-md);
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+.iconBtn:hover {
+  color: var(--ink);
+  background: var(--navy100);
+}
+
+.removeBtn {
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--missing);
+  padding: var(--s6) var(--s8);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.removeBtn:disabled {
+  color: var(--faint);
+  cursor: default;
+}
+
+.notice {
+  padding: var(--s10);
+  border-radius: var(--r-md);
+  background: var(--strong-bg);
+  color: var(--strong);
+  font-size: 0.85rem;
+}
+
+.error {
+  padding: var(--s10);
+  border-radius: var(--r-md);
+  background: var(--missing-bg);
+  color: var(--missing);
+  font-size: 0.85rem;
+}

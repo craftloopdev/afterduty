@@ -1,0 +1,231 @@
+.wrap {
+  display: block;
+}
+
+/* ── Heading row ── */
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--s12);
+}
+.title {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin: 0;
+  color: var(--ink);
+}
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ── "Not filing" acknowledgement (excluded conditions live in the full list) ── */
+.notFiling {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: var(--s12);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-decoration: none;
+}
+.notFiling:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* ── Desktop: table ── */
+.table {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+.thead,
+.trow {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 108px 108px 108px 96px 30px;
+  align-items: center;
+  gap: var(--s12);
+  padding: 0 18px;
+  min-width: 600px;
+}
+.thead {
+  height: 42px;
+  background: var(--sunken);
+  border-bottom: 1px solid var(--line);
+}
+.thead span {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--faint);
+}
+.thRate {
+  text-align: right;
+}
+
+.trow {
+  min-height: 64px;
+  text-align: left;
+  width: 100%;
+  border-bottom: 1px solid var(--line-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.1s ease;
+}
+.trow:last-child {
+  border-bottom: none;
+}
+.trow:hover {
+  background: var(--sunken);
+}
+.trow:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+
+.tdName {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 11px 0;
+  min-width: 0;
+}
+.tdName b {
+  font-size: 0.90625rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--ink);
+}
+.tdName small {
+  font-size: 0.75rem;
+  color: var(--faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tdTri {
+  display: flex;
+}
+.tdRate {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tdRate em {
+  color: var(--faint);
+  font-style: normal;
+  font-weight: 700;
+}
+.tdArrow {
+  color: var(--faint);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ── Mobile: glance card (hidden on desktop) ── */
+.glance {
+  display: none;
+  background: var(--card);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.glanceRow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  text-align: left;
+  padding: 13px 15px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+}
+.glanceRow:focus-visible,
+.glanceMore:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+.glanceIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--strong-bg);
+  color: var(--strong-dot);
+}
+.glanceName {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--ink);
+  min-width: 0;
+}
+.glanceName small {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--faint);
+}
+.glanceRate {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  font-size: 1.0625rem;
+  color: var(--navy);
+}
+.glanceMore {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  width: 100%;
+  text-align: left;
+  padding: 13px 15px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--partial);
+  text-decoration: none;
+}
+.glanceMoreTxt {
+  flex: 1;
+  min-width: 0; /* wrap between the fixed icons instead of widening the row */
+}
+
+/* ── Responsive: become the mobile layout ── */
+@media (max-width: 759.98px) {
+  .table {
+    display: none;
+  }
+  .glance {
+    display: block;
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "gc-022",
+  "slug": "pyramiding-anxiety-into-ptsd",
+  "title": "Pyramiding: anxiety absorbed into PTSD; tinnitus clamped",
+  "tags": [
+    "pyramiding"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-mh.txt",
+          "filename": "MH.txt",
+          "canned_extraction": "canned/extraction/01-mh.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "9411": "canned/synthesis_rate/9411.json",
+      "9400": "canned/synthesis_rate/9400.json",
+      "6260": null
+    },
+    "gap_evidence_by_vasrd": {},
+    "gap_validation_by_vasrd": {},
+    "gap_whatif_by_vasrd": {}
+  }
+}

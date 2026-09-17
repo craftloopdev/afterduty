@@ -1,0 +1,7 @@
+[
+  {"scenario": "Veteran obtains a nexus letter linking PTSD to the 2008 stressor",
+   "action": "Request an Independent Medical Opinion from a qualified provider",
+   "current_rating": 70, "potential_rating": 70,
+   "monthly_delta": 0, "action_required": "Schedule an IMO appointment and submit the opinion",
+   "confidence": 0.7, "timeline": "1-3 months"}
+]

@@ -1,0 +1,50 @@
+{
+  "id": "gc-018",
+  "slug": "contradictory-onset-dates",
+  "title": "Contradictory: conflicting onset dates collapse to one condition",
+  "tags": [
+    "contradictory-evidence"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-onset-a.txt",
+          "filename": "Onset_a.txt",
+          "canned_extraction": "canned/extraction/01-onset-a.json"
+        },
+        {
+          "file": "docs/02-onset-b.txt",
+          "filename": "Onset_b.txt",
+          "canned_extraction": "canned/extraction/02-onset-b.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "9411": "canned/synthesis_rate/9411.json"
+    },
+    "gap_evidence_by_vasrd": {
+      "9411": "canned/gap_evidence/9411.json"
+    },
+    "gap_validation_by_vasrd": {
+      "9411": "canned/gap_validation/9411.json"
+    },
+    "gap_whatif_by_vasrd": {
+      "9411": "canned/gap_whatif/9411.json"
+    }
+  }
+}

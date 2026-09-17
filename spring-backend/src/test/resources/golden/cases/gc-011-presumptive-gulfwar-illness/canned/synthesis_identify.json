@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Chronic multisymptom illness (presumptive, Gulf War)",
+    "vasrd_code": "8850",
+    "body_system": "neurological",
+    "is_presumptive": true,
+    "confidence": 0.9,
+    "presumptive_basis": "Gulf War undiagnosed illness presumption"
+  }
+]

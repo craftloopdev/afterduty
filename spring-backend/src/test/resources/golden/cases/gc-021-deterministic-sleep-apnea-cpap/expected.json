@@ -1,0 +1,27 @@
+{
+  "case_id": "gc-021",
+  "phases": {
+    "initial": {
+      "pipeline_outcome": "complete",
+      "conditions": [
+        {
+          "name_pattern": "(?i)sleep apnea",
+          "vasrd_code": "6847",
+          "rating_band": {
+            "min": 50,
+            "max": 50
+          },
+          "must_be_found": true,
+          "deterministic_rating_expected": true
+        }
+      ],
+      "combined_rating_band": {
+        "min": 50,
+        "max": 50
+      },
+      "abstention": {
+        "expected": false
+      }
+    }
+  }
+}

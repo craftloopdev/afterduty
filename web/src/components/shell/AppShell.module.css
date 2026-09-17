@@ -1,0 +1,33 @@
+.app {
+  display: flex;
+  min-height: 100dvh;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: var(--s24);
+  /* Containment: an overflowing child (long unbreakable strings) must never
+     hand the whole page horizontal scroll on phones. Sources are fixed too
+     (Pill wrap etc.) — this is the backstop. */
+  overflow-x: clip;
+  min-width: 0;
+}
+
+@media (max-width: 759.98px) {
+  .content {
+    padding: var(--s16);
+    /* Clears the fixed MobileNav INCLUDING its safe-area growth (P1-23) —
+       a bare 96px left the last card under the bar on notched phones. */
+    padding-bottom: calc(var(--mobile-nav-h) + var(--s24));
+  }
+}

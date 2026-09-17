@@ -1,0 +1,56 @@
+{
+  "id": "gc-024",
+  "slug": "incremental-duplicate-reupload",
+  "title": "Incremental: duplicate re-upload \u21d2 no-new-facts short-circuit",
+  "tags": [
+    "incremental"
+  ],
+  "status": "active",
+  "needs_expert_review": true,
+  "expert_review": {
+    "status": "unreviewed",
+    "reviewer": null,
+    "date": null,
+    "notes": null
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "docs": [
+        {
+          "file": "docs/01-note.txt",
+          "filename": "Note.txt",
+          "canned_extraction": "canned/extraction/01-note.json"
+        }
+      ]
+    },
+    {
+      "name": "delta-duplicate",
+      "docs": [
+        {
+          "file": "docs/02-note-dup.txt",
+          "filename": "Note_duplicate.txt",
+          "canned_extraction": "canned/extraction/02-note-dup.json"
+        }
+      ]
+    }
+  ],
+  "canned": {
+    "synthesis_identify": "canned/synthesis_identify.json",
+    "synthesis_duplicate_merger": "canned/synthesis_duplicate_merger.json",
+    "synthesis_verify": "canned/synthesis_verify.json",
+    "synthesis_rate_by_vasrd": {
+      "9411": "canned/synthesis_rate/9411.json",
+      "6260": null
+    },
+    "gap_evidence_by_vasrd": {
+      "9411": "canned/gap_evidence/9411.json"
+    },
+    "gap_validation_by_vasrd": {
+      "9411": "canned/gap_validation/9411.json"
+    },
+    "gap_whatif_by_vasrd": {
+      "9411": "canned/gap_whatif/9411.json"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.bar {
+  display: flex;
+  gap: 3px;
+  width: 100%;
+}
+
+.seg {
+  flex: 1 1 0;
+  height: 7px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.on {
+  background: var(--strength-on-navy);
+}
