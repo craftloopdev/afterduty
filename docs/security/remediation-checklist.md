@@ -61,4 +61,4 @@
 Injected Express/React/Terraform catalog (wrong codebase) · secret-rotation-as-emergency (never in
 this repo's history) · CORS `*` (Bearer not cookie) · missing backend security headers · Docker-as-root /
 no `.dockerignore` (Cloud Run gVisor; `.gcloudignore` governs deploy) · dependency/Gradle-wrapper checksum
-pinning · no access-audit table · no app-layer/CMEK encryption · `/Users/sobryan/` path in old history.
+pinning · no access-audit table · no app-layer/CMEK encryption · `/Users/<owner>/` path in old history.

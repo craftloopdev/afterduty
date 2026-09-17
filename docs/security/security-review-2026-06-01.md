@@ -240,7 +240,7 @@ Documented so future reviews don't re-flag them. Each was confirmed against the 
   but pre-existing and not worsened by going public.
 - **RevenueCat webhook non-constant-time compare; verbose-error reflection** — low; gating secret is
   an env var (not in tree); `server.error.include-message` defaults to `never`.
-- **`/Users/sobryan/` path in old history** (`regression/MANIFEST.md`, scrubbed in current tree) —
+- **`/Users/<owner>/` path in old history** (`regression/MANIFEST.md`, scrubbed in current tree) —
   exposes only the already-public username; not worth a history rewrite.
 - **Maintainer gmail in 190/224 author fields + `LICENSE`** — maintainer's deliberate call (already
   public via the GitHub profile).

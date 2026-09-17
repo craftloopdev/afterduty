@@ -1,6 +1,6 @@
 # Assurance Engine as a second verifier — v0 design
 
-**Status:** design APPROVED by Sean on 2026-09-07 (in chat, after the decisions memo D1–D6 was
+**Status:** design APPROVED by the owner on 2026-09-07 (in chat, after the decisions memo D1–D6 was
 approved on 2026-09-06). This file is the written spec for review before an implementation plan is
 written. **Two calls made at approval:** (1) pack v1 carries four checks, not the two D3 named for
 steps one and two; (2) item 2 in v0 means an *authored* pack with the engine's gates, and the
@@ -125,7 +125,7 @@ Bound parameters flow from the fan-out to the leaf rules, exactly as the engine'
 | `SR-CODE-VALID` | 1 `condition_finding`, `vasrd_code_known eq true` | `vasrd_code_known eq false` | 38 CFR Part 4; §4.27 (diagnostic code numbers) |
 | `SR-RATING-LEVEL` | 1 `condition_finding`, `rating_in_schedule eq true` | `rating_in_schedule eq false` | §4.7, §4.31, and the code's own criteria; DC 6260's single 10 falls out |
 | `SR-TRIAD` | 3 `triad_finding` (`min_count: 3`), `supported eq true` | none | §3.303(a); Shedden v. Principi, 381 F.3d 1163 |
-| `SR-PRESUMPTIVE` | 1 `presumptive_finding`, `is_presumptive eq true`, `basis_disproven eq false`, `basis matches <recognized-basis pattern>` | `basis_disproven eq true` | §3.307, §3.309, §3.317, §3.320 (PACT Act); the pattern is pack data, reviewed by Sean |
+| `SR-PRESUMPTIVE` | 1 `presumptive_finding`, `is_presumptive eq true`, `basis_disproven eq false`, `basis matches <recognized-basis pattern>` | `basis_disproven eq true` | §3.307, §3.309, §3.317, §3.320 (PACT Act); the pattern is pack data, reviewed by the owner |
 | `SR-NOT-PYRAMIDED` | 1 `pyramiding_finding`, `rated_peers_in_group eq 0`, `same_code_count lte 2` | `rated_peers_in_group gte 1`; `same_code_count gt 2` | §4.14; §4.130 single evaluation; §4.25/§4.26 for the bilateral pair |
 
 Disposition semantics that the mapper relies on: a rule whose records are present but unsatisfied
@@ -274,7 +274,7 @@ in the ledger), `pack` (resource name, default `afterduty.verify.v1.yaml`).
 The mapper reads `derivation.rule_id` for `rule_id`, `derivation.unmet[].requirement_id` and
 `derivation.refutation_checks[]` for the description's cause, and the scenario's own finding records
 for the raw values. `description` is generated from those raw values. `suggested_fix` comes from one function,
-`EngineIssueMapper.suggestedFix(issueType, finding)`, **reserved for Sean to write**: it is the
+`EngineIssueMapper.suggestedFix(issueType, finding)`, **reserved for the owner to write**: it is the
 wording a veteran would eventually read, and it is VA judgment rather than engineering.
 
 ## 9. Ledger
@@ -333,7 +333,7 @@ pilot and reporting.
   authored in the plan.
 - **Scoreboard** per case and in total, for each verifier: `catches` (expected and flagged), `misses`
   (expected and not flagged), `unexpected` (flagged and not expected, listed for review), plus
-  `agreement` (flagged by both). The harness cannot tell a false alarm from a new find; Sean
+  `agreement` (flagged by both). The harness cannot tell a false alarm from a new find; the owner
   classifies the unexpected list, and the gc-100 gate is zero unexplained unexpected findings plus
   the pyramiding and insufficient-evidence expectations caught. No percentage is a gate.
 - **Reports:** `docs/qa/evals/runs/assurance-pilot-<runId>/report.json`, `report.md`, `scores.csv`

@@ -1,7 +1,7 @@
 # Engine session → app session: D1 through D6 are signed off. Begin work.
 
 **From:** the assurance-engine session, 2026-09-06.
-**Authority:** Sean, this date, in the engine session. He read the six decisions and settled them.
+**Authority:** the owner, this date, in the engine session. He read the six decisions and settled them.
 
 ## The decision
 
@@ -11,7 +11,7 @@ pin, not about the deployment decision.
 
 That includes the reframe you made after the first draft: the engine goes in as a **second verifier
 beside `SynthesisVerificationAgent`**, not as a rater, and the rating path is untouched. Your
-sequencing holds: memo first, then the brainstorm and spec with Sean, then the pack generator, the
+sequencing holds: memo first, then the brainstorm and spec with the owner, then the pack generator, the
 serializer, the pilot, and the deploy.
 
 ## The one correction, and it is load-bearing

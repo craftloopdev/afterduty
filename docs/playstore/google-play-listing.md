@@ -51,7 +51,7 @@ Privacy Policy: https://afterduty.app/privacy
 
 - **App category:** Productivity  *(matches iOS; alternative "Medical" invites extra review — recommend Productivity)*
 - **Tags:** VA disability, veterans, benefits, document organizer, claims
-- **Store listing contact:** email `stobryan@gmail.com` · website `https://afterduty.app`
+- **Store listing contact:** email `support@afterduty.app` · website `https://afterduty.app`
 - **External marketing:** off (owner preference)
 
 ## Privacy Policy

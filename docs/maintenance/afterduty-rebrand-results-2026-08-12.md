@@ -82,13 +82,13 @@ re-merge it.
 **`support@` / `privacy@` / `security@` / `conduct@` @afterduty.app hard-bounce.**
 
 afterduty.app is a Workspace *user alias domain*, so only local parts that exist on the mailbox resolve:
-`good@` and `sean@`. An SMTP RCPT probe returns 250 for those two and 550 for the four published contacts.
+`good@` and `<owner>@`. An SMTP RCPT probe returns 250 for those two and 550 for the four published contacts.
 
 This is a **regression, not a pre-existing gap**: vaclaimpath.com is a catch-all — any local part returns
 250 — so those addresses used to accept mail. The login-lockout screen, the paywall and the privacy policy
 now point veterans at addresses that bounce.
 
-Fix (~2 minutes): Admin console → Directory → Users → Sean OBryan → Add alternate emails, or create Groups.
+Fix (~2 minutes): Admin console → Directory → Users → the owner → Add alternate emails, or create Groups.
 Then delete the entries from `KNOWN_DEFERRED` in `tests/check_published_emails.py`, and flip the marketing
 site's `veterans@vaclaimpath.com` — deliberately left alone for now precisely because it still delivers
 while the @afterduty.app version would not.

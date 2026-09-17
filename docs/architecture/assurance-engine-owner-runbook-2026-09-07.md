@@ -1,6 +1,6 @@
 # Owner runbook — one-time setup for the engine service (D6, v0)
 
-**For:** Sean. **Takes:** about two minutes. **Run as:** an account holding Owner on
+**For:** the owner. **Takes:** about two minutes. **Run as:** an account holding Owner on
 `craftloop-va-claim`, or at least Service Account Admin plus Secret Manager Admin. **Why it is you and
 not a session:** the deploy identity every session uses
 (`1048958573080-compute@developer.gserviceaccount.com`) was tested on 2026-09-07 with

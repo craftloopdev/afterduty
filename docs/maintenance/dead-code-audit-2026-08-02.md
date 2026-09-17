@@ -1,6 +1,6 @@
 # Dead-code audit — 2026-08-02
 
-Repo: `/Users/rusticus/Developer/va-claim-path-app` · branch `feat/next-web-foundation`
+Repo: `~/Developer/va-claim-path-app` · branch `feat/next-web-foundation`
 Scope: flutter cutover residue, backend dead beans/endpoints, web dead code/deps, root files, docs, repo hygiene.
 **Report-only — nothing has been deleted.**
 

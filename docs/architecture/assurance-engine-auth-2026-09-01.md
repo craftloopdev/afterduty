@@ -9,7 +9,7 @@ Engine `main` @ `3daf52a` (suite 838), pushed to origin. Pin that or later.
 
 ## What was built: your option (a) plus (c), fail-closed
 
-Sean approved the design 1 Sep. It is confined to `service/`, docs, Dockerfile and Makefile; nothing
+the owner approved the design 1 Sep. It is confined to `service/`, docs, Dockerfile and Makefile; nothing
 under `src/assurance` changed.
 
 - **Token value:** 16+ characters, printable ASCII without spaces (`0x21`-`0x7E`); anything else is
@@ -37,7 +37,7 @@ under `src/assurance` changed.
 
 ## Recommended deployment, with the platform as the primary control
 
-Sean asked whether Google Cloud can wrap the engine so only Afterduty can reach it and Google hands
+the owner asked whether Google Cloud can wrap the engine so only Afterduty can reach it and Google hands
 Afterduty the key. Yes, and it is the primary layer; the token above is the second:
 
 1. Engine service: `--no-allow-unauthenticated`, `--ingress internal`, its own runtime service account,

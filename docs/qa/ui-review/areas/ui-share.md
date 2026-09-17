@@ -6,7 +6,7 @@ entry points (`home/ShareCard.tsx`, `profile/ProfileView.tsx`), fixtures (`lib/f
 `app/dev/share/page.tsx`), and the Spring backend share contract (`ShareController.java`, `ShareService.java`)
 used to verify which UI states are actually reachable.
 
-All paths below are relative to `/Users/rusticus/Developer/va-claim-path-app`.
+All paths below are relative to `~/Developer/va-claim-path-app`.
 
 ---
 

@@ -7,7 +7,7 @@ history, disability ratings. We take security reports seriously.
 
 **Do not file a public GitHub issue for a security report.**
 
-Preferred: [open a private GitHub Security Advisory](https://github.com/sobryan/va-claim-path-app/security/advisories/new).
+Preferred: [open a private GitHub Security Advisory](https://github.com/craftloopdev/afterduty/security/advisories/new).
 
 Fallback email: `security@afterduty.app`.
 

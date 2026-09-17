@@ -202,15 +202,15 @@ describe("ProfileView — header never shows a uid; nameless gets 'Welcome' + th
 describe("ProfileView — editable preferred name (PATCH /api/auth/me)", () => {
   it("saves through the mutations facade and updates the header in place", async () => {
     updatePreferredName.mockResolvedValue(
-      new Response(JSON.stringify({ ok: true, preferredName: "Sean" }), { status: 200 }),
+      new Response(JSON.stringify({ ok: true, preferredName: "Griff" }), { status: 200 }),
     );
     render(<ProfileView profile={{ ...PROFILE, name: "", email: null, initial: "U" }} />);
     await userEvent.click(screen.getByRole("button", { name: /what should we call you/i }));
-    await userEvent.type(screen.getByRole("textbox", { name: /preferred name/i }), "Sean");
+    await userEvent.type(screen.getByRole("textbox", { name: /preferred name/i }), "Griff");
     await userEvent.click(screen.getByRole("button", { name: /^save$/i }));
 
-    expect(await screen.findByText("Sean")).toBeInTheDocument();
-    expect(updatePreferredName).toHaveBeenCalledWith("Sean");
+    expect(await screen.findByText("Griff")).toBeInTheDocument();
+    expect(updatePreferredName).toHaveBeenCalledWith("Griff");
     expect(screen.queryByText("Welcome")).not.toBeInTheDocument();
   });
 
@@ -220,7 +220,7 @@ describe("ProfileView — editable preferred name (PATCH /api/auth/me)", () => {
     await userEvent.click(screen.getByRole("button", { name: /edit name/i }));
     const input = screen.getByRole("textbox", { name: /preferred name/i });
     await userEvent.clear(input);
-    await userEvent.type(input, "Sean");
+    await userEvent.type(input, "Griff");
     await userEvent.click(screen.getByRole("button", { name: /^save$/i }));
 
     expect(await screen.findByText(/couldn't save your name/i)).toBeInTheDocument();
@@ -262,22 +262,22 @@ describe("ProfileView — email row: synthetic emails never render; Add-an-email
     const dialog = screen.getByRole("dialog", { name: /add an email/i });
     expect(dialog).toBeInTheDocument();
 
-    await userEvent.type(screen.getByRole("textbox", { name: /email address/i }), "Sean@Example.com");
+    await userEvent.type(screen.getByRole("textbox", { name: /email address/i }), "Griff@Example.com");
     await userEvent.click(screen.getByRole("button", { name: /send me a code/i }));
-    expect(requestEmailCode).toHaveBeenCalledWith("sean@example.com", "attach");
+    expect(requestEmailCode).toHaveBeenCalledWith("griff@example.com", "attach");
 
     await userEvent.type(
       await screen.findByRole("textbox", { name: /verification code/i }),
       "123456",
     );
     await userEvent.click(screen.getByRole("button", { name: /verify email/i }));
-    expect(attachEmailCode).toHaveBeenCalledWith("sean@example.com", "123456");
+    expect(attachEmailCode).toHaveBeenCalledWith("griff@example.com", "123456");
 
     // Sheet closes; the row now shows the attached address + the sign-in note.
     await waitFor(() =>
       expect(screen.queryByRole("dialog", { name: /add an email/i })).not.toBeInTheDocument(),
     );
-    expect(screen.getByText("sean@example.com")).toBeInTheDocument();
+    expect(screen.getByText("griff@example.com")).toBeInTheDocument();
     expect(screen.getByText(/you can now sign in with it/i)).toBeInTheDocument();
   });
 

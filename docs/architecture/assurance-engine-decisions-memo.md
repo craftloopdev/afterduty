@@ -1,6 +1,6 @@
 # Assurance Engine integration — decisions memo (item 1)
 
-**Status: APPROVED 2026-09-06.** Sean read D1–D6 in the engine session and approved all six as
+**Status: APPROVED 2026-09-06.** the owner read D1–D6 in the engine session and approved all six as
 written, with one correction — the engine SHA to pin in D6. Delivered here as two engine-authored
 file drops, `assurance-engine-GO-2026-09-06.md` and `assurance-engine-cloudrun-readiness-2026-09-06.md`
 (this directory). Nothing below is built yet. This memo was the instrument the engine session asked
@@ -8,7 +8,7 @@ for: the app-side decisions stated explicitly so they could be accepted, amended
 a spec is written.
 
 **Context:** `docs/architecture/assurance-engine-integration.md` (tasking + all five clarifications
-answered). Engine pinned at **`1b94993`** or later, `github.com/sobryan/assurance-engine` — corrected
+answered). Engine pinned at **`1b94993`** or later, `github.com/craftloopdev/assurance-engine` — corrected
 2026-09-06 from `380f4a7`, which predates endpoint authentication (see D6).
 
 **Reading order for a reviewer:** D1 and D2 are the load-bearing ones. D3–D6 follow from them.
@@ -17,7 +17,7 @@ answered). Engine pinned at **`1b94993`** or later, `github.com/sobryan/assuranc
 
 ## What this integration actually changes
 
-**The engine is a VERIFIER, not a rater.** *(Reframed 2026-09-05 at Sean's direction — an earlier
+**The engine is a VERIFIER, not a rater.** *(Reframed 2026-09-05 at the owner's direction — an earlier
 draft posed this as "which conditions does the engine rate," which created a false choice between
 verifiability and decidability and left no clear path to ship. That framing is abandoned; the
 reasoning is kept here so it is not re-adopted.)*
@@ -233,7 +233,7 @@ pilot that leaked into the UI would stop being a shadow pilot.
 
 ### The success criterion
 
-**Proposed, needs Sean.** Two gates, both judgment calls, deliberately not percentages:
+**Proposed, needs the owner.** Two gates, both judgment calls, deliberately not percentages:
 
 1. **Zero unexplained false alarms on gc-100.** Every issue the engine raises that is not in the known
    7 must have a written explanation, and none of those explanations may be "the pack is wrong in a
@@ -278,7 +278,7 @@ separate Cloud Run service in that project. **Pin `1b94993` or later.**
 service with no token gate, the opposite of what our 1 September request asked for. Authentication
 landed on the engine's origin at `3daf52a`; `1b94993` adds the two container fixes below. Verified
 here on 2026-09-07: the ancestry is `380f4a7` → `3daf52a` → `1b94993`, and `1b94993` is on
-`origin/main` of `github.com/sobryan/assurance-engine`.
+`origin/main` of `github.com/craftloopdev/assurance-engine`.
 
 **What `1b94993` carries, all three binding on us:**
 - the shared-token gate, **fail-closed at startup** — the container exits 2 before binding a socket
@@ -327,9 +327,9 @@ needs owner-level IAM (the credentials available to this session cannot list net
 Recommendation: **spec it as two steps** — v0 deploys with IAM + shared token and the caller proven
 with one request; internal ingress follows as its own change with its own rollback, not folded into
 the first engine deploy. The engine's `SERVICE.md` calls internal ingress binding for PHI-bearing
-use, so whether v0 may run without it is Sean's call, stated here so it is not decided by default.
+use, so whether v0 may run without it is the owner's call, stated here so it is not decided by default.
 
-**Decided 2026-09-07 (Sean):** v0 deploys with IAM plus the shared token; the caller is proven with
+**Decided 2026-09-07 (the owner):** v0 deploys with IAM plus the shared token; the caller is proven with
 one request; internal ingress lands afterwards as its own change with its own rollback. The engine
 service is After Duty's private instance — its only invoker is the API's runtime service account,
 and nothing else inside or outside the project is granted `run.invoker` on it.
@@ -344,7 +344,7 @@ hardened image (non-root, read-only root filesystem) is a deferred engine task w
 **Audit item.** Project-level roles that carry `run.routes.invoke` (Cloud Run Admin, Developer,
 Source Developer, Services Invoker, and basic Editor/Owner) can call the service with no
 service-level binding. Keep those to human operators, never to workloads. No credential available
-to this session can read the project IAM policy, so this audit is Sean's.
+to this session can read the project IAM policy, so this audit is the owner's.
 
 **Also noted, out of scope here:** the permission test surfaced least-privilege findings about
 existing identities and secret handling. They are recorded owner-side, outside this repository, and
@@ -355,14 +355,14 @@ none blocks v0.
 ## What this memo does not decide
 
 - **Whether engine-found issues are ever shown to veterans.** v0 is shadow-mode only. That decision
-  needs the pilot's false-alarm rate, and it is Sean's. Note this is a *much smaller* decision than
+  needs the pilot's false-alarm rate, and it is the owner's. Note this is a *much smaller* decision than
   the one the earlier draft posed: the engine adds issues to an existing surface rather than
   replacing the rating a veteran sees, so it can be enabled per-check rather than all at once.
 - **Whether the engine ever replaces `SynthesisVerificationAgent`.** Not in scope. Running both is
   the safer end state — an LLM verifier catches what rules cannot express, and vice versa.
 - **HLR modeling.** Deferred; it is also the trigger for the engine's E1 scope-key work, so adopting
   it is a cross-repo decision, not ours alone.
-- **Item 6 (site wording).** The marketing-site session owns it, gated on this shipping *and* Sean
+- **Item 6 (site wording).** The marketing-site session owns it, gated on this shipping *and* the owner
   approving copy. `/process` currently says After Duty "doesn't run on that engine" — true today,
   false the day this ships, and it must not be changed before both gates are met.
 
@@ -396,7 +396,7 @@ scope from "which conditions" to "which checks." That change is what makes verif
 decidability and the product bar compatible instead of competing, so it is worth reading D1 and the
 framing section before the rest.
 
-**Approved as written on 2026-09-06** (Sean, in the engine session; relayed by file drop). D5's two
+**Approved as written on 2026-09-06** (the owner, in the engine session; relayed by file drop). D5's two
 gates stand as the success criterion; D3 scope and D4 retention stand as recommended. D6's ingress
 sequencing was decided 2026-09-07: v0 first with IAM plus the shared token, internal ingress as a
 follow-on change with its own rollback.

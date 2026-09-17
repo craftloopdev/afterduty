@@ -9,16 +9,16 @@ import {
 
 describe("displayName", () => {
   it("returns a real name as-is", () => {
-    expect(displayName({ name: "Sean OBryan", email: "s@x.com" })).toBe("Sean OBryan");
+    expect(displayName({ name: "Griff Daniels", email: "s@x.com" })).toBe("Griff Daniels");
   });
   it("falls back from a Firebase UID to the email local part", () => {
-    expect(displayName({ name: "dB34I0uAgdXTBTL7bDq5kzrAb0M2", email: "sean@x.com" })).toBe("sean");
+    expect(displayName({ name: "dB34I0uAgdXTBTL7bDq5kzrAb0M2", email: "griff@x.com" })).toBe("griff");
   });
   it("returns empty when only a UID and no email (phone sign-in)", () => {
     expect(displayName({ name: "dB34I0uAgdXTBTL7bDq5kzrAb0M2", email: "" })).toBe("");
   });
   it("firstName takes the first token", () => {
-    expect(firstName({ name: "Sean OBryan", email: "" })).toBe("Sean");
+    expect(firstName({ name: "Griff Daniels", email: "" })).toBe("Griff");
     expect(firstName({ name: "dB34I0uAgdXTBTL7bDq5kzrAb0M2", email: "" })).toBe("");
   });
 });
@@ -42,17 +42,17 @@ describe("displayName — preferredName + synthetic-email hardening (profile 202
   const UID = "dB34I0uAgdXTBTL7bDq5kzrAb0M2";
 
   it("prefers preferredName over everything else", () => {
-    expect(displayName({ name: "Sean OBryan", email: "s@x.com", preferredName: "Gunny" })).toBe(
+    expect(displayName({ name: "Griff Daniels", email: "s@x.com", preferredName: "Gunny" })).toBe(
       "Gunny",
     );
   });
 
   it("ignores a blank/whitespace preferredName", () => {
-    expect(displayName({ name: "Sean OBryan", email: "", preferredName: "  " })).toBe(
-      "Sean OBryan",
+    expect(displayName({ name: "Griff Daniels", email: "", preferredName: "  " })).toBe(
+      "Griff Daniels",
     );
-    expect(displayName({ name: "Sean OBryan", email: "", preferredName: null })).toBe(
-      "Sean OBryan",
+    expect(displayName({ name: "Griff Daniels", email: "", preferredName: null })).toBe(
+      "Griff Daniels",
     );
   });
 
@@ -68,12 +68,12 @@ describe("displayName — preferredName + synthetic-email hardening (profile 202
 
   it("preferredName rescues an otherwise-synthetic account", () => {
     expect(
-      displayName({ name: UID, email: `${UID}@firebase.local`, preferredName: "Sean" }),
-    ).toBe("Sean");
+      displayName({ name: UID, email: `${UID}@firebase.local`, preferredName: "Griff" }),
+    ).toBe("Griff");
   });
 
   it("still uses a REAL email's local part", () => {
-    expect(displayName({ name: UID, email: "sean@example.com" })).toBe("sean");
+    expect(displayName({ name: UID, email: "griff@example.com" })).toBe("griff");
   });
 });
 

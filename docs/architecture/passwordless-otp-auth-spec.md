@@ -3,7 +3,7 @@
 **Status:** Frozen contract for build. **Owner:** auth rebuild.
 **Date:** 2026-06-20.
 **Mirrors:** VolunTails' proven, shipped single-box phone-or-email OTP
-(`/Users/rusticus/Developer/voluntails`). Backend pattern ported FastAPI/SQLAlchemy →
+(`~/Developer/voluntails`). Backend pattern ported FastAPI/SQLAlchemy →
 Spring Boot/Java; web pattern ported Next.js → Next.js (BFF).
 
 This spec replaces VA Claim Path's current login (Google + Apple + password +

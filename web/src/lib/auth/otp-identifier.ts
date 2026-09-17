@@ -21,7 +21,7 @@ export function classify(raw: string): Classified {
   return e164 ? { kind: "phone", e164 } : { kind: "invalid" };
 }
 
-// US phone → E.164 (Sean's pref: accept 10 digits, auto-prepend +1).
+// US phone → E.164 (the owner's preference: accept 10 digits, auto-prepend +1).
 //   • already "+"        → keep iff 8–15 digits
 //   • 10 digits          → +1XXXXXXXXXX
 //   • 11 digits, lead 1  → +1XXXXXXXXXX

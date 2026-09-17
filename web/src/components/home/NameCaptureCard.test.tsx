@@ -46,14 +46,14 @@ describe("NameCaptureCard — shows only when nameless", () => {
 describe("NameCaptureCard — saving", () => {
   it("PATCHes the trimmed first name, thanks the veteran, and refreshes (web)", async () => {
     updatePreferredName.mockResolvedValue(
-      new Response(JSON.stringify({ ok: true, preferredName: "Sean" }), { status: 200 }),
+      new Response(JSON.stringify({ ok: true, preferredName: "Griff" }), { status: 200 }),
     );
     render(<NameCaptureCard show />);
-    await userEvent.type(await screen.findByRole("textbox", { name: /first name/i }), "  Sean ");
+    await userEvent.type(await screen.findByRole("textbox", { name: /first name/i }), "  Griff ");
     await userEvent.click(screen.getByRole("button", { name: /^save$/i }));
 
     expect(await screen.findByText(/good to meet you/i)).toBeInTheDocument();
-    expect(updatePreferredName).toHaveBeenCalledWith("Sean");
+    expect(updatePreferredName).toHaveBeenCalledWith("Griff");
     expect(refresh).toHaveBeenCalled();
   });
 
@@ -61,7 +61,7 @@ describe("NameCaptureCard — saving", () => {
     updatePreferredName.mockResolvedValue(new Response(null, { status: 200 }));
     const onSaved = vi.fn();
     render(<NameCaptureCard show onSaved={onSaved} />);
-    await userEvent.type(await screen.findByRole("textbox", { name: /first name/i }), "Sean");
+    await userEvent.type(await screen.findByRole("textbox", { name: /first name/i }), "Griff");
     await userEvent.click(screen.getByRole("button", { name: /^save$/i }));
 
     await waitFor(() => expect(onSaved).toHaveBeenCalled());
@@ -71,7 +71,7 @@ describe("NameCaptureCard — saving", () => {
   it("keeps the card + shows honest copy when the save fails", async () => {
     updatePreferredName.mockResolvedValue(new Response(null, { status: 502 }));
     render(<NameCaptureCard show />);
-    await userEvent.type(await screen.findByRole("textbox", { name: /first name/i }), "Sean");
+    await userEvent.type(await screen.findByRole("textbox", { name: /first name/i }), "Griff");
     await userEvent.click(screen.getByRole("button", { name: /^save$/i }));
 
     expect(await screen.findByText(/couldn't save your name/i)).toBeInTheDocument();

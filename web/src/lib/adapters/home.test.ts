@@ -28,8 +28,8 @@ const needsWorkCond: ConditionResponse = {
 
 const me: UserResponse = {
   id: 10,
-  email: "sean@example.com",
-  name: "Sean OBryan",
+  email: "griff@example.com",
+  name: "Griff Daniels",
   activeClaim: {
     id: 99,
     status: "ANALYZED",
@@ -68,7 +68,7 @@ const baseInputs: HomeInputs = {
 describe("composeHomeVM", () => {
   it("derives partitions, presumptive count, steps, pay, and Pro state", () => {
     const vm = composeHomeVM(baseInputs);
-    expect(vm.firstName).toBe("Sean");
+    expect(vm.firstName).toBe("Griff");
     expect(vm.hasClaim).toBe(true);
     expect(vm.isNewUser).toBe(false);
     expect(vm.ready.map((c) => c.id)).toEqual([1]);

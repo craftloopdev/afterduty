@@ -1,10 +1,10 @@
 # Assurance Evidence Engine integration — app-side pickup
 
 **Status: PICKED UP 2026-08-30, NOT STARTED.** This records the tasking and the verified ground
-truth. No spec, no plan, no code yet — the six items below need a design pass with Sean before
+truth. No spec, no plan, no code yet — the six items below need a design pass with the owner before
 anything is built.
 
-**Decision (2026-08-30, Sean):** Craftloop's Assurance Evidence Engine becomes After Duty's
+**Decision (2026-08-30, the owner):** Craftloop's Assurance Evidence Engine becomes After Duty's
 claim/gap-analysis engine, running as a **separate Cloud Run service inside After Duty's trust
 boundary**. Relayed by the phronesis engine session.
 
@@ -13,7 +13,7 @@ boundary**. Relayed by the phronesis engine session.
 The first handoff was routed to the wrong session. It reached the **afterduty.app marketing-site
 session** (`~/Developer/VAClaimPath`), which is static-site scope only. That session did the right
 thing: it accepted **item 6 alone** (site wording — and even that gated on the integration actually
-shipping *and* Sean approving new copy), recorded the obligation in its own repo, returned four
+shipping *and* the owner approving new copy), recorded the obligation in its own repo, returned four
 facts about this app, and sent items 1–5 back. The engine repo logged the correction in
 `d4f67f0` and parked the row "awaiting app-repo session."
 
@@ -30,7 +30,7 @@ This session (`~/Developer/va-claim-path-app`, PID 23105) is that session. Items
 | 3 | Java run-record serializer | `conform` |
 | 4 | 25-case shadow-mode pilot vs current gap logic | — |
 | 5 | Cloud Run deploy pinning an engine SHA | — |
-| 6 | Site-wording change — **last, and owned by the site repo** | integration ships + Sean approves copy |
+| 6 | Site-wording change — **last, and owned by the site repo** | integration ships + the owner approves copy |
 
 **The engine repo (`~/Developer/phronesis/assurance-engine`) owns:** the engine core; a thin HTTP
 wrapper deliberately landing **outside `src/assurance`** so the accreditation story stays
@@ -129,7 +129,7 @@ guide; `validate` / `lint` / `test-pack` are our quality gates. The private gold
 needed** and stays path-referenced (PHI rule).
 
 **5. Item 1 — the memo comes first** and is the instrument that proposes the remaining app-side
-decisions to Sean: ledger persistence (ephemeral vs GCS/AlloyDB for user-facing audit trails), pack
+decisions to the owner: ledger persistence (ephemeral vs GCS/AlloyDB for user-facing audit trails), pack
 regeneration cadence against `VasrdRecord.as_of_date`, pilot design, and — resolving our fact (c) —
 **seam scoping**: the engine consumes **post-synthesis batch assessments**, and the two controller
 paths reaching `VaMathService` directly are *live estimation UX, not argument-keeping*, so they need
@@ -137,8 +137,8 @@ paths reaching `VaMathService` directly are *live estimation UX, not argument-ke
 
 ## Engine state (verified 2026-08-31)
 
-`main` = `380f4a7`, suite **780**, and **in sync with `origin`** (`github.com/sobryan/assurance-engine`)
-— Sean pushed, so CI can fetch by SHA; pin `380f4a7` or later — **superseded 2026-09-06: pin `1b94993` or later**, because `380f4a7`
+`main` = `380f4a7`, suite **780**, and **in sync with `origin`** (`github.com/craftloopdev/assurance-engine`)
+— the owner pushed, so CI can fetch by SHA; pin `380f4a7` or later — **superseded 2026-09-06: pin `1b94993` or later**, because `380f4a7`
 predates the token gate (memo D6). Newly relevant: `assurance export
 SCENARIO --format gsn [--svg PATH]` renders any assessment as a disposition-colored GSN argument
 graph (our pilot report can carry a per-case picture); hash-pinned locks + CycloneDX SBOMs with a
@@ -158,17 +158,17 @@ Report engine-side defects to `phronesis-ab` or the board row — never work aro
 ## Next step
 
 Nothing is blocked. Item 1 (the decisions memo) is next and is the input to a brainstorm + spec with
-Sean. Item 6 stays with the site repo, last.
+the owner. Item 6 stays with the site repo, last.
 
 ## Update 2026-09-06/07 — D1–D6 approved; work begins
 
-Sean approved D1–D6 as written on 2026-09-06 (in the engine session; delivered here as two
+the owner approved D1–D6 as written on 2026-09-06 (in the engine session; delivered here as two
 engine-authored file drops, `assurance-engine-GO-2026-09-06.md` and
 `assurance-engine-cloudrun-readiness-2026-09-06.md`, both now committed — the engine repo holds no
 canonical copy of either). One correction, to D6's pin: **`1b94993` or later**, because `380f4a7`
 predates endpoint authentication. The memo's D6 now carries the full deploy contract (fail-closed
 `ASSURANCE_SERVICE_TOKEN`, ordered deploy, both caller headers, the internal-ingress requirement and
-what it costs on our side). Sequencing per the memo: brainstorm + spec with Sean → D2 serializer →
+what it costs on our side). Sequencing per the memo: brainstorm + spec with the owner → D2 serializer →
 D3 pack (steps 1–2) → D5 pilot → D3 steps 3–4; D6 in parallel.
 
 Engine `main` on 2026-09-07: `d70737c` (docs only), with `1b94993` the last code change. The engine

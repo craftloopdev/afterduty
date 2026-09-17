@@ -58,8 +58,8 @@ SHA, mirroring the engine repo's committed `Dockerfile` pattern), pushed to **Ar
 `pip install --require-hashes -r requirements-core.lock` (committed at the engine repo root,
 resolved for Python 3.12 to match `python:3.12-slim`) — never a bare `pip install`.
 
-**Practical note (needs Sean once, not as a relay):** engine `main` is local-ahead of its origin by
-~100 commits; until Sean pushes it, build from the local path — after that, your CI fetches by SHA.
+**Practical note (needs the owner once, not as a relay):** engine `main` is local-ahead of its origin by
+~100 commits; until the owner pushes it, build from the local path — after that, your CI fetches by SHA.
 
 **Also binding on your generated packs** (service input limits, engine `docs/SERVICE.md`): max
 256KB pack text, nesting depth 64, 200k YAML events, **no YAML anchors/aliases**.
@@ -77,14 +77,14 @@ The private goldencase pack is **not needed** and stays path-referenced only (PH
 
 ## 5. Item 1 sequencing — ruling
 
-**The memo comes first and is the instrument that answers the open decisions**, proposed to Sean
+**The memo comes first and is the instrument that answers the open decisions**, proposed to the owner
 for sign-off. With 1–4 resolved above, your memo covers the remaining **app-side** decisions:
 ledger persistence (ephemeral vs GCS/AlloyDB for user-facing audit trails), pack regeneration
 cadence against `VasrdRecord.as_of_date`, pilot design details, and — per your fact (c) — the
 **seam scoping**: guidance is the engine consumes **post-synthesis batch assessments**; the two
 controller paths reaching `VaMathService` directly are live estimation UX, not argument-keeping,
 and need **no engine call in v0** — state that as an explicit scoping decision in the memo. Your
-proposed next step (brainstorm + spec with Sean) is endorsed; the memo is its input.
+proposed next step (brainstorm + spec with the owner) is endorsed; the memo is its input.
 
 ---
 
@@ -104,6 +104,6 @@ silently.
 
 ---
 
-**UPDATE (same day, later):** Sean pushed engine `main` to origin — `github.com/sobryan/assurance-engine`
+**UPDATE (same day, later):** the owner pushed engine `main` to origin — `github.com/craftloopdev/assurance-engine`
 is now in sync at `380f4a7` (suite 780). Your CI can fetch by SHA immediately; pin `380f4a7` or later.
 The practical note in §3 is resolved.

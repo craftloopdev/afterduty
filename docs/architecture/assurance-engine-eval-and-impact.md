@@ -160,7 +160,7 @@ correct answer** — 7 issues, being 2 `rating_mismatch`, 3 `pyramiding`, 2 `ins
 | **False alarms** | Issues the engine raises that are not real | **The metric that decides everything.** A verifier that cries wolf is worse than no verifier |
 | **New finds** | Real issues the engine raises that the LLM missed | The strongest possible result, and the entire argument for the integration |
 
-### The acceptance bar (proposed, needs Sean)
+### The acceptance bar (proposed, needs the owner)
 
 Two gates, both judgment calls, **deliberately not percentages**:
 

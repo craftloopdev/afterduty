@@ -30,13 +30,13 @@ describe("loadProfilePage — synthetic email / uid hygiene", () => {
   it("prefers preferredName once set", async () => {
     const api = makeEndpoints(
       fakeFetch({
-        "/auth/me": { id: 1, name: UID, email: `${UID}@firebase.local`, preferredName: "Sean" },
+        "/auth/me": { id: 1, name: UID, email: `${UID}@firebase.local`, preferredName: "Griff" },
         "/subscription/status": { active: false },
       }),
     );
     const vm = await api.loadProfilePage();
-    expect(vm.name).toBe("Sean");
-    expect(vm.initial).toBe("S");
+    expect(vm.name).toBe("Griff");
+    expect(vm.initial).toBe("G");
   });
 
   it("keeps a real email verbatim", async () => {
@@ -221,13 +221,13 @@ describe("patchPreferredName — pinned PATCH /auth/me contract", () => {
     const calls: Array<{ path: string; opts?: FetchOpts }> = [];
     const spying: ApiFetch = (async <T,>(path: string, opts?: FetchOpts): Promise<T> => {
       calls.push({ path, opts });
-      return { ok: true, preferredName: "Sean" } as T;
+      return { ok: true, preferredName: "Griff" } as T;
     }) as ApiFetch;
     const api = makeEndpoints(spying);
-    const res = await api.patchPreferredName("Sean");
-    expect(res).toEqual({ ok: true, preferredName: "Sean" });
+    const res = await api.patchPreferredName("Griff");
+    expect(res).toEqual({ ok: true, preferredName: "Griff" });
     expect(calls).toEqual([
-      { path: "/auth/me", opts: { method: "PATCH", body: { preferredName: "Sean" } } },
+      { path: "/auth/me", opts: { method: "PATCH", body: { preferredName: "Griff" } } },
     ]);
     // Account-level mutation: no viewAs may ride along (the transport strips
     // it from writes anyway — this pins that the loader never sets one).
@@ -252,12 +252,12 @@ describe("loadHomeVM — nameless flag (arms the What-should-we-call-you card)",
 
   it("false once any usable name exists (preferredName or a real email)", async () => {
     const named = makeEndpoints(
-      fakeFetch({ ...BASE, "/auth/me": { id: 1, name: UID, preferredName: "Sean" } }),
+      fakeFetch({ ...BASE, "/auth/me": { id: 1, name: UID, preferredName: "Griff" } }),
     );
     expect((await named.loadHomeVM()).nameless).toBe(false);
 
     const emailed = makeEndpoints(
-      fakeFetch({ ...BASE, "/auth/me": { id: 1, name: UID, email: "sean@example.com" } }),
+      fakeFetch({ ...BASE, "/auth/me": { id: 1, name: UID, email: "griff@example.com" } }),
     );
     expect((await emailed.loadHomeVM()).nameless).toBe(false);
   });

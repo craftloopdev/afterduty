@@ -1,6 +1,6 @@
 # After Duty rebrand — design
 
-**Date:** 2026-08-10 · **Owner:** Sean OBryan · **Status:** Stage 0 + Stage 1 **SHIPPED** 2026-08-11 (PR #118). **Stages 2 and 3 DEFERRED** by owner 2026-08-12 — see §6/§7; the deferred ledger owns them. Active scope of the rebrand is now Stage 1 completeness only.
+**Date:** 2026-08-10 · **Owner:** the owner · **Status:** Stage 0 + Stage 1 **SHIPPED** 2026-08-11 (PR #118). **Stages 2 and 3 DEFERRED** by owner 2026-08-12 — see §6/§7; the deferred ledger owns them. Active scope of the rebrand is now Stage 1 completeness only.
 
 ## 1. Context and decision record
 
@@ -46,7 +46,7 @@ Owner decisions captured during design (2026-08-10):
 
 ## 3. Already done (pre-work, verified)
 
-- **Email/domain runbook (2026-08-09/10):** afterduty.app is a verified user alias domain of the craftloop.dev Workspace; good@/sean@afterduty.app deliver. SPF + DKIM (selector `google`, "authenticating") + DMARC p=none live on both craftloop.dev and afterduty.app; outbound SPF/DKIM/DMARC = PASS verified. Send-as deferred by owner. Cloudflare DNS token (Zone.DNS:Edit, craftloop.dev + afterduty.app only) at `~/.gcp/cf-dns-token.txt`; change log at `~/.gcp/email-auth-changes-2026-08-09.log`.
+- **Email/domain runbook (2026-08-09/10):** afterduty.app is a verified user alias domain of the craftloop.dev Workspace; good@/<owner>@afterduty.app deliver. SPF + DKIM (selector `google`, "authenticating") + DMARC p=none live on both craftloop.dev and afterduty.app; outbound SPF/DKIM/DMARC = PASS verified. Send-as deferred by owner. Cloudflare DNS token (Zone.DNS:Edit, craftloop.dev + afterduty.app only) at `~/.gcp/cf-dns-token.txt`; change log at `~/.gcp/email-auth-changes-2026-08-09.log`.
 - **Marketing site cutover (2026-08-10):** the VAClaimPath Pages project serves **https://afterduty.app** (+www, TLS). Zone rule `rebrand-301-vaclaimpath-to-afterduty` 301s vaclaimpath.com apex+www (path+query preserved) → afterduty.app; app./api. hostnames excluded and verified unaffected. `/privacy`, `/terms`, `/delete-account`, `/security` serve 200 with After Duty titles. Play-listing legal links remain valid through the 301.
 - **Cross-session coordination:** `REBRAND-AFTERDUTY.md` briefs + CLAUDE.md banners in `~/Developer/VAClaimPath` and `~/Documents/craftloop`. The VAClaimPath repo owes: sitemap/canonical → afterduty.app; CTA + contact-email flips gated on Stage 1.
 
@@ -116,9 +116,9 @@ scheme)** and **Stage 3 (artwork/icon/screenshot refresh)** in their entirety, p
   and `conduct@` are published in shipped copy (login-lockout screen, recovery page, paywall,
   privacy.html, SECURITY.md, CODE_OF_CONDUCT.md) but **hard-bounce**: afterduty.app is a Workspace *user
   alias domain*, so only local-parts that exist on the mailbox resolve — verified by SMTP RCPT probe,
-  `good@` and `sean@` return 250, all four published addresses return 550. This is a **regression**:
+  `good@` and `<owner>@` return 250, all four published addresses return 550. This is a **regression**:
   vaclaimpath.com is a catch-all and accepted every one of them. Owner fix (~2 min, Admin console →
-  Directory → Users → Sean OBryan → Add alternate emails, or Groups for multi-responder): add the four
+  Directory → Users → the owner → Add alternate emails, or Groups for multi-responder): add the four
   local-parts; they then resolve at both craftloop.dev and afterduty.app with no redeploy. Until then the
   marketing site's `veterans@vaclaimpath.com` must NOT be flipped to @afterduty.app (it currently
   delivers), and `tests/check_published_emails.py` lists them in `KNOWN_DEFERRED` so the deploy gate
