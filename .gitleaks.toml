@@ -25,4 +25,7 @@ paths = [
     '''(^|/)\.gradle/''',
     '''(^|/)\.idea/''',
     '''(^|/)node_modules/''',
+    # CocoaPods lockfile: its SPEC CHECKSUMS section is a list of SHA-1 hashes
+    # that the generic-api-key rule mistakes for credentials. Tracked on purpose.
+    '''(^|/)Podfile\.lock$''',
 ]
