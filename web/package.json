@@ -16,7 +16,7 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@capacitor-firebase/authentication": "^8.3.0",
+    "@capacitor-firebase/authentication": "^8.5.1",
     "@capacitor/android": "^8.5.1",
     "@capacitor/app": "^8.1.1",
     "@capacitor/core": "^8.4.1",
