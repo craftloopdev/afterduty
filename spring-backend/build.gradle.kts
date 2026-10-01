@@ -35,7 +35,7 @@ dependencies {
     implementation("com.anthropic:anthropic-java-vertex:2.62.0")
 
     // GCS document storage
-    implementation("com.google.cloud:google-cloud-storage:2.73.0")
+    implementation("com.google.cloud:google-cloud-storage:2.74.0")
 
     // Firebase Admin SDK
     implementation("com.google.firebase:firebase-admin:9.4.3")
