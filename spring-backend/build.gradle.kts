@@ -49,7 +49,7 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind")
 
     // Stripe (subscription billing — test mode)
-    implementation("com.stripe:stripe-java:33.4.2")
+    implementation("com.stripe:stripe-java:34.0.0")
 
     // SendGrid (passwordless email-code OTP delivery — §5 of passwordless-otp-auth-spec)
     implementation("com.sendgrid:sendgrid-java:4.10.3")
