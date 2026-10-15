@@ -57,7 +57,7 @@ dependencies {
     // WebAuthn / passkeys (auth program P1.3). The Yubico server-side library does
     // the attestation + assertion verification (challenge binding, origin/rpId match,
     // signature, sign_count monotonicity, UV policy) — we never hand-roll COSE/CBOR/sig.
-    implementation("com.yubico:webauthn-server-core:2.9.0")
+    implementation("com.yubico:webauthn-server-core:2.10.1")
 
     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
