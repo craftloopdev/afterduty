@@ -31,7 +31,7 @@ dependencies {
     // Claude via Anthropic SDK on Vertex AI. 2.35+ is required for the `us`
     // multi-region endpoint (VertexBackend maps region "us" to
     // aiplatform.us.rep.googleapis.com; 2.18 only knew global + regional hosts).
-    implementation("com.anthropic:anthropic-java:2.62.0")
+    implementation("com.anthropic:anthropic-java:3.6.0")
     implementation("com.anthropic:anthropic-java-vertex:2.62.0")
 
     // GCS document storage
