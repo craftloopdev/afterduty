@@ -32,7 +32,7 @@ dependencies {
     // multi-region endpoint (VertexBackend maps region "us" to
     // aiplatform.us.rep.googleapis.com; 2.18 only knew global + regional hosts).
     implementation("com.anthropic:anthropic-java:2.62.0")
-    implementation("com.anthropic:anthropic-java-vertex:2.62.0")
+    implementation("com.anthropic:anthropic-java-vertex:3.6.0")
 
     // GCS document storage
     implementation("com.google.cloud:google-cloud-storage:2.73.0")
